@@ -1,0 +1,6 @@
+# Project Files No Use in Git
+
+/SimpleCPU01Project/SimpleCPU01Project.cache/*
+/SimpleCPU01Project/SimpleCPU01Project.hw/*
+/SimpleCPU01Project/SimpleCPU01Project.ip_user_files/*
+/SimpleCPU01Project/SimpleCPU01Project.sim/*
