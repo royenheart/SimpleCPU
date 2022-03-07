@@ -1,0 +1,1 @@
+The source code are compiled with GCC both in Linux and Windows.
