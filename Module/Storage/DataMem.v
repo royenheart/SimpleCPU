@@ -21,7 +21,7 @@
 
 module DataMem (
     // 32位数据存储地址
-    input wire [4:0] A,
+    input wire [31:0] A,
     // 32位数据读取
     input wire [31:0] WD,
     // 数据存储判断
@@ -30,8 +30,8 @@ module DataMem (
     output reg[31:0] RD
 );
 
-// A为5位地址，故需要32个32位寄存器
-reg [31:0] store[31:0];
+// A为32位地址，故需要2^32个32位寄存器
+reg [31:0] store[4294967295:0];
 
 // 当时钟上升沿时改变进行数据的读或写
 always@(posedge clk)

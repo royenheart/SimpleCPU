@@ -1,16 +1,16 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: 谢皓泽
+// Engineer:
 // 
-// Create Date: 2022/03/06 18:58:34
+// Create Date: 2022/03/09 19:07:12
 // Design Name: 
-// Module Name: PCAddr
+// Module Name:
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
 // Description: 
-// 
+//
 // Dependencies: 
 // 
 // Revision:
@@ -18,21 +18,27 @@
 // Additional Comments:
 // 
 //////////////////////////////////////////////////////////////////////////////////
+module Chip_test;
+// Chip Parameters
+parameter PERIOD  = 10;
 
-// 指令地址寄存
-module PCAddr(
-    input wire [4:0] PC,
-    input wire clk,
-    output wire [4:0] IPC
-);
+// Chip Inputs
 
-reg [4:0] store;
+// Chip Outputs
 
-assign IPC = store;
 
-always@(clk)
+initial
 begin
-    store <= PC;
+    forever #(PERIOD/2)  clk=~clk;
 end
+
+initial
+begin
+    #(PERIOD*2) rst_n  =  1;
+end
+
+Chip  u_Chip (
+
+);
 
 endmodule

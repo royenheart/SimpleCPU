@@ -34,7 +34,7 @@ module CU(
     output reg [4:0] ALUControl,
     output reg [1:0] Branch,
     output reg ALUSrcA,
-    output reg ALuSrcB,
+    output reg ALUSrcB,
     output reg [4:0] RegDst,
     output reg Extend,
     output reg PCtoReg
@@ -53,7 +53,7 @@ begin
             ALUControl <= 5'b00000;
             Branch <= 2'b00;
             ALUSrcA <= 1'b0;
-            ALuSrcB <= 1'b0;
+            ALUSrcB <= 1'b0;
             RegDst <= 1'b1;
             // 不使用立即数
             Extend <= 1'b0;
@@ -68,7 +68,7 @@ begin
             ALUControl <= 5'b00001;
             Branch <= 2'b00;
             ALUSrcA <= 1'b0;
-            ALuSrcB <= 1'b0;
+            ALUSrcB <= 1'b0;
             RegDst <= 1'b1;
             Extend <= 1'b0;
             PCtoReg <= 1'b0;
@@ -82,7 +82,7 @@ begin
             ALUControl <= 5'b00010;
             Branch <= 2'b00;
             ALUSrcA <= 1'b0;
-            ALuSrcB <= 1'b0;
+            ALUSrcB <= 1'b0;
             RegDst <= 1'b1;
             Extend <= 1'b0;
             PCtoReg <= 1'b0;
@@ -96,7 +96,7 @@ begin
             ALUControl <= 5'b00011;
             Branch <= 2'b00;
             ALUSrcA <= 1'b0;
-            ALuSrcB <= 1'b0;
+            ALUSrcB <= 1'b0;
             RegDst <= 1'b1;
             Extend <= 1'b0;
             PCtoReg <= 1'b0;
@@ -110,7 +110,7 @@ begin
             ALUControl <= 5'b00100;
             Branch <= 2'b00;
             ALUSrcA <= 1'b0;
-            ALuSrcB <= 1'b0;
+            ALUSrcB <= 1'b0;
             RegDst <= 1'b1;
             Extend <= 1'b0;
             PCtoReg <= 1'b0;
@@ -124,7 +124,7 @@ begin
             ALUControl <= 5'b00101;
             Branch <= 2'b00;
             ALUSrcA <= 1'b0;
-            ALuSrcB <= 1'b0;
+            ALUSrcB <= 1'b0;
             RegDst <= 1'b1;
             Extend <= 1'b0;
             PCtoReg <= 1'b0;
@@ -138,7 +138,7 @@ begin
             ALUControl <= 5'b00110;
             Branch <= 2'b00;
             ALUSrcA <= 1'b0;
-            ALuSrcB <= 1'b0;
+            ALUSrcB <= 1'b0;
             RegDst <= 1'b1;
             Extend <= 1'b0;
             PCtoReg <= 1'b0;
@@ -152,7 +152,7 @@ begin
             ALUControl <= 5'b00111;
             Branch <= 2'b00;
             ALUSrcA <= 1'b0;
-            ALuSrcB <= 1'b0;
+            ALUSrcB <= 1'b0;
             RegDst <= 1'b1;
             Extend <= 1'b0;
             PCtoReg <= 1'b0;
@@ -167,7 +167,7 @@ begin
             ALUControl <= 5'b01000;
             Branch <= 2'b00;
             ALUSrcA <= 1'b0;
-            ALuSrcB <= 1'b0;
+            ALUSrcB <= 1'b0;
             RegDst <= 1'b1;
             Extend <= 1'b0;
             PCtoReg <= 1'b0;
@@ -181,7 +181,7 @@ begin
             ALUControl <= 5'b01001;
             Branch <= 2'b00;
             ALUSrcA <= 1'b0;
-            ALuSrcB <= 1'b0;
+            ALUSrcB <= 1'b0;
             RegDst <= 1'b1;
             Extend <= 1'b0;
             PCtoReg <= 1'b0;
@@ -195,7 +195,7 @@ begin
             ALUControl <= 5'b01010;
             Branch <= 2'b00;
             ALUSrcA <= 1'b1;
-            ALuSrcB <= 1'b0;
+            ALUSrcB <= 1'b0;
             RegDst <= 1'b1;
             Extend <= 1'b0;
             PCtoReg <= 1'b0;
@@ -209,7 +209,7 @@ begin
             ALUControl <= 5'b01011;
             Branch <= 2'b00;
             ALUSrcA <= 1'b1;
-            ALuSrcB <= 1'b0;
+            ALUSrcB <= 1'b0;
             RegDst <= 1'b1;
             Extend <= 1'b0;
             PCtoReg <= 1'b0;
@@ -223,7 +223,7 @@ begin
             ALUControl <= 5'b01100;
             Branch <= 2'b00;
             ALUSrcA <= 1'b1;
-            ALuSrcB <= 1'b0;
+            ALUSrcB <= 1'b0;
             RegDst <= 1'b1;
             Extend <= 1'b0;
             PCtoReg <= 1'b0;
@@ -237,7 +237,7 @@ begin
             ALUControl <= 5'b01010;
             Branch <= 2'b00;
             ALUSrcA <= 1'b0;
-            ALuSrcB <= 1'b0;
+            ALUSrcB <= 1'b0;
             RegDst <= 1'b1;
             Extend <= 1'b0;
             PCtoReg <= 1'b0;
@@ -251,7 +251,7 @@ begin
             ALUControl <= 5'b01011;
             Branch <= 2'b00;
             ALUSrcA <= 1'b0;
-            ALuSrcB <= 1'b0;
+            ALUSrcB <= 1'b0;
             RegDst <= 1'b1;
             Extend <= 1'b0;
             PCtoReg <= 1'b0;
@@ -265,7 +265,7 @@ begin
             ALUControl <= 5'b01100;
             Branch <= 2'b00;
             ALUSrcA <= 1'b0;
-            ALuSrcB <= 1'b0;
+            ALUSrcB <= 1'b0;
             RegDst <= 1'b1;
             Extend <= 1'b0;
             PCtoReg <= 1'b0;
@@ -279,7 +279,7 @@ begin
             ALUControl <= 5'b11111;
             Branch <= 2'b00;
             ALUSrcA <= 1'b0;
-            ALuSrcB <= 1'b0;
+            ALUSrcB <= 1'b0;
             RegDst <= 1'b0;
             Extend <= 1'b0;
             PCtoReg <= 1'b0;
@@ -300,7 +300,7 @@ begin
             ALUControl <= 5'b00000;
             Branch <= 2'b00;
             ALUSrcA <= 1'b0;
-            ALuSrcB <= 1'b1;
+            ALUSrcB <= 1'b1;
             RegDst <= 1'b0;
             Extend <= 1'b1;
             PCtoReg <= 1'b0;
@@ -314,7 +314,7 @@ begin
             ALUControl <= 5'b00000;
             Branch <= 2'b00;
             ALUSrcA <= 1'b0;
-            ALuSrcB <= 1'b1;
+            ALUSrcB <= 1'b1;
             RegDst <= 1'b0;
             Extend <= 1'b0;
             PCtoReg <= 1'b0;
@@ -328,7 +328,7 @@ begin
             ALUControl <= 5'b00100;
             Branch <= 2'b00;
             ALUSrcA <= 1'b0;
-            ALuSrcB <= 1'b1;
+            ALUSrcB <= 1'b1;
             RegDst <= 1'b0;
             Extend <= 1'b0;
             PCtoReg <= 1'b0;
@@ -342,7 +342,7 @@ begin
             ALUControl <= 5'b00101;
             Branch <= 2'b00;
             ALUSrcA <= 1'b0;
-            ALuSrcB <= 1'b1;
+            ALUSrcB <= 1'b1;
             RegDst <= 1'b0;
             Extend <= 1'b0;
             PCtoReg <= 1'b0;
@@ -356,7 +356,7 @@ begin
             ALUControl <= 5'b00110;
             Branch <= 2'b00;
             ALUSrcA <= 1'b0;
-            ALuSrcB <= 1'b1;
+            ALUSrcB <= 1'b1;
             RegDst <= 1'b0;
             Extend <= 1'b0;
             PCtoReg <= 1'b0;
@@ -370,7 +370,7 @@ begin
             ALUControl <= 5'b01010;
             Branch <= 2'b00;
             ALUSrcA <= 1'b0;
-            ALuSrcB <= 1'b1;
+            ALUSrcB <= 1'b1;
             RegDst <= 1'b0;
             Extend <= 1'b0;
             PCtoReg <= 1'b0;
@@ -384,7 +384,7 @@ begin
             ALUControl <= 5'b00000;
             Branch <= 2'b00;
             ALUSrcA <= 1'b0;
-            ALuSrcB <= 1'b1;
+            ALUSrcB <= 1'b1;
             RegDst <= 1'b0;
             Extend <= 1'b1;
             PCtoReg <= 1'b0;
@@ -398,7 +398,7 @@ begin
             ALUControl <= 5'b00000;
             Branch <= 2'b00;
             ALUSrcA <= 1'b0;
-            ALuSrcB <= 1'b1;
+            ALUSrcB <= 1'b1;
             RegDst <= 1'b0;
             Extend <= 1'b1;
             PCtoReg <= 1'b0;
@@ -412,7 +412,7 @@ begin
             ALUControl <= 5'b01111;
             Branch <= 2'b00;
             ALUSrcA <= 1'b0;
-            ALuSrcB <= 1'b1;
+            ALUSrcB <= 1'b1;
             RegDst <= 1'b0;
             Extend <= 1'b1;
             PCtoReg <= 1'b0;
@@ -426,7 +426,7 @@ begin
             ALUControl <= 5'b01111;
             Branch <= 2'b00;
             ALUSrcA <= 1'b0;
-            ALuSrcB <= 1'b1;
+            ALUSrcB <= 1'b1;
             RegDst <= 1'b0;
             Extend <= 1'b0;
             PCtoReg <= 1'b0;
@@ -440,7 +440,7 @@ begin
             ALUControl <= 5'b11111;
             Branch <= 2'b00;
             ALUSrcA <= 1'b0;
-            ALuSrcB <= 1'b0;
+            ALUSrcB <= 1'b0;
             RegDst <= 1'b0;
             Extend <= 1'b0;
             PCtoReg <= 1'b0;
@@ -461,7 +461,7 @@ begin
             ALUControl <= 5'b11111;
             Branch <= 2'b11;
             ALUSrcA <= 1'b0;
-            ALuSrcB <= 1'b0;
+            ALUSrcB <= 1'b0;
             RegDst <= 1'b0;
             Extend <= 1'b0;
             PCtoReg <= 1'b0;
@@ -475,7 +475,7 @@ begin
             ALUControl <= 5'b11111;
             Branch <= 2'b00;
             ALUSrcA <= 1'b0;
-            ALuSrcB <= 1'b0;
+            ALUSrcB <= 1'b0;
             RegDst <= 1'b0;
             Extend <= 1'b0;
             PCtoReg <= 1'b0;
@@ -496,7 +496,7 @@ begin
             ALUControl <= 5'b01101;
             Branch <= 2'b01 & {0, zero};
             ALUSrcA <= 1'b0;
-            ALuSrcB <= 1'b0;
+            ALUSrcB <= 1'b0;
             RegDst <= 1'b0;
             Extend <= 1'b1;
             PCtoReg <= 1'b0;
@@ -510,7 +510,7 @@ begin
             ALUControl <= 5'b01110;
             Branch <= 2'b01 & {0, zero};
             ALUSrcA <= 1'b0;
-            ALuSrcB <= 1'b0;
+            ALUSrcB <= 1'b0;
             RegDst <= 1'b0;
             Extend <= 1'b1;
             PCtoReg <= 1'b0;
@@ -524,7 +524,7 @@ begin
             ALUControl <= 5'b11111;
             Branch <= 2'b10;
             ALUSrcA <= 1'b0;
-            ALuSrcB <= 1'b0;
+            ALUSrcB <= 1'b0;
             RegDst <= 1'b0;
             Extend <= 1'b0;
             PCtoReg <= 1'b0;
@@ -538,7 +538,7 @@ begin
             ALUControl <= 5'b11111;
             Branch <= 2'b10;
             ALUSrcA <= 1'b0;
-            ALuSrcB <= 1'b0;
+            ALUSrcB <= 1'b0;
             RegDst <= 1'b0;
             Extend <= 1'b0;
             PCtoReg <= 1'b1;
@@ -552,7 +552,7 @@ begin
             ALUControl <= 5'b11111;
             Branch <= 2'b00;
             ALUSrcA <= 1'b0;
-            ALuSrcB <= 1'b0;
+            ALUSrcB <= 1'b0;
             RegDst <= 1'b0;
             Extend <= 1'b0;
             PCtoReg <= 1'b0;
