@@ -5,7 +5,7 @@
 // 
 // Create Date: 2022/03/06 18:58:34
 // Design Name: 
-// Module Name: ALU
+// Module Name: CU
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -21,12 +21,12 @@
 
 module CU(
     // 6位操作数输入
-    input reg [5:0] op,
+    input wire [5:0] op,
     // 6位功能数输入，与op共同决定输出
-    input reg [5:0] func,
+    input wire [5:0] func,
     // ALU Zero信号，用于判断条件跳转语句是否成立
     // 只在跳转指令时需要进行判断
-    input reg zero,
+    input wire zero,
     output reg MemtoReg,
     output reg MemWrite,
     output reg RegWrite,
@@ -270,6 +270,20 @@ begin
             Extend <= 1'b0;
             PCtoReg <= 1'b0;
         end
+        default:
+        begin
+            // 错误指令
+            MemtoReg <= 1'b0;
+            MemWrite <= 1'b0;
+            RegWrite <= 1'b0;
+            ALUControl <= 5'b11111;
+            Branch <= 2'b00;
+            ALUSrcA <= 1'b0;
+            ALuSrcB <= 1'b0;
+            RegDst <= 1'b0;
+            Extend <= 1'b0;
+            PCtoReg <= 1'b0;
+        end
     endcase
 end
 
@@ -417,6 +431,20 @@ begin
             Extend <= 1'b0;
             PCtoReg <= 1'b0;
         end
+        default:
+        begin
+            // 错误指令
+            MemtoReg <= 1'b0;
+            MemWrite <= 1'b0;
+            RegWrite <= 1'b0;
+            ALUControl <= 5'b11111;
+            Branch <= 2'b00;
+            ALUSrcA <= 1'b0;
+            ALuSrcB <= 1'b0;
+            RegDst <= 1'b0;
+            Extend <= 1'b0;
+            PCtoReg <= 1'b0;
+        end
     endcase
 end
 
@@ -432,6 +460,20 @@ begin
             RegWrite <= 1'b0;
             ALUControl <= 5'b11111;
             Branch <= 2'b11;
+            ALUSrcA <= 1'b0;
+            ALuSrcB <= 1'b0;
+            RegDst <= 1'b0;
+            Extend <= 1'b0;
+            PCtoReg <= 1'b0;
+        end
+        default:
+        begin
+            // 错误指令
+            MemtoReg <= 1'b0;
+            MemWrite <= 1'b0;
+            RegWrite <= 1'b0;
+            ALUControl <= 5'b11111;
+            Branch <= 2'b00;
             ALUSrcA <= 1'b0;
             ALuSrcB <= 1'b0;
             RegDst <= 1'b0;
@@ -500,6 +542,20 @@ begin
             RegDst <= 1'b0;
             Extend <= 1'b0;
             PCtoReg <= 1'b1;
+        end
+        default:
+        begin
+            // 错误指令
+            MemtoReg <= 1'b0;
+            MemWrite <= 1'b0;
+            RegWrite <= 1'b0;
+            ALUControl <= 5'b11111;
+            Branch <= 2'b00;
+            ALUSrcA <= 1'b0;
+            ALuSrcB <= 1'b0;
+            RegDst <= 1'b0;
+            Extend <= 1'b0;
+            PCtoReg <= 1'b0;
         end
     endcase
 end

@@ -5,7 +5,7 @@
 // 
 // Create Date: 2022/03/06 18:58:34
 // Design Name: 
-// Module Name: InstrMem
+// Module Name: PCAddr
 // Project Name: 
 // Target Devices: 
 // Tool Versions: 
@@ -19,17 +19,19 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module InstrMem(
-    input wire [4:0] A,
-    output reg [31:0] RD
+module PCAddr(
+    input wire [4:0] PC,
+    input wire clk,
+    output wire [4:0] IPC
 );
 
-// 128个32位指令存储
-reg [31:0] instrs[127:0];
+reg [4:0] store;
 
-always@(*)
+assign IPC = store;
+
+always@(clk)
 begin
-    RD <= instrs[A];
+    store <= PC;
 end
 
 endmodule

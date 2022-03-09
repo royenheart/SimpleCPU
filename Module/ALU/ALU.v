@@ -116,6 +116,11 @@ module ALU(
                     out = 32'b0;
                     zero = (A != B) ? 1'b1 : 1'b0;
                 end
+            default:
+                begin
+                    out = 32'b0;
+                    zero = 1'b0;
+                end
         endcase
     end
 endmodule
