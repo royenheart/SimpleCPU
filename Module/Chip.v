@@ -27,13 +27,14 @@ module Chip(
 // 信号发生器（clk） - Start //
 
 reg clk;
+parameter PERIOD  = 10;
 
 initial 
 begin
-    clk = 1'b1;    
+    clk = 1'b0;
     forever 
     begin
-        #5 clk = ~clk;  
+        #(PERIOD/2) clk = ~clk;  
     end
 end
 
@@ -93,6 +94,16 @@ wire [31:0] PCPlusExtend;
 wire [31:0] PCPlusAddr;
 // PC = rs，直接从RD1线延伸出来即可
 
+///////////
+//初始化数据
+///////////
+
+
+
+///////////////
+//初始化数据结束
+///////////////
+
 //////////
 //数据通路
 //////////
@@ -107,33 +118,13 @@ assign WD3Temp = (MemtoReg == 1'b1)?DataMemRead:ALUResult;
 assign WD3 = (PCtoReg == 1'b1)?PCPlus4:WD3Temp;
 
 // PC + 4
-assign PCPlus4 = PC + 3'b100;
+assign PCPlus4 = IPC + 3'b100;
 // PC + 4 + (sign-extend)immediate<<2
 assign PCPlusExtend = PCPlus4 + (ExtendImm << 2);
 // PC = (PC+4)[31..28],address,0,0
 assign PCPlusAddr = {PCPlus4[31:28], instr[25:0], 2'b00};
 
-always@(Branch)
-begin
-    case(Branch)
-        2'b00:
-        begin
-            PC <= PCPlus4;
-        end
-        2'b01:
-        begin
-            PC <= PCPlusExtend;
-        end
-        2'b10:
-        begin
-            PC <= PCPlusAddr;
-        end
-        2'b11:
-        begin
-            PC <= RD1;
-        end
-    endcase
-end
+assign PC = (Branch == 2'b00)?PCPlus4:((Branch==2'b01)?PCPlusExtend:((Branch == 2'b10)?PCPlusAddr:RD1));
 
 /////////////
 //数据通路结束

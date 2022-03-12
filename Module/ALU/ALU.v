@@ -26,6 +26,14 @@ module ALU(
     output reg [31:0] out,
     output reg zero
     );
+
+    initial
+    begin
+        // 初始化数据
+        out <= 32'd0;
+        zero <= 1'b0;
+    end
+
     reg [31:0] C;
     reg [31:0] D;
     reg [31:0] ans;

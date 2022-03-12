@@ -33,6 +33,12 @@ module RegFiles(
 // 总共需要32个32位的寄存器
 reg [31:0] regs[31:0]; 
 
+initial
+begin
+    // 数据初始化（十六进制读入）
+    $readmemh("../../../../../Data/RegFiles.txt", regs);   
+end
+
 always@(posedge clk)
 begin
     RD1 <= A1;

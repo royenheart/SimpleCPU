@@ -24,12 +24,18 @@ module InstrMem(
     output reg [31:0] RD
 );
 
-// A32位寻址，有2^32个32位指令存储
-reg [31:0] instrs[4294967295:0];
+// A32位寻址，有2^32个32位指令存储（为方便进行仿真，仅使用256个）
+reg [7:0] instrs[255:0];
+
+initial
+begin
+    // 数据初始化（十六进制读入）
+    $readmemh("../../../../../Data/InstrMem.txt", instrs);
+end
 
 always@(*)
 begin
-    RD <= instrs[A];
+    RD <= {instrs[A], instrs[A+1], instrs[A+2], instrs[A+3]};
 end
 
 endmodule

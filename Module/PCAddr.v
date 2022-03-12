@@ -21,16 +21,23 @@
 
 // 指令地址寄存
 module PCAddr(
-    input wire [4:0] PC,
+    input wire [31:0] PC,
     input wire clk,
-    output wire [4:0] IPC
+    output wire [31:0] IPC
 );
 
-reg [4:0] store;
+reg [31:0] store;
 
+// 初始化数据
+initial
+begin
+    store <= 32'd0;
+end
+
+// 向指令存储器传输当前指令地址
 assign IPC = store;
 
-always@(clk)
+always@(posedge clk)
 begin
     store <= PC;
 end
