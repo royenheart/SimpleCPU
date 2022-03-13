@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: 王若譞
+// Engineer: 王若�?
 // 
 // Create Date: 2022/03/06 18:58:34
 // Design Name: 
@@ -101,17 +101,17 @@ module ALU(
                 end
             5'b01010:
                 begin
-                    out = A << B;
+                    out = B << A;
                     zero = 1'b0;
                 end
             5'b01011:
                 begin
-                    out = A >> B;
+                    out = B >> A;
                     zero = 1'b0;
                 end
             5'b01100:
                 begin
-                    out = ($signed(A)) >>> B;
+                    out = ($signed(B)) >>> A;
                     zero = 1'b0;
                 end
             5'b01101:
@@ -123,6 +123,11 @@ module ALU(
                 begin
                     out = 32'b0;
                     zero = (A != B) ? 1'b1 : 1'b0;
+                end
+            5'b01111:
+                begin
+                    out = B << 16;
+                    zero = 1'b0;
                 end
             default:
                 begin

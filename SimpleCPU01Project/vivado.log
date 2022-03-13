@@ -1,0 +1,1801 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Sun Mar 13 08:16:59 2022
+# Process ID: 5560
+# Current directory: D:/Git/SimpleCPU01/SimpleCPU01Project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17920 D:\Git\SimpleCPU01\SimpleCPU01Project\SimpleCPU01Project.xpr
+# Log file: D:/Git/SimpleCPU01/SimpleCPU01Project/vivado.log
+# Journal file: D:/Git/SimpleCPU01/SimpleCPU01Project\vivado.jou
+# Running On: LAPTOP-TDKNUURL, OS: Windows, CPU Frequency: 2895 MHz, CPU Physical cores: 16, Host memory: 16556 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_es:part0:1.3 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/es/1.3/board.xml as part xcvc1902-vsva2197-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_es:part0:1.3 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/es/1.3/board.xml as part xcvm1802-vsva2197-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120_es:part0:1.2 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/es/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208_es:part0:1.0 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/es/1.0/board.xml as part xczu48dr-fsvg1517-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208_es:part0:1.1 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/es/1.1/board.xml as part xczu48dr-fsvg1517-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208_es:part0:1.2 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/es/1.2/board.xml as part xczu48dr-fsvg1517-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld_es:part0:1.0 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/es/1.0/board.xml as part xczu58dr-fsvg1517-2-i-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216_es:part0:1.0 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/es/1.0/board.xml as part xczu49dr-ffvf1760-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216_es:part0:1.1 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/es/1.1/board.xml as part xczu49dr-ffvf1760-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216_es:part0:1.2 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/es/1.2/board.xml as part xczu49dr-ffvf1760-2-e-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld_es:part0:1.0 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/es/1.0/board.xml as part xczu59dr-ffvf1760-2-i-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:1.0 available at C:/Xilinx/Vivado/2021.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/1.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.2/data/ip'.
+open_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:06 . Memory (MB): peak = 1456.824 ; gain = 71.844
+update_compile_order -fileset sources_1
+launch_simulation -simset [get_filesets Chip ]
+Command: launch_simulation  -simset Chip
+INFO: [Vivado 12-12493] Simulation top is 'Chip_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'Chip'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'Chip_test' in fileset 'Chip'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'Chip'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+"xvlog --incr --relax -prj Chip_test_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Chip_test_behav xil_defaultlib.Chip_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Chip_test_behav xil_defaultlib.Chip_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Chip_test_behav -key {Behavioral:Chip:Functional:Chip_test} -tclbatch {Chip_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source Chip_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: [Simtcl 6-168] No object found for the given pattern.
+WARNING: [Add_Wave-1] No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console.
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Chip_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 1484.086 ; gain = 0.000
+add_wave {{/Chip_test}} 
+INFO: [Wavedata 42-43] There are no traceable objects to add.
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/Chip_test/u_Chip/u_cu}} 
+current_wave_config {Untitled 1}
+Untitled 1
+add_wave {{/Chip_test/u_Chip/u_regfiles}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10 us
+run 10 us
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation -simset [get_filesets Chip ]
+Command: launch_simulation  -simset Chip
+INFO: [Vivado 12-12493] Simulation top is 'Chip_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'Chip'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'Chip_test' in fileset 'Chip'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'Chip'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+"xvlog --incr --relax -prj Chip_test_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Chip_test_behav xil_defaultlib.Chip_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Chip_test_behav xil_defaultlib.Chip_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Chip_test_behav -key {Behavioral:Chip:Functional:Chip_test} -tclbatch {Chip_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source Chip_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: [Simtcl 6-168] No object found for the given pattern.
+WARNING: [Add_Wave-1] No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console.
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Chip_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1484.086 ; gain = 0.000
+add_wave {{/Chip_test/u_Chip}} 
+current_wave_config {Untitled 2}
+Untitled 2
+add_wave {{/Chip_test/u_Chip/u_cu}} 
+current_wave_config {Untitled 2}
+Untitled 2
+add_wave {{/Chip_test/u_Chip/u_regfiles}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10 ns
+run 10 ns
+run 10 ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation -simset [get_filesets Chip ]
+Command: launch_simulation  -simset Chip
+INFO: [Vivado 12-12493] Simulation top is 'Chip_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'Chip'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'Chip_test' in fileset 'Chip'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'Chip'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+"xvlog --incr --relax -prj Chip_test_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Chip_test_behav xil_defaultlib.Chip_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Chip_test_behav xil_defaultlib.Chip_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Chip_test_behav -key {Behavioral:Chip:Functional:Chip_test} -tclbatch {Chip_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source Chip_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: [Simtcl 6-168] No object found for the given pattern.
+WARNING: [Add_Wave-1] No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console.
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Chip_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1484.086 ; gain = 0.000
+add_wave {{/Chip_test/u_Chip}} 
+current_wave_config {Untitled 3}
+Untitled 3
+add_wave {{/Chip_test/u_Chip/u_regfiles}} 
+current_wave_config {Untitled 3}
+Untitled 3
+add_wave {{/Chip_test/u_Chip/u_cu}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+current_wave_config {Untitled 3}
+Untitled 3
+add_wave {{/Chip_test/u_Chip}} 
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation -simset [get_filesets Chip ]
+Command: launch_simulation  -simset Chip
+INFO: [Vivado 12-12493] Simulation top is 'Chip_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'Chip'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'Chip_test' in fileset 'Chip'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'Chip'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+"xvlog --incr --relax -prj Chip_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/ALU/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/CU/CU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CU
+INFO: [VRFC 10-2458] undeclared symbol opfunc, assumed default net type wire [D:/Git/SimpleCPU01/Module/CU/CU.v:43]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Chip.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Chip
+INFO: [VRFC 10-2458] undeclared symbol zero, assumed default net type wire [D:/Git/SimpleCPU01/Module/Chip.v:154]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Storage/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Extend/Extend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Extend
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Storage/InstrMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstrMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/PCAddr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PCAddr
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Storage/RegFiles.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegFiles
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Simulation/Chip_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Chip_test
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Chip_test_behav xil_defaultlib.Chip_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Chip_test_behav xil_defaultlib.Chip_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.CU
+Compiling module xil_defaultlib.Extend
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.InstrMem
+Compiling module xil_defaultlib.RegFiles
+Compiling module xil_defaultlib.PCAddr
+Compiling module xil_defaultlib.Chip
+Compiling module xil_defaultlib.Chip_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Chip_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Chip_test_behav -key {Behavioral:Chip:Functional:Chip_test} -tclbatch {Chip_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source Chip_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: [Simtcl 6-168] No object found for the given pattern.
+WARNING: [Add_Wave-1] No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console.
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Chip_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1484.086 ; gain = 0.000
+add_wave {{/Chip_test/u_Chip}} 
+current_wave_config {Untitled 4}
+Untitled 4
+add_wave {{/Chip_test/u_Chip/u_cu}} 
+current_wave_config {Untitled 4}
+Untitled 4
+add_wave {{/Chip_test/u_Chip/u_regfiles}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation -simset [get_filesets Chip ]
+Command: launch_simulation  -simset Chip
+INFO: [Vivado 12-12493] Simulation top is 'Chip_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'Chip'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'Chip_test' in fileset 'Chip'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'Chip'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+"xvlog --incr --relax -prj Chip_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/ALU/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/CU/CU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CU
+INFO: [VRFC 10-2458] undeclared symbol opfunc, assumed default net type wire [D:/Git/SimpleCPU01/Module/CU/CU.v:43]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Chip.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Chip
+INFO: [VRFC 10-2458] undeclared symbol zero, assumed default net type wire [D:/Git/SimpleCPU01/Module/Chip.v:154]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Storage/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Extend/Extend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Extend
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Storage/InstrMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstrMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/PCAddr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PCAddr
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Storage/RegFiles.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegFiles
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Simulation/Chip_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Chip_test
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Chip_test_behav xil_defaultlib.Chip_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Chip_test_behav xil_defaultlib.Chip_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.CU
+Compiling module xil_defaultlib.Extend
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.InstrMem
+Compiling module xil_defaultlib.RegFiles
+Compiling module xil_defaultlib.PCAddr
+Compiling module xil_defaultlib.Chip
+Compiling module xil_defaultlib.Chip_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Chip_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Chip_test_behav -key {Behavioral:Chip:Functional:Chip_test} -tclbatch {Chip_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source Chip_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: [Simtcl 6-168] No object found for the given pattern.
+WARNING: [Add_Wave-1] No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console.
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Chip_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1484.086 ; gain = 0.000
+add_wave {{/Chip_test/u_Chip}} 
+current_wave_config {Untitled 5}
+Untitled 5
+add_wave {{/Chip_test/u_Chip/u_cu}} 
+current_wave_config {Untitled 5}
+Untitled 5
+add_wave {{/Chip_test/u_Chip/u_regfiles}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation -simset [get_filesets Chip ]
+Command: launch_simulation  -simset Chip
+INFO: [Vivado 12-12493] Simulation top is 'Chip_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'Chip'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'Chip_test' in fileset 'Chip'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'Chip'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+"xvlog --incr --relax -prj Chip_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/ALU/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/CU/CU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Chip.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Chip
+INFO: [VRFC 10-2458] undeclared symbol zero, assumed default net type wire [D:/Git/SimpleCPU01/Module/Chip.v:154]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Storage/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Extend/Extend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Extend
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Storage/InstrMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstrMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/PCAddr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PCAddr
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Storage/RegFiles.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegFiles
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Simulation/Chip_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Chip_test
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Chip_test_behav xil_defaultlib.Chip_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Chip_test_behav xil_defaultlib.Chip_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.CU
+Compiling module xil_defaultlib.Extend
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.InstrMem
+Compiling module xil_defaultlib.RegFiles
+Compiling module xil_defaultlib.PCAddr
+Compiling module xil_defaultlib.Chip
+Compiling module xil_defaultlib.Chip_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Chip_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Chip_test_behav -key {Behavioral:Chip:Functional:Chip_test} -tclbatch {Chip_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source Chip_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: [Simtcl 6-168] No object found for the given pattern.
+WARNING: [Add_Wave-1] No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console.
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Chip_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1484.086 ; gain = 0.000
+add_wave {{/Chip_test/u_Chip}} 
+current_wave_config {Untitled 6}
+Untitled 6
+add_wave {{/Chip_test/u_Chip/u_regfiles}} 
+current_wave_config {Untitled 6}
+Untitled 6
+add_wave {{/Chip_test/u_Chip/u_cu}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation -simset [get_filesets Chip ]
+Command: launch_simulation  -simset Chip
+INFO: [Vivado 12-12493] Simulation top is 'Chip_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'Chip'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'Chip_test' in fileset 'Chip'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'Chip'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+"xvlog --incr --relax -prj Chip_test_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Chip_test_behav xil_defaultlib.Chip_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Chip_test_behav xil_defaultlib.Chip_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Chip_test_behav -key {Behavioral:Chip:Functional:Chip_test} -tclbatch {Chip_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source Chip_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: [Simtcl 6-168] No object found for the given pattern.
+WARNING: [Add_Wave-1] No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console.
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Chip_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1484.086 ; gain = 0.000
+add_wave {{/Chip_test/u_Chip}} 
+current_wave_config {Untitled 7}
+Untitled 7
+add_wave {{/Chip_test/u_Chip/u_cu}} 
+current_wave_config {Untitled 7}
+Untitled 7
+add_wave {{/Chip_test/u_Chip/u_regfiles}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation -simset [get_filesets Chip ]
+Command: launch_simulation  -simset Chip
+INFO: [Vivado 12-12493] Simulation top is 'Chip_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'Chip'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'Chip_test' in fileset 'Chip'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'Chip'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+"xvlog --incr --relax -prj Chip_test_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Chip_test_behav xil_defaultlib.Chip_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Chip_test_behav xil_defaultlib.Chip_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Chip_test_behav -key {Behavioral:Chip:Functional:Chip_test} -tclbatch {Chip_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source Chip_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: [Simtcl 6-168] No object found for the given pattern.
+WARNING: [Add_Wave-1] No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console.
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Chip_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1484.086 ; gain = 0.000
+add_wave {{/Chip_test/u_Chip}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+current_wave_config {Untitled 8}
+Untitled 8
+add_wave {{/Chip_test/u_Chip/u_regfiles}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+current_wave_config {Untitled 8}
+Untitled 8
+add_wave {{/Chip_test/u_Chip/u_cu}} 
+current_wave_config {Untitled 8}
+Untitled 8
+add_wave {{/Chip_test/u_Chip/u_regfiles}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation -simset [get_filesets Chip ]
+Command: launch_simulation  -simset Chip
+INFO: [Vivado 12-12493] Simulation top is 'Chip_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'Chip'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'Chip_test' in fileset 'Chip'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'Chip'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+"xvlog --incr --relax -prj Chip_test_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Chip_test_behav xil_defaultlib.Chip_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Chip_test_behav xil_defaultlib.Chip_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Chip_test_behav -key {Behavioral:Chip:Functional:Chip_test} -tclbatch {Chip_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source Chip_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: [Simtcl 6-168] No object found for the given pattern.
+WARNING: [Add_Wave-1] No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console.
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Chip_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1484.086 ; gain = 0.000
+add_wave {{/Chip_test/u_Chip}} 
+current_wave_config {Untitled 9}
+Untitled 9
+add_wave {{/Chip_test/u_Chip/u_cu}} 
+current_wave_config {Untitled 9}
+Untitled 9
+add_wave {{/Chip_test/u_Chip/u_regfiles}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+current_wave_config {Untitled 9}
+Untitled 9
+add_wave {{/Chip_test/u_Chip/u_alu}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation -simset [get_filesets Chip ]
+Command: launch_simulation  -simset Chip
+INFO: [Vivado 12-12493] Simulation top is 'Chip_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'Chip'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'Chip_test' in fileset 'Chip'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'Chip'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+"xvlog --incr --relax -prj Chip_test_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Chip_test_behav xil_defaultlib.Chip_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Chip_test_behav xil_defaultlib.Chip_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Chip_test_behav -key {Behavioral:Chip:Functional:Chip_test} -tclbatch {Chip_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source Chip_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: [Simtcl 6-168] No object found for the given pattern.
+WARNING: [Add_Wave-1] No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console.
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Chip_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 1516.121 ; gain = 0.000
+add_wave {{/Chip_test/u_Chip}} 
+current_wave_config {Untitled 10}
+Untitled 10
+add_wave {{/Chip_test/u_Chip/u_cu}} 
+current_wave_config {Untitled 10}
+Untitled 10
+add_wave {{/Chip_test/u_Chip/u_regfiles}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation -simset [get_filesets Chip ]
+Command: launch_simulation  -simset Chip
+INFO: [Vivado 12-12493] Simulation top is 'Chip_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'Chip'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'Chip_test' in fileset 'Chip'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'Chip'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+"xvlog --incr --relax -prj Chip_test_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Chip_test_behav xil_defaultlib.Chip_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Chip_test_behav xil_defaultlib.Chip_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Chip_test_behav -key {Behavioral:Chip:Functional:Chip_test} -tclbatch {Chip_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source Chip_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: [Simtcl 6-168] No object found for the given pattern.
+WARNING: [Add_Wave-1] No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console.
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Chip_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1516.121 ; gain = 0.000
+add_wave {{/Chip_test/u_Chip}} 
+current_wave_config {Untitled 11}
+Untitled 11
+add_wave {{/Chip_test/u_Chip/u_cu}} 
+current_wave_config {Untitled 11}
+Untitled 11
+add_wave {{/Chip_test/u_Chip/u_regfiles}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 100 ns
+run 100 ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation -simset [get_filesets Chip ]
+Command: launch_simulation  -simset Chip
+INFO: [Vivado 12-12493] Simulation top is 'Chip_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'Chip'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'Chip_test' in fileset 'Chip'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'Chip'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+"xvlog --incr --relax -prj Chip_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/ALU/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/CU/CU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Chip.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Chip
+INFO: [VRFC 10-2458] undeclared symbol zero, assumed default net type wire [D:/Git/SimpleCPU01/Module/Chip.v:154]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Storage/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Extend/Extend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Extend
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Storage/InstrMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstrMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/PCAddr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PCAddr
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Storage/RegFiles.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegFiles
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Simulation/Chip_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Chip_test
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Chip_test_behav xil_defaultlib.Chip_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Chip_test_behav xil_defaultlib.Chip_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.CU
+Compiling module xil_defaultlib.Extend
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.InstrMem
+Compiling module xil_defaultlib.RegFiles
+Compiling module xil_defaultlib.PCAddr
+Compiling module xil_defaultlib.Chip
+Compiling module xil_defaultlib.Chip_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Chip_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Chip_test_behav -key {Behavioral:Chip:Functional:Chip_test} -tclbatch {Chip_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source Chip_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: [Simtcl 6-168] No object found for the given pattern.
+WARNING: [Add_Wave-1] No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console.
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Chip_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1516.121 ; gain = 0.000
+add_wave {{/Chip_test/u_Chip}} 
+current_wave_config {Untitled 12}
+Untitled 12
+add_wave {{/Chip_test/u_Chip/u_cu}} 
+current_wave_config {Untitled 12}
+Untitled 12
+add_wave {{/Chip_test/u_Chip/u_regfiles}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 100 ns
+run 100 ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation -simset [get_filesets Chip ]
+Command: launch_simulation  -simset Chip
+INFO: [Vivado 12-12493] Simulation top is 'Chip_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'Chip'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'Chip_test' in fileset 'Chip'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'Chip'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+"xvlog --incr --relax -prj Chip_test_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Chip_test_behav xil_defaultlib.Chip_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Chip_test_behav xil_defaultlib.Chip_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Chip_test_behav -key {Behavioral:Chip:Functional:Chip_test} -tclbatch {Chip_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source Chip_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: [Simtcl 6-168] No object found for the given pattern.
+WARNING: [Add_Wave-1] No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console.
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Chip_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1516.121 ; gain = 0.000
+add_wave {{/Chip_test/u_Chip}} 
+current_wave_config {Untitled 13}
+Untitled 13
+add_wave {{/Chip_test/u_Chip/u_cu}} 
+current_wave_config {Untitled 13}
+Untitled 13
+add_wave {{/Chip_test/u_Chip/u_regfiles}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 200 ns
+run 200 ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation -simset [get_filesets Chip ]
+Command: launch_simulation  -simset Chip
+INFO: [Vivado 12-12493] Simulation top is 'Chip_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'Chip'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'Chip_test' in fileset 'Chip'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'Chip'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+"xvlog --incr --relax -prj Chip_test_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Chip_test_behav xil_defaultlib.Chip_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Chip_test_behav xil_defaultlib.Chip_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Chip_test_behav -key {Behavioral:Chip:Functional:Chip_test} -tclbatch {Chip_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source Chip_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: [Simtcl 6-168] No object found for the given pattern.
+WARNING: [Add_Wave-1] No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console.
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Chip_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:06 . Memory (MB): peak = 1516.121 ; gain = 0.000
+add_wave {{/Chip_test/u_Chip}} 
+current_wave_config {Untitled 14}
+Untitled 14
+add_wave {{/Chip_test/u_Chip/u_cu}} 
+current_wave_config {Untitled 14}
+Untitled 14
+add_wave {{/Chip_test/u_Chip/u_regfiles}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 200 ns
+run 200 ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation -simset [get_filesets Chip ]
+Command: launch_simulation  -simset Chip
+INFO: [Vivado 12-12493] Simulation top is 'Chip_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'Chip'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'Chip_test' in fileset 'Chip'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'Chip'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+"xvlog --incr --relax -prj Chip_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/ALU/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/CU/CU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Chip.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Chip
+INFO: [VRFC 10-2458] undeclared symbol zero, assumed default net type wire [D:/Git/SimpleCPU01/Module/Chip.v:154]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Storage/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Extend/Extend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Extend
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Storage/InstrMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstrMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/PCAddr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PCAddr
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Storage/RegFiles.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegFiles
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Simulation/Chip_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Chip_test
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Chip_test_behav xil_defaultlib.Chip_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Chip_test_behav xil_defaultlib.Chip_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.CU
+Compiling module xil_defaultlib.Extend
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.InstrMem
+Compiling module xil_defaultlib.RegFiles
+Compiling module xil_defaultlib.PCAddr
+Compiling module xil_defaultlib.Chip
+Compiling module xil_defaultlib.Chip_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Chip_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Chip_test_behav -key {Behavioral:Chip:Functional:Chip_test} -tclbatch {Chip_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source Chip_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: [Simtcl 6-168] No object found for the given pattern.
+WARNING: [Add_Wave-1] No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console.
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Chip_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1516.121 ; gain = 0.000
+add_wave {{/Chip_test/u_Chip}} 
+current_wave_config {Untitled 15}
+Untitled 15
+add_wave {{/Chip_test/u_Chip/u_cu}} 
+current_wave_config {Untitled 15}
+Untitled 15
+add_wave {{/Chip_test/u_Chip/u_regfiles}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 200 ns
+run 200 ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation -simset [get_filesets Chip ]
+Command: launch_simulation  -simset Chip
+INFO: [Vivado 12-12493] Simulation top is 'Chip_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'Chip'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'Chip_test' in fileset 'Chip'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'Chip'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+"xvlog --incr --relax -prj Chip_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/ALU/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/CU/CU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Chip.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Chip
+INFO: [VRFC 10-2458] undeclared symbol zero, assumed default net type wire [D:/Git/SimpleCPU01/Module/Chip.v:154]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Storage/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Extend/Extend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Extend
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Storage/InstrMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstrMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/PCAddr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PCAddr
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Storage/RegFiles.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegFiles
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Simulation/Chip_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Chip_test
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Chip_test_behav xil_defaultlib.Chip_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Chip_test_behav xil_defaultlib.Chip_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.CU
+Compiling module xil_defaultlib.Extend
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.InstrMem
+Compiling module xil_defaultlib.RegFiles
+Compiling module xil_defaultlib.PCAddr
+Compiling module xil_defaultlib.Chip
+Compiling module xil_defaultlib.Chip_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Chip_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Chip_test_behav -key {Behavioral:Chip:Functional:Chip_test} -tclbatch {Chip_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source Chip_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: [Simtcl 6-168] No object found for the given pattern.
+WARNING: [Add_Wave-1] No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console.
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Chip_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1516.121 ; gain = 0.000
+add_wave {{/Chip_test/u_Chip}} 
+current_wave_config {Untitled 16}
+Untitled 16
+add_wave {{/Chip_test/u_Chip/u_cu}} 
+current_wave_config {Untitled 16}
+Untitled 16
+add_wave {{/Chip_test/u_Chip/u_regfiles}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 200 ns
+run 200 ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation -simset [get_filesets Chip ]
+Command: launch_simulation  -simset Chip
+INFO: [Vivado 12-12493] Simulation top is 'Chip_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'Chip'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'Chip_test' in fileset 'Chip'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'Chip'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+"xvlog --incr --relax -prj Chip_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/ALU/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/CU/CU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Chip.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Chip
+INFO: [VRFC 10-2458] undeclared symbol zero, assumed default net type wire [D:/Git/SimpleCPU01/Module/Chip.v:154]
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Storage/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Extend/Extend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Extend
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Storage/InstrMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstrMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/PCAddr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PCAddr
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Storage/RegFiles.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegFiles
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Simulation/Chip_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Chip_test
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Chip_test_behav xil_defaultlib.Chip_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Chip_test_behav xil_defaultlib.Chip_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.CU
+Compiling module xil_defaultlib.Extend
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.InstrMem
+Compiling module xil_defaultlib.RegFiles
+Compiling module xil_defaultlib.PCAddr
+Compiling module xil_defaultlib.Chip
+Compiling module xil_defaultlib.Chip_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Chip_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Chip_test_behav -key {Behavioral:Chip:Functional:Chip_test} -tclbatch {Chip_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source Chip_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: [Simtcl 6-168] No object found for the given pattern.
+WARNING: [Add_Wave-1] No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console.
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Chip_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1516.121 ; gain = 0.000
+add_wave {{/Chip_test/u_Chip}} 
+current_wave_config {Untitled 17}
+Untitled 17
+add_wave {{/Chip_test/u_Chip/u_cu}} 
+current_wave_config {Untitled 17}
+Untitled 17
+add_wave {{/Chip_test/u_Chip/u_regfiles}} 
+run 200 ns
+run 200 ns
+run 200 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 200 ns
+run 200 ns
+run 200 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 200 ns
+run 200 ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation -simset [get_filesets Chip ]
+Command: launch_simulation  -simset Chip
+INFO: [Vivado 12-12493] Simulation top is 'Chip_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'Chip'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'Chip_test' in fileset 'Chip'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'Chip'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+"xvlog --incr --relax -prj Chip_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/ALU/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/CU/CU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Chip.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Chip
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Storage/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Extend/Extend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Extend
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Storage/InstrMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstrMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/PCAddr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PCAddr
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Storage/RegFiles.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegFiles
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Simulation/Chip_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Chip_test
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Chip_test_behav xil_defaultlib.Chip_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Chip_test_behav xil_defaultlib.Chip_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.CU
+Compiling module xil_defaultlib.Extend
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.InstrMem
+Compiling module xil_defaultlib.RegFiles
+Compiling module xil_defaultlib.PCAddr
+Compiling module xil_defaultlib.Chip
+Compiling module xil_defaultlib.Chip_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Chip_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Chip_test_behav -key {Behavioral:Chip:Functional:Chip_test} -tclbatch {Chip_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source Chip_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: [Simtcl 6-168] No object found for the given pattern.
+WARNING: [Add_Wave-1] No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console.
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Chip_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1516.121 ; gain = 0.000
+add_wave {{/Chip_test/u_Chip}} 
+current_wave_config {Untitled 18}
+Untitled 18
+add_wave {{/Chip_test/u_Chip/u_cu}} 
+current_wave_config {Untitled 18}
+Untitled 18
+add_wave {{/Chip_test/u_Chip/u_regfiles}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 200 ns
+run 200 ns
+run 200 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 200 ns
+run 200 ns
+run 200 ns
+current_wave_config {Untitled 18}
+Untitled 18
+add_wave {{/Chip_test/u_Chip/u_alu}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 200 ns
+run 200 ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation -simset [get_filesets Chip ]
+Command: launch_simulation  -simset Chip
+INFO: [Vivado 12-12493] Simulation top is 'Chip_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'Chip'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'Chip_test' in fileset 'Chip'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'Chip'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+"xvlog --incr --relax -prj Chip_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/ALU/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/CU/CU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Chip.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Chip
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Storage/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Extend/Extend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Extend
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Storage/InstrMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstrMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/PCAddr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PCAddr
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Storage/RegFiles.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegFiles
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Simulation/Chip_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Chip_test
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Chip_test_behav xil_defaultlib.Chip_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Chip_test_behav xil_defaultlib.Chip_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.CU
+Compiling module xil_defaultlib.Extend
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.InstrMem
+Compiling module xil_defaultlib.RegFiles
+Compiling module xil_defaultlib.PCAddr
+Compiling module xil_defaultlib.Chip
+Compiling module xil_defaultlib.Chip_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Chip_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Chip_test_behav -key {Behavioral:Chip:Functional:Chip_test} -tclbatch {Chip_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source Chip_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: [Simtcl 6-168] No object found for the given pattern.
+WARNING: [Add_Wave-1] No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console.
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Chip_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1516.121 ; gain = 0.000
+add_wave {{/Chip_test/u_Chip}} 
+current_wave_config {Untitled 19}
+Untitled 19
+add_wave {{/Chip_test/u_Chip/u_extend}} 
+current_wave_config {Untitled 19}
+Untitled 19
+add_wave {{/Chip_test/u_Chip/u_regfiles}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 200 ns
+run 200 ns
+run 200 ns
+current_wave_config {Untitled 19}
+Untitled 19
+add_wave {{/Chip_test/u_Chip/u_datamem}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 200 ns
+run 200 ns
+run 200 ns
+run 200 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 200 ns
+run 200 ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation -simset [get_filesets Chip ]
+Command: launch_simulation  -simset Chip
+INFO: [Vivado 12-12493] Simulation top is 'Chip_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'Chip'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'Chip_test' in fileset 'Chip'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'Chip'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+"xvlog --incr --relax -prj Chip_test_vlog.prj"
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/ALU/ALU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ALU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/CU/CU.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module CU
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Chip.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Chip
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Storage/DataMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module DataMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Extend/Extend.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Extend
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Storage/InstrMem.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module InstrMem
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/PCAddr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module PCAddr
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Module/Storage/RegFiles.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module RegFiles
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Git/SimpleCPU01/Simulation/Chip_test.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Chip_test
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Chip_test_behav xil_defaultlib.Chip_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Chip_test_behav xil_defaultlib.Chip_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.ALU
+Compiling module xil_defaultlib.CU
+Compiling module xil_defaultlib.Extend
+Compiling module xil_defaultlib.DataMem
+Compiling module xil_defaultlib.InstrMem
+Compiling module xil_defaultlib.RegFiles
+Compiling module xil_defaultlib.PCAddr
+Compiling module xil_defaultlib.Chip
+Compiling module xil_defaultlib.Chip_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot Chip_test_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '4' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Chip_test_behav -key {Behavioral:Chip:Functional:Chip_test} -tclbatch {Chip_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source Chip_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: [Simtcl 6-168] No object found for the given pattern.
+WARNING: [Add_Wave-1] No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console.
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Chip_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 2508.062 ; gain = 0.000
+add_wave {{/Chip_test/u_Chip}} 
+current_wave_config {Untitled 20}
+Untitled 20
+add_wave {{/Chip_test/u_Chip/u_cu}} 
+current_wave_config {Untitled 20}
+Untitled 20
+add_wave {{/Chip_test/u_Chip/u_regfiles}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 200 ns
+run 200 ns
+current_wave_config {Untitled 20}
+Untitled 20
+add_wave {{/Chip_test/u_Chip/u_datamem}} 
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 200 ns
+run 200 ns
+run 200 ns
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run 200 ns
+run 200 ns
+run 200 ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation -simset [get_filesets Chip ]
+Command: launch_simulation  -simset Chip
+INFO: [Vivado 12-12493] Simulation top is 'Chip_test'
+WARNING: [Vivado 12-12986] Compiled library path does not exist: ''
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'Chip'
+INFO: [SIM-utils-72] Using boost library from 'C:/Xilinx/Vivado/2021.2/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'Chip_test' in fileset 'Chip'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'Chip'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+"xvlog --incr --relax -prj Chip_test_vlog.prj"
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+"xelab --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Chip_test_behav xil_defaultlib.Chip_test xil_defaultlib.glbl -log elaborate.log"
+Vivado Simulator v2021.2
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2021.2/bin/unwrapped/win64.o/xelab.exe --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip --snapshot Chip_test_behav xil_defaultlib.Chip_test xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.sim/Chip/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "Chip_test_behav -key {Behavioral:Chip:Functional:Chip_test} -tclbatch {Chip_test.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Time resolution is 1 ps
+source Chip_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+WARNING: [Simtcl 6-168] No object found for the given pattern.
+WARNING: [Add_Wave-1] No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console.
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'Chip_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 2508.062 ; gain = 0.000
+add_wave {{/Chip_test/u_Chip}} 
+current_wave_config {Untitled 21}
+Untitled 21
+add_wave {{/Chip_test/u_Chip/u_cu}} 
+current_wave_config {Untitled 21}
+Untitled 21
+add_wave {{/Chip_test/u_Chip/u_regfiles}} 
+restart

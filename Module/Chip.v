@@ -151,7 +151,7 @@ ALU u_alu (
 CU u_cu (
     .op         (instr[31:26]),
     .func       (instr[5:0]),
-    .zero       (zero),
+    .zero       (Zero),
     .MemtoReg   (MemtoReg),
     .MemWrite   (MemWrite),
     .RegWrite   (RegWrite),

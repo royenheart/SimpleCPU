@@ -26,8 +26,8 @@ module RegFiles(
     input wire [31:0] WD3,
     input wire clk,
     input wire WE3,
-    output reg [31:0] RD1,
-    output reg [31:0] RD2
+    output wire [31:0] RD1,
+    output wire [31:0] RD2
 );
 
 // 总共需要32个32位的寄存器
@@ -39,10 +39,11 @@ begin
     $readmemh("../../../../../Data/RegFiles.txt", regs);   
 end
 
+assign RD1 = regs[A1];
+assign RD2 = regs[A2];
+
 always@(posedge clk)
 begin
-    RD1 <= A1;
-    RD2 <= A2;
     case(WE3)
         1'b1:
         begin

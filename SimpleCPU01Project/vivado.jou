@@ -1,0 +1,391 @@
+#-----------------------------------------------------------
+# Vivado v2021.2 (64-bit)
+# SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+# IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+# Start of session at: Sun Mar 13 08:16:59 2022
+# Process ID: 5560
+# Current directory: D:/Git/SimpleCPU01/SimpleCPU01Project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17920 D:\Git\SimpleCPU01\SimpleCPU01Project\SimpleCPU01Project.xpr
+# Log file: D:/Git/SimpleCPU01/SimpleCPU01Project/vivado.log
+# Journal file: D:/Git/SimpleCPU01/SimpleCPU01Project\vivado.jou
+# Running On: LAPTOP-TDKNUURL, OS: Windows, CPU Frequency: 2895 MHz, CPU Physical cores: 16, Host memory: 16556 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.xpr
+update_compile_order -fileset sources_1
+launch_simulation -simset [get_filesets Chip ]
+source Chip_test.tcl
+add_wave {{/Chip_test}} 
+current_wave_config {Untitled 1}
+add_wave {{/Chip_test/u_Chip/u_cu}} 
+current_wave_config {Untitled 1}
+add_wave {{/Chip_test/u_Chip/u_regfiles}} 
+restart
+run 10 us
+run 10 us
+restart
+restart
+restart
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+close_sim
+launch_simulation -simset [get_filesets Chip ]
+source Chip_test.tcl
+add_wave {{/Chip_test/u_Chip}} 
+current_wave_config {Untitled 2}
+add_wave {{/Chip_test/u_Chip/u_cu}} 
+current_wave_config {Untitled 2}
+add_wave {{/Chip_test/u_Chip/u_regfiles}} 
+restart
+run 10 ns
+run 10 ns
+run 10 ns
+close_sim
+launch_simulation -simset [get_filesets Chip ]
+source Chip_test.tcl
+add_wave {{/Chip_test/u_Chip}} 
+current_wave_config {Untitled 3}
+add_wave {{/Chip_test/u_Chip/u_regfiles}} 
+current_wave_config {Untitled 3}
+add_wave {{/Chip_test/u_Chip/u_cu}} 
+restart
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+current_wave_config {Untitled 3}
+add_wave {{/Chip_test/u_Chip}} 
+close_sim
+launch_simulation -simset [get_filesets Chip ]
+source Chip_test.tcl
+add_wave {{/Chip_test/u_Chip}} 
+current_wave_config {Untitled 4}
+add_wave {{/Chip_test/u_Chip/u_cu}} 
+current_wave_config {Untitled 4}
+add_wave {{/Chip_test/u_Chip/u_regfiles}} 
+restart
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+close_sim
+launch_simulation -simset [get_filesets Chip ]
+source Chip_test.tcl
+add_wave {{/Chip_test/u_Chip}} 
+current_wave_config {Untitled 5}
+add_wave {{/Chip_test/u_Chip/u_cu}} 
+current_wave_config {Untitled 5}
+add_wave {{/Chip_test/u_Chip/u_regfiles}} 
+restart
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+close_sim
+launch_simulation -simset [get_filesets Chip ]
+source Chip_test.tcl
+add_wave {{/Chip_test/u_Chip}} 
+current_wave_config {Untitled 6}
+add_wave {{/Chip_test/u_Chip/u_regfiles}} 
+current_wave_config {Untitled 6}
+add_wave {{/Chip_test/u_Chip/u_cu}} 
+restart
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+close_sim
+launch_simulation -simset [get_filesets Chip ]
+source Chip_test.tcl
+add_wave {{/Chip_test/u_Chip}} 
+current_wave_config {Untitled 7}
+add_wave {{/Chip_test/u_Chip/u_cu}} 
+current_wave_config {Untitled 7}
+add_wave {{/Chip_test/u_Chip/u_regfiles}} 
+restart
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+close_sim
+launch_simulation -simset [get_filesets Chip ]
+source Chip_test.tcl
+add_wave {{/Chip_test/u_Chip}} 
+restart
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+current_wave_config {Untitled 8}
+add_wave {{/Chip_test/u_Chip/u_regfiles}} 
+restart
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+restart
+current_wave_config {Untitled 8}
+add_wave {{/Chip_test/u_Chip/u_cu}} 
+current_wave_config {Untitled 8}
+add_wave {{/Chip_test/u_Chip/u_regfiles}} 
+restart
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+close_sim
+launch_simulation -simset [get_filesets Chip ]
+source Chip_test.tcl
+add_wave {{/Chip_test/u_Chip}} 
+current_wave_config {Untitled 9}
+add_wave {{/Chip_test/u_Chip/u_cu}} 
+current_wave_config {Untitled 9}
+add_wave {{/Chip_test/u_Chip/u_regfiles}} 
+restart
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+current_wave_config {Untitled 9}
+add_wave {{/Chip_test/u_Chip/u_alu}} 
+restart
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+close_sim
+launch_simulation -simset [get_filesets Chip ]
+source Chip_test.tcl
+add_wave {{/Chip_test/u_Chip}} 
+current_wave_config {Untitled 10}
+add_wave {{/Chip_test/u_Chip/u_cu}} 
+current_wave_config {Untitled 10}
+add_wave {{/Chip_test/u_Chip/u_regfiles}} 
+restart
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+run 10 ns
+close_sim
+launch_simulation -simset [get_filesets Chip ]
+source Chip_test.tcl
+add_wave {{/Chip_test/u_Chip}} 
+current_wave_config {Untitled 11}
+add_wave {{/Chip_test/u_Chip/u_cu}} 
+current_wave_config {Untitled 11}
+add_wave {{/Chip_test/u_Chip/u_regfiles}} 
+restart
+run all
+restart
+run 100 ns
+run 100 ns
+close_sim
+launch_simulation -simset [get_filesets Chip ]
+source Chip_test.tcl
+add_wave {{/Chip_test/u_Chip}} 
+current_wave_config {Untitled 12}
+add_wave {{/Chip_test/u_Chip/u_cu}} 
+current_wave_config {Untitled 12}
+add_wave {{/Chip_test/u_Chip/u_regfiles}} 
+restart
+run 100 ns
+run 100 ns
+close_sim
+launch_simulation -simset [get_filesets Chip ]
+source Chip_test.tcl
+add_wave {{/Chip_test/u_Chip}} 
+current_wave_config {Untitled 13}
+add_wave {{/Chip_test/u_Chip/u_cu}} 
+current_wave_config {Untitled 13}
+add_wave {{/Chip_test/u_Chip/u_regfiles}} 
+restart
+run 200 ns
+run 200 ns
+close_sim
+launch_simulation -simset [get_filesets Chip ]
+source Chip_test.tcl
+add_wave {{/Chip_test/u_Chip}} 
+current_wave_config {Untitled 14}
+add_wave {{/Chip_test/u_Chip/u_cu}} 
+current_wave_config {Untitled 14}
+add_wave {{/Chip_test/u_Chip/u_regfiles}} 
+restart
+run 200 ns
+run 200 ns
+close_sim
+launch_simulation -simset [get_filesets Chip ]
+source Chip_test.tcl
+add_wave {{/Chip_test/u_Chip}} 
+current_wave_config {Untitled 15}
+add_wave {{/Chip_test/u_Chip/u_cu}} 
+current_wave_config {Untitled 15}
+add_wave {{/Chip_test/u_Chip/u_regfiles}} 
+restart
+run 200 ns
+run 200 ns
+close_sim
+launch_simulation -simset [get_filesets Chip ]
+source Chip_test.tcl
+add_wave {{/Chip_test/u_Chip}} 
+current_wave_config {Untitled 16}
+add_wave {{/Chip_test/u_Chip/u_cu}} 
+current_wave_config {Untitled 16}
+add_wave {{/Chip_test/u_Chip/u_regfiles}} 
+restart
+run 200 ns
+run 200 ns
+close_sim
+launch_simulation -simset [get_filesets Chip ]
+source Chip_test.tcl
+add_wave {{/Chip_test/u_Chip}} 
+current_wave_config {Untitled 17}
+add_wave {{/Chip_test/u_Chip/u_cu}} 
+current_wave_config {Untitled 17}
+add_wave {{/Chip_test/u_Chip/u_regfiles}} 
+run 200 ns
+run 200 ns
+run 200 ns
+restart
+run 200 ns
+run 200 ns
+run 200 ns
+restart
+run 200 ns
+run 200 ns
+close_sim
+launch_simulation -simset [get_filesets Chip ]
+source Chip_test.tcl
+add_wave {{/Chip_test/u_Chip}} 
+current_wave_config {Untitled 18}
+add_wave {{/Chip_test/u_Chip/u_cu}} 
+current_wave_config {Untitled 18}
+add_wave {{/Chip_test/u_Chip/u_regfiles}} 
+restart
+run 200 ns
+run 200 ns
+run 200 ns
+restart
+run 200 ns
+run 200 ns
+run 200 ns
+current_wave_config {Untitled 18}
+add_wave {{/Chip_test/u_Chip/u_alu}} 
+restart
+run 200 ns
+run 200 ns
+close_sim
+launch_simulation -simset [get_filesets Chip ]
+source Chip_test.tcl
+add_wave {{/Chip_test/u_Chip}} 
+current_wave_config {Untitled 19}
+add_wave {{/Chip_test/u_Chip/u_extend}} 
+current_wave_config {Untitled 19}
+add_wave {{/Chip_test/u_Chip/u_regfiles}} 
+restart
+run 200 ns
+run 200 ns
+run 200 ns
+current_wave_config {Untitled 19}
+add_wave {{/Chip_test/u_Chip/u_datamem}} 
+restart
+run 200 ns
+run 200 ns
+run 200 ns
+run 200 ns
+restart
+run 200 ns
+run 200 ns
+close_sim
+launch_simulation -simset [get_filesets Chip ]
+source Chip_test.tcl
+add_wave {{/Chip_test/u_Chip}} 
+current_wave_config {Untitled 20}
+add_wave {{/Chip_test/u_Chip/u_cu}} 
+current_wave_config {Untitled 20}
+add_wave {{/Chip_test/u_Chip/u_regfiles}} 
+restart
+run 200 ns
+run 200 ns
+current_wave_config {Untitled 20}
+add_wave {{/Chip_test/u_Chip/u_datamem}} 
+restart
+run 200 ns
+run 200 ns
+run 200 ns
+restart
+run 200 ns
+run 200 ns
+run 200 ns
+close_sim
+launch_simulation -simset [get_filesets Chip ]
+source Chip_test.tcl
+add_wave {{/Chip_test/u_Chip}} 
+current_wave_config {Untitled 21}
+add_wave {{/Chip_test/u_Chip/u_cu}} 
+current_wave_config {Untitled 21}
+add_wave {{/Chip_test/u_Chip/u_regfiles}} 
+restart

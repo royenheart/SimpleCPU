@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: 谢皓泽
+// Engineer: 谢皓�?
 // 
 // Create Date: 2022/03/06 18:58:34
 // Design Name: 
@@ -24,8 +24,8 @@ module CU(
     input wire [5:0] op,
     // 6位功能数输入，与op共同决定输出
     input wire [5:0] func,
-    // ALU Zero信号，用于判断条件跳转语句是否成立
-    // 只在跳转指令时需要进行判断
+    // ALU Zero信号，用于判断条件跳转语句是否成�?
+    // 只在跳转指令时需要进行判�?
     input wire zero,
     output wire MemtoReg,
     output wire MemWrite,
@@ -40,18 +40,20 @@ module CU(
     output wire PCtoReg
 );
 
-assign opfunc = {op, func};
+wire [11:0] opfunc;
+
+assign opfunc = {op,func};
 
 assign MemtoReg = (op == 6'b100011)?1'b1:1'b0;
 assign MemWrite = (op == 6'b101011)?1'b1:1'b0;
 assign RegWrite = (op == 6'b101011)?1'b0:1'b1;
 assign ALUControl[4] = (opfunc == 12'b000000001000 || op == 6'b000010 || op == 6'b000011)?1'b1:1'b0;
 assign ALUControl[3] = (opfunc == 12'b000000101010 || opfunc == 12'b000000101011 || opfunc == 12'b000000000000 || opfunc == 12'b000000000010 || opfunc == 12'b000000000011 || opfunc == 12'b000000000100 || opfunc == 12'b000000000110 || opfunc == 12'b000000000111 || opfunc == 12'b000000001000 || op == 6'b001111 || op == 6'b000100 || op == 6'b000101 || op == 6'b001010 || op == 6'b001011 || op == 6'b000010 || op == 6'b000011)?1'b1:1'b0;
-assign ALUControl[2] = (opfunc == 12'b000000100100 || opfunc == 12'b000000100101 || opfunc == 12'b000000100110 || opfunc == 12'b000000100111 || opfunc == 12'b000000000011 || opfunc == 12'b000000000111 || opfunc == 12'b000000001000 || op == 6'b001100 || op == 6'b001101 || op == 6'b001110 || op == 6'b000100 || op == 6'b000101 || op == 6'b001010 || op == 6'b001011 || op == 6'b000010 || op == 6'b000011)?1'b1:1'b0;
-assign ALUControl[1] = (opfunc == 12'b000000100010 || opfunc == 12'b000000100011 || opfunc == 12'b000000100110 || opfunc == 12'b000000100111 || opfunc == 12'b000000000000 || opfunc == 12'b000000000010 || opfunc == 12'b000000000100 || opfunc == 12'b000000000110 || opfunc == 12'b000000001000 || op == 6'b001110 || op == 6'b001111 || op == 6'b000101 || op == 6'b001010 || op == 6'b001011 || op == 6'b000010 || op == 6'b000011)?1'b1:1'b0;
-assign ALUControl[0] = (opfunc == 12'b000000100001 || opfunc == 12'b000000100011 || opfunc == 12'b000000100101 || opfunc == 12'b000000100111 || opfunc == 12'b000000101011 || opfunc == 12'b000000000010 || opfunc == 12'b000000000110 || opfunc == 12'b000000001000 || op == 6'b001101 || op == 6'b000100 || op == 6'b001010 || op == 6'b001011 || op == 6'b000010 || op == 6'b000011)?1'b1:1'b0;
+assign ALUControl[2] = (opfunc == 12'b000000100100 || opfunc == 12'b000000100101 || opfunc == 12'b000000100110 || opfunc == 12'b000000100111 || opfunc == 12'b000000000011 || opfunc == 12'b000000000111 || opfunc == 12'b000000001000 || op == 6'b001100 || op == 6'b001101 || op == 6'b001110 || op == 6'b001111 || op == 6'b000100 || op == 6'b000101 || op == 6'b000010 || op == 6'b000011)?1'b1:1'b0;
+assign ALUControl[1] = (opfunc == 12'b000000100010 || opfunc == 12'b000000100011 || opfunc == 12'b000000100110 || opfunc == 12'b000000100111 || opfunc == 12'b000000000000 || opfunc == 12'b000000000010 || opfunc == 12'b000000000100 || opfunc == 12'b000000000110 || opfunc == 12'b000000001000 || op == 6'b001110 || op == 6'b001111 || op == 6'b000101 || op == 6'b000010 || op == 6'b000011)?1'b1:1'b0;
+assign ALUControl[0] = (opfunc == 12'b000000100001 || opfunc == 12'b000000100011 || opfunc == 12'b000000100101 || opfunc == 12'b000000100111 || opfunc == 12'b000000101011 || opfunc == 12'b000000000010 || opfunc == 12'b000000000110 || opfunc == 12'b000000001000 || op == 6'b001101 || op == 6'b001111 || op == 6'b000100 || op == 6'b001011 || op == 6'b000010 || op == 6'b000011)?1'b1:1'b0;
 assign Branch[1] = (op == 6'b000010 || op == 6'b000011 || opfunc == 12'b000000001000)?1'b1:1'b0;
-assign Branch[0] = (opfunc == 12'b000000001000 || (op == 6'b000100 && {1'b0, zero}) || (op == 6'b000101 && {1'b0, zero}))?1'b1:1'b0;
+assign Branch[0] = (opfunc == 12'b000000001000 || (op == 6'b000100 && zero == 1'b1) || (op == 6'b000101 && zero == 1'b1))?1'b1:1'b0;
 assign ALUSrcA = (opfunc == 12'b000000000000 || opfunc == 12'b000000000010 || opfunc == 12'b000000000011)?1'b1:1'b0;
 assign ALUSrcB = (op == 6'b001000 || op == 6'b001001 || op == 6'b001100 || op == 6'b001101 || op == 6'b001110 || op == 6'b001111 || op == 6'b100011 || op == 6'b101011 || op == 6'b001010 || op == 6'b001011)?1'b1:1'b0;
 assign RegDst = (opfunc == 12'b000000100000 || opfunc == 12'b000000100001 || opfunc == 12'b000000100010 || opfunc == 12'b000000100011 || opfunc == 12'b000000100100 || opfunc == 12'b000000100101 || opfunc == 12'b000000100110 || opfunc == 12'b000000100111 || opfunc == 12'b000000101010 || opfunc == 12'b000000101011 || opfunc == 12'b000000000000 || opfunc == 12'b000000000010 || opfunc == 12'b000000000011 || opfunc == 12'b000000000100 || opfunc == 12'b000000000110 || opfunc == 12'b000000000111 || opfunc == 12'b000000001000)?1'b1:1'b0;
