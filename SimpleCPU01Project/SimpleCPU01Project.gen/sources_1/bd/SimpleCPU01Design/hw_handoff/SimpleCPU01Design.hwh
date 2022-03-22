@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Mar 22 15:05:28 2022" VIVADOVERSION="2021.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Mar 22 15:22:50 2022" VIVADOVERSION="2021.2">
 
   <SYSTEMINFO ARCH="virtex7" DEVICE="7vx485t" NAME="SimpleCPU01Design" PACKAGE="ffg1157" SPEEDGRADE="-1"/>
 
@@ -9,7 +9,7 @@
         <CONNECTION INSTANCE="dist_mem_gen_0" PORT="a"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="O" LEFT="31" NAME="spo_0" RIGHT="0" SIGIS="undef" SIGNAME="dist_mem_gen_0_spo">
+    <PORT DIR="O" LEFT="7" NAME="spo_0" RIGHT="0" SIGIS="undef" SIGNAME="dist_mem_gen_0_spo">
       <CONNECTIONS>
         <CONNECTION INSTANCE="dist_mem_gen_0" PORT="spo"/>
       </CONNECTIONS>
@@ -54,10 +54,10 @@
         <PARAMETER NAME="C_REG_A_D_INPUTS" VALUE="0"/>
         <PARAMETER NAME="C_REG_DPRA_INPUT" VALUE="0"/>
         <PARAMETER NAME="C_SYNC_ENABLE" VALUE="1"/>
-        <PARAMETER NAME="C_WIDTH" VALUE="32"/>
+        <PARAMETER NAME="C_WIDTH" VALUE="8"/>
         <PARAMETER NAME="C_PARSER_TYPE" VALUE="1"/>
         <PARAMETER NAME="depth" VALUE="1024"/>
-        <PARAMETER NAME="data_width" VALUE="32"/>
+        <PARAMETER NAME="data_width" VALUE="8"/>
         <PARAMETER NAME="Component_Name" VALUE="SimpleCPU01Design_dist_mem_gen_0_0"/>
         <PARAMETER NAME="memory_type" VALUE="rom"/>
         <PARAMETER NAME="input_options" VALUE="non_registered"/>
@@ -90,7 +90,7 @@
             <CONNECTION INSTANCE="External_Ports" PORT="a_0"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="spo" RIGHT="0" SIGIS="undef" SIGNAME="dist_mem_gen_0_spo">
+        <PORT DIR="O" LEFT="7" NAME="spo" RIGHT="0" SIGIS="undef" SIGNAME="dist_mem_gen_0_spo">
           <CONNECTIONS>
             <CONNECTION INSTANCE="External_Ports" PORT="spo_0"/>
           </CONNECTIONS>

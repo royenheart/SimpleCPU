@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="SimpleCPU01Design_dist_mem_gen_0_0_synth_1" LaunchPart="xc7vx485tffg1157-1" LaunchTime="1647932731">
+<GenRun Id="SimpleCPU01Design_dist_mem_gen_0_0_synth_1" LaunchPart="xc7vx485tffg1157-1" LaunchTime="1647933772">
   <File Type="PA-TCL" Name="SimpleCPU01Design_dist_mem_gen_0_0.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="SimpleCPU01Design_dist_mem_gen_0_0_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="SimpleCPU01Design_dist_mem_gen_0_0_reports.tcl"/>

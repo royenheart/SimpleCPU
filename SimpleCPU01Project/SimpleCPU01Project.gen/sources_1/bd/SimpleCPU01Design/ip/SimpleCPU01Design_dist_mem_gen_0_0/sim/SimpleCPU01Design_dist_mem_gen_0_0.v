@@ -59,7 +59,7 @@ module SimpleCPU01Design_dist_mem_gen_0_0 (
 );
 
 input wire [9 : 0] a;
-output wire [31 : 0] spo;
+output wire [7 : 0] spo;
 
   dist_mem_gen_v8_0_13 #(
     .C_FAMILY("virtex7"),
@@ -92,11 +92,11 @@ output wire [31 : 0] spo;
     .C_REG_A_D_INPUTS(0),
     .C_REG_DPRA_INPUT(0),
     .C_SYNC_ENABLE(1),
-    .C_WIDTH(32),
+    .C_WIDTH(8),
     .C_PARSER_TYPE(1)
   ) inst (
     .a(a),
-    .d(32'B0),
+    .d(8'B0),
     .dpra(10'B0),
     .clk(1'D0),
     .we(1'D0),

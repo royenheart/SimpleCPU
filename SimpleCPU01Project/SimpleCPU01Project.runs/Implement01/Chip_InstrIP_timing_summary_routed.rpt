@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
-| Date         : Tue Mar 22 15:09:42 2022
+| Date         : Tue Mar 22 15:27:13 2022
 | Host         : LAPTOP-TDKNUURL running 64-bit major release  (build 9200)
 | Command      : report_timing_summary -max_paths 10 -report_unconstrained -file Chip_InstrIP_timing_summary_routed.rpt -pb Chip_InstrIP_timing_summary_routed.pb -rpx Chip_InstrIP_timing_summary_routed.rpx -warn_on_violation
 | Design       : Chip_InstrIP
@@ -41,7 +41,7 @@ Timing Summary Report
 
 Rule       Severity          Description                  Violations  
 ---------  ----------------  ---------------------------  ----------  
-TIMING-17  Critical Warning  Non-clocked sequential cell  120         
+TIMING-17  Critical Warning  Non-clocked sequential cell  1000        
 
 Note: This report is based on the most recent report_methodology run and may not be up-to-date. Run report_methodology on the current design for the latest report.
 
@@ -51,12 +51,12 @@ check_timing report
 
 Table of Contents
 -----------------
-1. checking no_clock (120)
+1. checking no_clock (2168)
 2. checking constant_clock (0)
 3. checking pulse_width_clock (0)
-4. checking unconstrained_internal_endpoints (540)
+4. checking unconstrained_internal_endpoints (4724)
 5. checking no_input_delay (0)
-6. checking no_output_delay (437)
+6. checking no_output_delay (504)
 7. checking multiple_clock (0)
 8. checking generated_clocks (0)
 9. checking loops (0)
@@ -64,9 +64,9 @@ Table of Contents
 11. checking partial_output_delay (0)
 12. checking latch_loops (0)
 
-1. checking no_clock (120)
---------------------------
- There are 120 register/latch pins with no clock driven by root clock pin: clk (HIGH)
+1. checking no_clock (2168)
+---------------------------
+ There are 2168 register/latch pins with no clock driven by root clock pin: clk (HIGH)
 
 
 2. checking constant_clock (0)
@@ -79,9 +79,9 @@ Table of Contents
  There are 0 register/latch pins which need pulse_width check
 
 
-4. checking unconstrained_internal_endpoints (540)
---------------------------------------------------
- There are 540 pins that are not constrained for maximum delay. (HIGH)
+4. checking unconstrained_internal_endpoints (4724)
+---------------------------------------------------
+ There are 4724 pins that are not constrained for maximum delay. (HIGH)
 
  There are 0 pins that are not constrained for maximum delay due to constant clock.
 
@@ -93,9 +93,9 @@ Table of Contents
  There are 0 input ports with no input delay but user has a false path constraint.
 
 
-6. checking no_output_delay (437)
+6. checking no_output_delay (504)
 ---------------------------------
- There are 437 ports with no output delay specified. (HIGH)
+ There are 504 ports with no output delay specified. (HIGH)
 
  There are 0 ports with no output delay but user has a false path constraint
 
@@ -140,7 +140,7 @@ Table of Contents
 
     WNS(ns)      TNS(ns)  TNS Failing Endpoints  TNS Total Endpoints      WHS(ns)      THS(ns)  THS Failing Endpoints  THS Total Endpoints     WPWS(ns)     TPWS(ns)  TPWS Failing Endpoints  TPWS Total Endpoints  
     -------      -------  ---------------------  -------------------      -------      -------  ---------------------  -------------------     --------     --------  ----------------------  --------------------  
-        inf        0.000                      0                  977          inf        0.000                      0                  977           NA           NA                      NA                    NA  
+        inf        0.000                      0                 5228          inf        0.000                      0                 5228           NA           NA                      NA                    NA  
 
 
 There are no user specified timing constraints.
@@ -209,8 +209,8 @@ Path Group:  (none)
 From Clock:  
   To Clock:  
 
-Max Delay           977 Endpoints
-Min Delay           977 Endpoints
+Max Delay          5228 Endpoints
+Min Delay          5228 Endpoints
 --------------------------------------------------------------------------------------
 
 
@@ -219,397 +219,649 @@ Max Delay Paths
 Slack:                    inf
   Source:                 u_pcaddr/store_reg[0]/C
                             (rising edge-triggered cell FDRE)
-  Destination:            ALUResultExp[24]
+  Destination:            WD3TempExp[25]
                             (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        27.902ns  (logic 3.516ns (12.600%)  route 24.387ns (87.400%))
-  Logic Levels:           12  (FDRE=1 LUT2=2 LUT3=4 LUT5=1 LUT6=3 OBUF=1)
+  Data Path Delay:        35.105ns  (logic 4.584ns (13.059%)  route 30.521ns (86.941%))
+  Logic Levels:           22  (CARRY4=4 FDRE=1 LUT3=2 LUT4=2 LUT5=1 LUT6=6 MUXF7=2 MUXF8=2 OBUF=1 RAMD32=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X122Y193       FDRE                         0.000     0.000 r  u_pcaddr/store_reg[0]/C
-    SLICE_X122Y193       FDRE (Prop_fdre_C_Q)         0.308     0.308 r  u_pcaddr/store_reg[0]/Q
-                         net (fo=61, routed)          3.350     3.658    u_instrmembrom/u_mem_generator/SimpleCPU01Design_i/dist_mem_gen_0/U0/synth_options.dist_mem_inst/gen_rom.rom_inst/a[0]
-    SLICE_X48Y212        LUT3 (Prop_lut3_I2_O)        0.065     3.723 f  u_instrmembrom/u_mem_generator/SimpleCPU01Design_i/dist_mem_gen_0/U0/synth_options.dist_mem_inst/gen_rom.rom_inst/spo[30]_INST_0/O
-                         net (fo=9, routed)           4.154     7.877    u_instrmembrom/u_mem_generator/spo_0[30]
-    SLICE_X139Y215       LUT2 (Prop_lut2_I1_O)        0.179     8.056 f  u_instrmembrom/u_mem_generator/ALUControlExp_OBUF[4]_inst_i_4/O
-                         net (fo=35, routed)          0.959     9.015    u_instrmembrom/u_mem_generator/ALUControlExp_OBUF[4]_inst_i_4_n_0
-    SLICE_X144Y212       LUT3 (Prop_lut3_I0_O)        0.170     9.185 r  u_instrmembrom/u_mem_generator/ALUSrcAExp_OBUF_inst_i_1/O
-                         net (fo=159, routed)         3.271    12.456    u_instrmembrom/u_mem_generator/bbstub_spo[3]
-    SLICE_X158Y207       LUT3 (Prop_lut3_I1_O)        0.053    12.509 f  u_instrmembrom/u_mem_generator/SrcAExp_OBUF[3]_inst_i_2/O
-                         net (fo=131, routed)         2.069    14.578    u_instrmembrom/u_mem_generator/SrcAExp_OBUF[1]
-    SLICE_X138Y202       LUT2 (Prop_lut2_I0_O)        0.053    14.631 f  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[30]_inst_i_12/O
-                         net (fo=17, routed)          0.839    15.470    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[30]_inst_i_12_n_0
-    SLICE_X144Y203       LUT5 (Prop_lut5_I2_O)        0.053    15.523 f  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[25]_inst_i_15/O
-                         net (fo=3, routed)           0.550    16.073    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[25]_inst_i_15_n_0
-    SLICE_X143Y206       LUT6 (Prop_lut6_I5_O)        0.053    16.126 f  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[25]_inst_i_17/O
-                         net (fo=2, routed)           0.682    16.808    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[25]_inst_i_17_n_0
-    SLICE_X142Y203       LUT3 (Prop_lut3_I0_O)        0.066    16.874 r  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[24]_inst_i_7/O
-                         net (fo=1, routed)           0.679    17.553    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[24]_inst_i_7_n_0
-    SLICE_X141Y205       LUT6 (Prop_lut6_I4_O)        0.168    17.721 r  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[24]_inst_i_3/O
-                         net (fo=1, routed)           0.565    18.286    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[24]_inst_i_3_n_0
-    SLICE_X141Y210       LUT6 (Prop_lut6_I3_O)        0.053    18.339 r  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[24]_inst_i_1/O
-                         net (fo=5, routed)           7.269    25.608    ALUResultExp_OBUF[24]
-    AK28                 OBUF (Prop_obuf_I_O)         2.295    27.902 r  ALUResultExp_OBUF[24]_inst/O
-                         net (fo=0)                   0.000    27.902    ALUResultExp[24]
-    AK28                                                              r  ALUResultExp[24] (OUT)
+    SLICE_X54Y202        FDRE                         0.000     0.000 r  u_pcaddr/store_reg[0]/C
+    SLICE_X54Y202        FDRE (Prop_fdre_C_Q)         0.308     0.308 r  u_pcaddr/store_reg[0]/Q
+                         net (fo=41, routed)          2.681     2.989    u_pcaddr/Q[0]
+    SLICE_X46Y250        LUT4 (Prop_lut4_I2_O)        0.065     3.054 r  u_pcaddr/SimpleCPU01Design_i_i_7/O
+                         net (fo=16, routed)          1.250     4.304    u_instrmembrom/u_mem_generator_1/SimpleCPU01Design_i/dist_mem_gen_0/U0/synth_options.dist_mem_inst/gen_rom.rom_inst/a[3]
+    SLICE_X46Y248        LUT5 (Prop_lut5_I1_O)        0.168     4.472 r  u_instrmembrom/u_mem_generator_1/SimpleCPU01Design_i/dist_mem_gen_0/U0/synth_options.dist_mem_inst/gen_rom.rom_inst/spo[0]_INST_0/O
+                         net (fo=37, routed)          5.029     9.501    u_regfiles/regs_reg_r2_0_31_0_5/ADDRC0
+    SLICE_X56Y165        RAMD32 (Prop_ramd32_RADR0_O)
+                                                      0.063     9.564 f  u_regfiles/regs_reg_r2_0_31_0_5/RAMC/O
+                         net (fo=91, routed)          5.079    14.644    u_instrmembrom/u_mem_generator_0/RD2Exp_OBUF[4]
+    SLICE_X120Y170       LUT3 (Prop_lut3_I0_O)        0.175    14.819 f  u_instrmembrom/u_mem_generator_0/SrcBExp_OBUF[4]_inst_i_1/O
+                         net (fo=15, routed)          1.911    16.730    u_instrmembrom/u_mem_generator_3/p_2_out_inferred__0/i__carry__6[0]
+    SLICE_X125Y184       LUT6 (Prop_lut6_I5_O)        0.164    16.894 r  u_instrmembrom/u_mem_generator_3/i__carry_i_2/O
+                         net (fo=1, routed)           0.251    17.145    u_alu/out2_inferred__5/i__carry__0_0[2]
+    SLICE_X122Y184       CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.244    17.389 r  u_alu/out2_inferred__5/i__carry/CO[3]
+                         net (fo=1, routed)           0.000    17.389    u_alu/out2_inferred__5/i__carry_n_0
+    SLICE_X122Y185       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060    17.449 r  u_alu/out2_inferred__5/i__carry__0/CO[3]
+                         net (fo=1, routed)           0.000    17.449    u_alu/out2_inferred__5/i__carry__0_n_0
+    SLICE_X122Y186       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060    17.509 r  u_alu/out2_inferred__5/i__carry__1/CO[3]
+                         net (fo=1, routed)           0.000    17.509    u_alu/out2_inferred__5/i__carry__1_n_0
+    SLICE_X122Y187       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060    17.569 r  u_alu/out2_inferred__5/i__carry__2/CO[3]
+                         net (fo=1, routed)           0.752    18.320    u_instrmembrom/u_mem_generator_0/ALUResultExp_OBUF[0]_inst_i_7_1[0]
+    SLICE_X118Y184       LUT4 (Prop_lut4_I3_O)        0.053    18.373 r  u_instrmembrom/u_mem_generator_0/ALUResultExp_OBUF[0]_inst_i_10/O
+                         net (fo=1, routed)           0.315    18.689    u_instrmembrom/u_mem_generator_0/ALUResultExp_OBUF[0]_inst_i_10_n_0
+    SLICE_X118Y184       LUT6 (Prop_lut6_I0_O)        0.053    18.742 r  u_instrmembrom/u_mem_generator_0/ALUResultExp_OBUF[0]_inst_i_7/O
+                         net (fo=1, routed)           1.057    19.798    u_instrmembrom/u_mem_generator_3/WD3Exp_OBUF[0]_inst_i_2_2
+    SLICE_X110Y176       LUT6 (Prop_lut6_I5_O)        0.053    19.851 f  u_instrmembrom/u_mem_generator_3/ALUResultExp_OBUF[0]_inst_i_3/O
+                         net (fo=19, routed)          0.705    20.556    u_instrmembrom/u_mem_generator_3/ALUResultExp_OBUF[0]_inst_i_3_n_0
+    SLICE_X106Y173       LUT6 (Prop_lut6_I2_O)        0.053    20.609 r  u_instrmembrom/u_mem_generator_3/store[3][1]_i_3/O
+                         net (fo=126, routed)         5.545    26.154    u_datamem/DataMemReadExp_OBUF[1]_inst_i_40_0
+    SLICE_X80Y160        LUT6 (Prop_lut6_I4_O)        0.053    26.207 r  u_datamem/DataMemReadExp_OBUF[25]_inst_i_108/O
+                         net (fo=1, routed)           0.000    26.207    u_datamem/DataMemReadExp_OBUF[25]_inst_i_108_n_0
+    SLICE_X80Y160        MUXF7 (Prop_muxf7_I1_O)      0.129    26.336 r  u_datamem/DataMemReadExp_OBUF[25]_inst_i_49/O
+                         net (fo=1, routed)           0.000    26.336    u_datamem/DataMemReadExp_OBUF[25]_inst_i_49_n_0
+    SLICE_X80Y160        MUXF8 (Prop_muxf8_I1_O)      0.054    26.390 r  u_datamem/DataMemReadExp_OBUF[25]_inst_i_20/O
+                         net (fo=1, routed)           0.711    27.101    u_datamem/DataMemReadExp_OBUF[25]_inst_i_20_n_0
+    SLICE_X87Y152        LUT6 (Prop_lut6_I0_O)        0.153    27.254 r  u_datamem/DataMemReadExp_OBUF[25]_inst_i_7/O
+                         net (fo=1, routed)           0.000    27.254    u_datamem/DataMemReadExp_OBUF[25]_inst_i_7_n_0
+    SLICE_X87Y152        MUXF7 (Prop_muxf7_I1_O)      0.129    27.383 r  u_datamem/DataMemReadExp_OBUF[25]_inst_i_3/O
+                         net (fo=1, routed)           0.000    27.383    u_datamem/DataMemReadExp_OBUF[25]_inst_i_3_n_0
+    SLICE_X87Y152        MUXF8 (Prop_muxf8_I1_O)      0.054    27.437 r  u_datamem/DataMemReadExp_OBUF[25]_inst_i_1/O
+                         net (fo=3, routed)           1.111    28.548    u_instrmembrom/u_mem_generator_0/WD3TempExp[31][24]
+    SLICE_X102Y141       LUT3 (Prop_lut3_I0_O)        0.153    28.701 r  u_instrmembrom/u_mem_generator_0/WD3TempExp_OBUF[25]_inst_i_1/O
+                         net (fo=1, routed)           4.124    32.825    WD3TempExp_OBUF[25]
+    AF8                  OBUF (Prop_obuf_I_O)         2.280    35.105 r  WD3TempExp_OBUF[25]_inst/O
+                         net (fo=0)                   0.000    35.105    WD3TempExp[25]
+    AF8                                                               r  WD3TempExp[25] (OUT)
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
   Source:                 u_pcaddr/store_reg[0]/C
                             (rising edge-triggered cell FDRE)
-  Destination:            WD3Exp[22]
+  Destination:            WD3TempExp[30]
                             (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        27.708ns  (logic 3.563ns (12.861%)  route 24.145ns (87.139%))
-  Logic Levels:           11  (FDRE=1 LUT2=2 LUT3=3 LUT4=1 LUT6=3 OBUF=1)
+  Data Path Delay:        34.892ns  (logic 4.706ns (13.486%)  route 30.187ns (86.514%))
+  Logic Levels:           22  (CARRY4=4 FDRE=1 LUT3=2 LUT4=2 LUT5=1 LUT6=6 MUXF7=2 MUXF8=2 OBUF=1 RAMD32=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X122Y193       FDRE                         0.000     0.000 r  u_pcaddr/store_reg[0]/C
-    SLICE_X122Y193       FDRE (Prop_fdre_C_Q)         0.308     0.308 r  u_pcaddr/store_reg[0]/Q
-                         net (fo=61, routed)          3.350     3.658    u_instrmembrom/u_mem_generator/SimpleCPU01Design_i/dist_mem_gen_0/U0/synth_options.dist_mem_inst/gen_rom.rom_inst/a[0]
-    SLICE_X48Y212        LUT3 (Prop_lut3_I2_O)        0.065     3.723 f  u_instrmembrom/u_mem_generator/SimpleCPU01Design_i/dist_mem_gen_0/U0/synth_options.dist_mem_inst/gen_rom.rom_inst/spo[30]_INST_0/O
-                         net (fo=9, routed)           4.154     7.877    u_instrmembrom/u_mem_generator/spo_0[30]
-    SLICE_X139Y215       LUT2 (Prop_lut2_I1_O)        0.179     8.056 f  u_instrmembrom/u_mem_generator/ALUControlExp_OBUF[4]_inst_i_4/O
-                         net (fo=35, routed)          0.959     9.015    u_instrmembrom/u_mem_generator/ALUControlExp_OBUF[4]_inst_i_4_n_0
-    SLICE_X144Y212       LUT3 (Prop_lut3_I0_O)        0.170     9.185 r  u_instrmembrom/u_mem_generator/ALUSrcAExp_OBUF_inst_i_1/O
-                         net (fo=159, routed)         2.928    12.113    u_regfiles/ALUSrcAExp_OBUF
-    SLICE_X155Y209       LUT4 (Prop_lut4_I2_O)        0.068    12.181 r  u_regfiles/ALUResultExp_OBUF[3]_inst_i_9/O
-                         net (fo=2, routed)           0.465    12.646    u_regfiles/regs_reg_r1_0_31_6_11_1
-    SLICE_X154Y209       LUT6 (Prop_lut6_I5_O)        0.169    12.815 f  u_regfiles/ALUResultExp_OBUF[8]_inst_i_5/O
-                         net (fo=7, routed)           0.745    13.560    u_instrmembrom/u_mem_generator/WD3Exp_OBUF[1]_inst_i_2_0
-    SLICE_X141Y209       LUT3 (Prop_lut3_I0_O)        0.065    13.625 f  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[31]_inst_i_7/O
-                         net (fo=19, routed)          1.595    15.220    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[31]_inst_i_7_n_0
-    SLICE_X145Y200       LUT2 (Prop_lut2_I1_O)        0.170    15.390 f  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[15]_inst_i_4/O
-                         net (fo=15, routed)          1.534    16.924    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[15]_inst_i_4_n_0
-    SLICE_X139Y205       LUT6 (Prop_lut6_I5_O)        0.053    16.977 r  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[22]_inst_i_3/O
-                         net (fo=1, routed)           0.567    17.543    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[22]_inst_i_3_n_0
-    SLICE_X143Y205       LUT6 (Prop_lut6_I3_O)        0.053    17.596 r  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[22]_inst_i_1/O
-                         net (fo=5, routed)           7.849    25.445    WD3Exp_OBUF[22]
-    H10                  OBUF (Prop_obuf_I_O)         2.263    27.708 r  WD3Exp_OBUF[22]_inst/O
-                         net (fo=0)                   0.000    27.708    WD3Exp[22]
-    H10                                                               r  WD3Exp[22] (OUT)
+    SLICE_X54Y202        FDRE                         0.000     0.000 r  u_pcaddr/store_reg[0]/C
+    SLICE_X54Y202        FDRE (Prop_fdre_C_Q)         0.308     0.308 r  u_pcaddr/store_reg[0]/Q
+                         net (fo=41, routed)          2.681     2.989    u_pcaddr/Q[0]
+    SLICE_X46Y250        LUT4 (Prop_lut4_I2_O)        0.065     3.054 r  u_pcaddr/SimpleCPU01Design_i_i_7/O
+                         net (fo=16, routed)          1.250     4.304    u_instrmembrom/u_mem_generator_1/SimpleCPU01Design_i/dist_mem_gen_0/U0/synth_options.dist_mem_inst/gen_rom.rom_inst/a[3]
+    SLICE_X46Y248        LUT5 (Prop_lut5_I1_O)        0.168     4.472 r  u_instrmembrom/u_mem_generator_1/SimpleCPU01Design_i/dist_mem_gen_0/U0/synth_options.dist_mem_inst/gen_rom.rom_inst/spo[0]_INST_0/O
+                         net (fo=37, routed)          5.029     9.501    u_regfiles/regs_reg_r2_0_31_0_5/ADDRC0
+    SLICE_X56Y165        RAMD32 (Prop_ramd32_RADR0_O)
+                                                      0.063     9.564 f  u_regfiles/regs_reg_r2_0_31_0_5/RAMC/O
+                         net (fo=91, routed)          5.079    14.644    u_instrmembrom/u_mem_generator_0/RD2Exp_OBUF[4]
+    SLICE_X120Y170       LUT3 (Prop_lut3_I0_O)        0.175    14.819 f  u_instrmembrom/u_mem_generator_0/SrcBExp_OBUF[4]_inst_i_1/O
+                         net (fo=15, routed)          1.911    16.730    u_instrmembrom/u_mem_generator_3/p_2_out_inferred__0/i__carry__6[0]
+    SLICE_X125Y184       LUT6 (Prop_lut6_I5_O)        0.164    16.894 r  u_instrmembrom/u_mem_generator_3/i__carry_i_2/O
+                         net (fo=1, routed)           0.251    17.145    u_alu/out2_inferred__5/i__carry__0_0[2]
+    SLICE_X122Y184       CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.244    17.389 r  u_alu/out2_inferred__5/i__carry/CO[3]
+                         net (fo=1, routed)           0.000    17.389    u_alu/out2_inferred__5/i__carry_n_0
+    SLICE_X122Y185       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060    17.449 r  u_alu/out2_inferred__5/i__carry__0/CO[3]
+                         net (fo=1, routed)           0.000    17.449    u_alu/out2_inferred__5/i__carry__0_n_0
+    SLICE_X122Y186       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060    17.509 r  u_alu/out2_inferred__5/i__carry__1/CO[3]
+                         net (fo=1, routed)           0.000    17.509    u_alu/out2_inferred__5/i__carry__1_n_0
+    SLICE_X122Y187       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060    17.569 r  u_alu/out2_inferred__5/i__carry__2/CO[3]
+                         net (fo=1, routed)           0.752    18.320    u_instrmembrom/u_mem_generator_0/ALUResultExp_OBUF[0]_inst_i_7_1[0]
+    SLICE_X118Y184       LUT4 (Prop_lut4_I3_O)        0.053    18.373 r  u_instrmembrom/u_mem_generator_0/ALUResultExp_OBUF[0]_inst_i_10/O
+                         net (fo=1, routed)           0.315    18.689    u_instrmembrom/u_mem_generator_0/ALUResultExp_OBUF[0]_inst_i_10_n_0
+    SLICE_X118Y184       LUT6 (Prop_lut6_I0_O)        0.053    18.742 r  u_instrmembrom/u_mem_generator_0/ALUResultExp_OBUF[0]_inst_i_7/O
+                         net (fo=1, routed)           1.057    19.798    u_instrmembrom/u_mem_generator_3/WD3Exp_OBUF[0]_inst_i_2_2
+    SLICE_X110Y176       LUT6 (Prop_lut6_I5_O)        0.053    19.851 f  u_instrmembrom/u_mem_generator_3/ALUResultExp_OBUF[0]_inst_i_3/O
+                         net (fo=19, routed)          2.471    22.323    u_instrmembrom/u_mem_generator_3/ALUResultExp_OBUF[0]_inst_i_3_n_0
+    SLICE_X87Y181        LUT6 (Prop_lut6_I2_O)        0.053    22.376 r  u_instrmembrom/u_mem_generator_3/DataMemReadExp_OBUF[30]_inst_i_123/O
+                         net (fo=126, routed)         2.503    24.878    u_datamem/DataMemReadExp_OBUF[30]_inst_i_46_0
+    SLICE_X75Y179        LUT6 (Prop_lut6_I4_O)        0.053    24.931 r  u_datamem/DataMemReadExp_OBUF[30]_inst_i_105/O
+                         net (fo=1, routed)           0.000    24.931    u_datamem/DataMemReadExp_OBUF[30]_inst_i_105_n_0
+    SLICE_X75Y179        MUXF7 (Prop_muxf7_I0_O)      0.143    25.074 r  u_datamem/DataMemReadExp_OBUF[30]_inst_i_48/O
+                         net (fo=1, routed)           0.000    25.074    u_datamem/DataMemReadExp_OBUF[30]_inst_i_48_n_0
+    SLICE_X75Y179        MUXF8 (Prop_muxf8_I0_O)      0.056    25.130 r  u_datamem/DataMemReadExp_OBUF[30]_inst_i_20/O
+                         net (fo=1, routed)           0.843    25.973    u_datamem/DataMemReadExp_OBUF[30]_inst_i_20_n_0
+    SLICE_X86Y176        LUT6 (Prop_lut6_I0_O)        0.153    26.126 r  u_datamem/DataMemReadExp_OBUF[30]_inst_i_7/O
+                         net (fo=1, routed)           0.000    26.126    u_datamem/DataMemReadExp_OBUF[30]_inst_i_7_n_0
+    SLICE_X86Y176        MUXF7 (Prop_muxf7_I1_O)      0.129    26.255 r  u_datamem/DataMemReadExp_OBUF[30]_inst_i_3/O
+                         net (fo=1, routed)           0.000    26.255    u_datamem/DataMemReadExp_OBUF[30]_inst_i_3_n_0
+    SLICE_X86Y176        MUXF8 (Prop_muxf8_I1_O)      0.054    26.309 r  u_datamem/DataMemReadExp_OBUF[30]_inst_i_1/O
+                         net (fo=3, routed)           2.082    28.391    u_instrmembrom/u_mem_generator_0/WD3TempExp[31][29]
+    SLICE_X102Y136       LUT3 (Prop_lut3_I0_O)        0.163    28.554 r  u_instrmembrom/u_mem_generator_0/WD3TempExp_OBUF[30]_inst_i_1/O
+                         net (fo=1, routed)           3.962    32.517    WD3TempExp_OBUF[30]
+    AE12                 OBUF (Prop_obuf_I_O)         2.376    34.892 r  WD3TempExp_OBUF[30]_inst/O
+                         net (fo=0)                   0.000    34.892    WD3TempExp[30]
+    AE12                                                              r  WD3TempExp[30] (OUT)
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
   Source:                 u_pcaddr/store_reg[0]/C
                             (rising edge-triggered cell FDRE)
-  Destination:            ALUResultExp[27]
+  Destination:            DataMemReadExp[25]
                             (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        27.608ns  (logic 3.369ns (12.201%)  route 24.240ns (87.799%))
-  Logic Levels:           11  (FDRE=1 LUT2=1 LUT3=4 LUT5=1 LUT6=3 OBUF=1)
+  Data Path Delay:        34.606ns  (logic 4.547ns (13.141%)  route 30.058ns (86.859%))
+  Logic Levels:           21  (CARRY4=4 FDRE=1 LUT3=1 LUT4=2 LUT5=1 LUT6=6 MUXF7=2 MUXF8=2 OBUF=1 RAMD32=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X122Y193       FDRE                         0.000     0.000 r  u_pcaddr/store_reg[0]/C
-    SLICE_X122Y193       FDRE (Prop_fdre_C_Q)         0.308     0.308 r  u_pcaddr/store_reg[0]/Q
-                         net (fo=61, routed)          3.350     3.658    u_instrmembrom/u_mem_generator/SimpleCPU01Design_i/dist_mem_gen_0/U0/synth_options.dist_mem_inst/gen_rom.rom_inst/a[0]
-    SLICE_X48Y212        LUT3 (Prop_lut3_I2_O)        0.065     3.723 f  u_instrmembrom/u_mem_generator/SimpleCPU01Design_i/dist_mem_gen_0/U0/synth_options.dist_mem_inst/gen_rom.rom_inst/spo[30]_INST_0/O
-                         net (fo=9, routed)           4.154     7.877    u_instrmembrom/u_mem_generator/spo_0[30]
-    SLICE_X139Y215       LUT2 (Prop_lut2_I1_O)        0.179     8.056 f  u_instrmembrom/u_mem_generator/ALUControlExp_OBUF[4]_inst_i_4/O
-                         net (fo=35, routed)          0.959     9.015    u_instrmembrom/u_mem_generator/ALUControlExp_OBUF[4]_inst_i_4_n_0
-    SLICE_X144Y212       LUT3 (Prop_lut3_I0_O)        0.170     9.185 r  u_instrmembrom/u_mem_generator/ALUSrcAExp_OBUF_inst_i_1/O
-                         net (fo=159, routed)         3.271    12.456    u_instrmembrom/u_mem_generator/bbstub_spo[3]
-    SLICE_X158Y207       LUT3 (Prop_lut3_I1_O)        0.053    12.509 r  u_instrmembrom/u_mem_generator/SrcAExp_OBUF[3]_inst_i_2/O
-                         net (fo=131, routed)         2.755    15.264    u_instrmembrom/u_mem_generator/SrcAExp_OBUF[1]
-    SLICE_X140Y207       LUT6 (Prop_lut6_I2_O)        0.053    15.317 f  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[31]_inst_i_14/O
-                         net (fo=2, routed)           0.566    15.883    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[31]_inst_i_14_n_0
-    SLICE_X143Y207       LUT6 (Prop_lut6_I0_O)        0.053    15.936 f  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[30]_inst_i_11/O
-                         net (fo=2, routed)           0.421    16.357    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[30]_inst_i_11_n_0
-    SLICE_X139Y206       LUT3 (Prop_lut3_I2_O)        0.053    16.410 f  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[28]_inst_i_10/O
-                         net (fo=2, routed)           0.404    16.814    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[28]_inst_i_10_n_0
-    SLICE_X139Y207       LUT5 (Prop_lut5_I4_O)        0.053    16.867 r  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[27]_inst_i_2/O
-                         net (fo=1, routed)           0.664    17.531    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[27]_inst_i_2_n_0
-    SLICE_X140Y209       LUT6 (Prop_lut6_I0_O)        0.053    17.584 r  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[27]_inst_i_1/O
-                         net (fo=5, routed)           7.696    25.280    ALUResultExp_OBUF[27]
-    AM31                 OBUF (Prop_obuf_I_O)         2.329    27.608 r  ALUResultExp_OBUF[27]_inst/O
-                         net (fo=0)                   0.000    27.608    ALUResultExp[27]
-    AM31                                                              r  ALUResultExp[27] (OUT)
+    SLICE_X54Y202        FDRE                         0.000     0.000 r  u_pcaddr/store_reg[0]/C
+    SLICE_X54Y202        FDRE (Prop_fdre_C_Q)         0.308     0.308 r  u_pcaddr/store_reg[0]/Q
+                         net (fo=41, routed)          2.681     2.989    u_pcaddr/Q[0]
+    SLICE_X46Y250        LUT4 (Prop_lut4_I2_O)        0.065     3.054 r  u_pcaddr/SimpleCPU01Design_i_i_7/O
+                         net (fo=16, routed)          1.250     4.304    u_instrmembrom/u_mem_generator_1/SimpleCPU01Design_i/dist_mem_gen_0/U0/synth_options.dist_mem_inst/gen_rom.rom_inst/a[3]
+    SLICE_X46Y248        LUT5 (Prop_lut5_I1_O)        0.168     4.472 r  u_instrmembrom/u_mem_generator_1/SimpleCPU01Design_i/dist_mem_gen_0/U0/synth_options.dist_mem_inst/gen_rom.rom_inst/spo[0]_INST_0/O
+                         net (fo=37, routed)          5.029     9.501    u_regfiles/regs_reg_r2_0_31_0_5/ADDRC0
+    SLICE_X56Y165        RAMD32 (Prop_ramd32_RADR0_O)
+                                                      0.063     9.564 f  u_regfiles/regs_reg_r2_0_31_0_5/RAMC/O
+                         net (fo=91, routed)          5.079    14.644    u_instrmembrom/u_mem_generator_0/RD2Exp_OBUF[4]
+    SLICE_X120Y170       LUT3 (Prop_lut3_I0_O)        0.175    14.819 f  u_instrmembrom/u_mem_generator_0/SrcBExp_OBUF[4]_inst_i_1/O
+                         net (fo=15, routed)          1.911    16.730    u_instrmembrom/u_mem_generator_3/p_2_out_inferred__0/i__carry__6[0]
+    SLICE_X125Y184       LUT6 (Prop_lut6_I5_O)        0.164    16.894 r  u_instrmembrom/u_mem_generator_3/i__carry_i_2/O
+                         net (fo=1, routed)           0.251    17.145    u_alu/out2_inferred__5/i__carry__0_0[2]
+    SLICE_X122Y184       CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.244    17.389 r  u_alu/out2_inferred__5/i__carry/CO[3]
+                         net (fo=1, routed)           0.000    17.389    u_alu/out2_inferred__5/i__carry_n_0
+    SLICE_X122Y185       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060    17.449 r  u_alu/out2_inferred__5/i__carry__0/CO[3]
+                         net (fo=1, routed)           0.000    17.449    u_alu/out2_inferred__5/i__carry__0_n_0
+    SLICE_X122Y186       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060    17.509 r  u_alu/out2_inferred__5/i__carry__1/CO[3]
+                         net (fo=1, routed)           0.000    17.509    u_alu/out2_inferred__5/i__carry__1_n_0
+    SLICE_X122Y187       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060    17.569 r  u_alu/out2_inferred__5/i__carry__2/CO[3]
+                         net (fo=1, routed)           0.752    18.320    u_instrmembrom/u_mem_generator_0/ALUResultExp_OBUF[0]_inst_i_7_1[0]
+    SLICE_X118Y184       LUT4 (Prop_lut4_I3_O)        0.053    18.373 r  u_instrmembrom/u_mem_generator_0/ALUResultExp_OBUF[0]_inst_i_10/O
+                         net (fo=1, routed)           0.315    18.689    u_instrmembrom/u_mem_generator_0/ALUResultExp_OBUF[0]_inst_i_10_n_0
+    SLICE_X118Y184       LUT6 (Prop_lut6_I0_O)        0.053    18.742 r  u_instrmembrom/u_mem_generator_0/ALUResultExp_OBUF[0]_inst_i_7/O
+                         net (fo=1, routed)           1.057    19.798    u_instrmembrom/u_mem_generator_3/WD3Exp_OBUF[0]_inst_i_2_2
+    SLICE_X110Y176       LUT6 (Prop_lut6_I5_O)        0.053    19.851 f  u_instrmembrom/u_mem_generator_3/ALUResultExp_OBUF[0]_inst_i_3/O
+                         net (fo=19, routed)          0.705    20.556    u_instrmembrom/u_mem_generator_3/ALUResultExp_OBUF[0]_inst_i_3_n_0
+    SLICE_X106Y173       LUT6 (Prop_lut6_I2_O)        0.053    20.609 r  u_instrmembrom/u_mem_generator_3/store[3][1]_i_3/O
+                         net (fo=126, routed)         5.545    26.154    u_datamem/DataMemReadExp_OBUF[1]_inst_i_40_0
+    SLICE_X80Y160        LUT6 (Prop_lut6_I4_O)        0.053    26.207 r  u_datamem/DataMemReadExp_OBUF[25]_inst_i_108/O
+                         net (fo=1, routed)           0.000    26.207    u_datamem/DataMemReadExp_OBUF[25]_inst_i_108_n_0
+    SLICE_X80Y160        MUXF7 (Prop_muxf7_I1_O)      0.129    26.336 r  u_datamem/DataMemReadExp_OBUF[25]_inst_i_49/O
+                         net (fo=1, routed)           0.000    26.336    u_datamem/DataMemReadExp_OBUF[25]_inst_i_49_n_0
+    SLICE_X80Y160        MUXF8 (Prop_muxf8_I1_O)      0.054    26.390 r  u_datamem/DataMemReadExp_OBUF[25]_inst_i_20/O
+                         net (fo=1, routed)           0.711    27.101    u_datamem/DataMemReadExp_OBUF[25]_inst_i_20_n_0
+    SLICE_X87Y152        LUT6 (Prop_lut6_I0_O)        0.153    27.254 r  u_datamem/DataMemReadExp_OBUF[25]_inst_i_7/O
+                         net (fo=1, routed)           0.000    27.254    u_datamem/DataMemReadExp_OBUF[25]_inst_i_7_n_0
+    SLICE_X87Y152        MUXF7 (Prop_muxf7_I1_O)      0.129    27.383 r  u_datamem/DataMemReadExp_OBUF[25]_inst_i_3/O
+                         net (fo=1, routed)           0.000    27.383    u_datamem/DataMemReadExp_OBUF[25]_inst_i_3_n_0
+    SLICE_X87Y152        MUXF8 (Prop_muxf8_I1_O)      0.054    27.437 r  u_datamem/DataMemReadExp_OBUF[25]_inst_i_1/O
+                         net (fo=3, routed)           4.772    32.209    DataMemReadExp_OBUF[25]
+    AF26                 OBUF (Prop_obuf_I_O)         2.396    34.606 r  DataMemReadExp_OBUF[25]_inst/O
+                         net (fo=0)                   0.000    34.606    DataMemReadExp[25]
+    AF26                                                              r  DataMemReadExp[25] (OUT)
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
   Source:                 u_pcaddr/store_reg[0]/C
                             (rising edge-triggered cell FDRE)
-  Destination:            ALUResultExp[10]
+  Destination:            WD3TempExp[24]
                             (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        27.511ns  (logic 3.541ns (12.870%)  route 23.970ns (87.130%))
-  Logic Levels:           12  (FDRE=1 LUT2=1 LUT3=5 LUT5=2 LUT6=2 OBUF=1)
+  Data Path Delay:        34.590ns  (logic 4.607ns (13.319%)  route 29.983ns (86.681%))
+  Logic Levels:           22  (CARRY4=4 FDRE=1 LUT3=2 LUT4=2 LUT5=1 LUT6=6 MUXF7=2 MUXF8=2 OBUF=1 RAMD32=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X122Y193       FDRE                         0.000     0.000 r  u_pcaddr/store_reg[0]/C
-    SLICE_X122Y193       FDRE (Prop_fdre_C_Q)         0.308     0.308 r  u_pcaddr/store_reg[0]/Q
-                         net (fo=61, routed)          3.350     3.658    u_instrmembrom/u_mem_generator/SimpleCPU01Design_i/dist_mem_gen_0/U0/synth_options.dist_mem_inst/gen_rom.rom_inst/a[0]
-    SLICE_X48Y212        LUT3 (Prop_lut3_I2_O)        0.065     3.723 f  u_instrmembrom/u_mem_generator/SimpleCPU01Design_i/dist_mem_gen_0/U0/synth_options.dist_mem_inst/gen_rom.rom_inst/spo[30]_INST_0/O
-                         net (fo=9, routed)           4.154     7.877    u_instrmembrom/u_mem_generator/spo_0[30]
-    SLICE_X139Y215       LUT2 (Prop_lut2_I1_O)        0.179     8.056 f  u_instrmembrom/u_mem_generator/ALUControlExp_OBUF[4]_inst_i_4/O
-                         net (fo=35, routed)          0.959     9.015    u_instrmembrom/u_mem_generator/ALUControlExp_OBUF[4]_inst_i_4_n_0
-    SLICE_X144Y212       LUT3 (Prop_lut3_I0_O)        0.170     9.185 r  u_instrmembrom/u_mem_generator/ALUSrcAExp_OBUF_inst_i_1/O
-                         net (fo=159, routed)         3.271    12.456    u_instrmembrom/u_mem_generator/bbstub_spo[3]
-    SLICE_X158Y207       LUT3 (Prop_lut3_I1_O)        0.053    12.509 r  u_instrmembrom/u_mem_generator/SrcAExp_OBUF[3]_inst_i_2/O
-                         net (fo=131, routed)         2.566    15.076    u_instrmembrom/u_mem_generator/SrcAExp_OBUF[1]
-    SLICE_X138Y198       LUT5 (Prop_lut5_I2_O)        0.053    15.129 r  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[6]_inst_i_12/O
-                         net (fo=2, routed)           0.456    15.584    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[6]_inst_i_12_n_0
-    SLICE_X139Y198       LUT6 (Prop_lut6_I0_O)        0.053    15.637 r  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[12]_inst_i_11/O
-                         net (fo=2, routed)           0.564    16.201    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[12]_inst_i_11_n_0
-    SLICE_X139Y201       LUT3 (Prop_lut3_I0_O)        0.067    16.268 r  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[9]_inst_i_9/O
-                         net (fo=2, routed)           0.549    16.817    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[9]_inst_i_9_n_0
-    SLICE_X139Y203       LUT3 (Prop_lut3_I2_O)        0.170    16.987 r  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[10]_inst_i_5/O
-                         net (fo=1, routed)           0.469    17.456    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[10]_inst_i_5_n_0
-    SLICE_X142Y203       LUT6 (Prop_lut6_I0_O)        0.053    17.509 r  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[10]_inst_i_2/O
-                         net (fo=1, routed)           0.458    17.967    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[10]_inst_i_2_n_0
-    SLICE_X143Y203       LUT5 (Prop_lut5_I0_O)        0.053    18.020 r  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[10]_inst_i_1/O
-                         net (fo=5, routed)           7.174    25.194    ALUResultExp_OBUF[10]
-    AN29                 OBUF (Prop_obuf_I_O)         2.317    27.511 r  ALUResultExp_OBUF[10]_inst/O
-                         net (fo=0)                   0.000    27.511    ALUResultExp[10]
-    AN29                                                              r  ALUResultExp[10] (OUT)
+    SLICE_X54Y202        FDRE                         0.000     0.000 r  u_pcaddr/store_reg[0]/C
+    SLICE_X54Y202        FDRE (Prop_fdre_C_Q)         0.308     0.308 r  u_pcaddr/store_reg[0]/Q
+                         net (fo=41, routed)          2.681     2.989    u_pcaddr/Q[0]
+    SLICE_X46Y250        LUT4 (Prop_lut4_I2_O)        0.065     3.054 r  u_pcaddr/SimpleCPU01Design_i_i_7/O
+                         net (fo=16, routed)          1.250     4.304    u_instrmembrom/u_mem_generator_1/SimpleCPU01Design_i/dist_mem_gen_0/U0/synth_options.dist_mem_inst/gen_rom.rom_inst/a[3]
+    SLICE_X46Y248        LUT5 (Prop_lut5_I1_O)        0.168     4.472 r  u_instrmembrom/u_mem_generator_1/SimpleCPU01Design_i/dist_mem_gen_0/U0/synth_options.dist_mem_inst/gen_rom.rom_inst/spo[0]_INST_0/O
+                         net (fo=37, routed)          5.029     9.501    u_regfiles/regs_reg_r2_0_31_0_5/ADDRC0
+    SLICE_X56Y165        RAMD32 (Prop_ramd32_RADR0_O)
+                                                      0.063     9.564 f  u_regfiles/regs_reg_r2_0_31_0_5/RAMC/O
+                         net (fo=91, routed)          5.079    14.644    u_instrmembrom/u_mem_generator_0/RD2Exp_OBUF[4]
+    SLICE_X120Y170       LUT3 (Prop_lut3_I0_O)        0.175    14.819 f  u_instrmembrom/u_mem_generator_0/SrcBExp_OBUF[4]_inst_i_1/O
+                         net (fo=15, routed)          1.911    16.730    u_instrmembrom/u_mem_generator_3/p_2_out_inferred__0/i__carry__6[0]
+    SLICE_X125Y184       LUT6 (Prop_lut6_I5_O)        0.164    16.894 r  u_instrmembrom/u_mem_generator_3/i__carry_i_2/O
+                         net (fo=1, routed)           0.251    17.145    u_alu/out2_inferred__5/i__carry__0_0[2]
+    SLICE_X122Y184       CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.244    17.389 r  u_alu/out2_inferred__5/i__carry/CO[3]
+                         net (fo=1, routed)           0.000    17.389    u_alu/out2_inferred__5/i__carry_n_0
+    SLICE_X122Y185       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060    17.449 r  u_alu/out2_inferred__5/i__carry__0/CO[3]
+                         net (fo=1, routed)           0.000    17.449    u_alu/out2_inferred__5/i__carry__0_n_0
+    SLICE_X122Y186       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060    17.509 r  u_alu/out2_inferred__5/i__carry__1/CO[3]
+                         net (fo=1, routed)           0.000    17.509    u_alu/out2_inferred__5/i__carry__1_n_0
+    SLICE_X122Y187       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060    17.569 r  u_alu/out2_inferred__5/i__carry__2/CO[3]
+                         net (fo=1, routed)           0.752    18.320    u_instrmembrom/u_mem_generator_0/ALUResultExp_OBUF[0]_inst_i_7_1[0]
+    SLICE_X118Y184       LUT4 (Prop_lut4_I3_O)        0.053    18.373 r  u_instrmembrom/u_mem_generator_0/ALUResultExp_OBUF[0]_inst_i_10/O
+                         net (fo=1, routed)           0.315    18.689    u_instrmembrom/u_mem_generator_0/ALUResultExp_OBUF[0]_inst_i_10_n_0
+    SLICE_X118Y184       LUT6 (Prop_lut6_I0_O)        0.053    18.742 r  u_instrmembrom/u_mem_generator_0/ALUResultExp_OBUF[0]_inst_i_7/O
+                         net (fo=1, routed)           1.057    19.798    u_instrmembrom/u_mem_generator_3/WD3Exp_OBUF[0]_inst_i_2_2
+    SLICE_X110Y176       LUT6 (Prop_lut6_I5_O)        0.053    19.851 f  u_instrmembrom/u_mem_generator_3/ALUResultExp_OBUF[0]_inst_i_3/O
+                         net (fo=19, routed)          2.218    22.070    u_instrmembrom/u_mem_generator_3/ALUResultExp_OBUF[0]_inst_i_3_n_0
+    SLICE_X87Y181        LUT6 (Prop_lut6_I2_O)        0.053    22.123 r  u_instrmembrom/u_mem_generator_3/store[3][0]_i_3/O
+                         net (fo=126, routed)         3.201    25.324    u_datamem/DataMemReadExp_OBUF[24]_inst_i_52_0
+    SLICE_X93Y144        LUT6 (Prop_lut6_I4_O)        0.053    25.377 r  u_datamem/DataMemReadExp_OBUF[24]_inst_i_113/O
+                         net (fo=1, routed)           0.000    25.377    u_datamem/DataMemReadExp_OBUF[24]_inst_i_113_n_0
+    SLICE_X93Y144        MUXF7 (Prop_muxf7_I0_O)      0.143    25.520 r  u_datamem/DataMemReadExp_OBUF[24]_inst_i_52/O
+                         net (fo=1, routed)           0.000    25.520    u_datamem/DataMemReadExp_OBUF[24]_inst_i_52_n_0
+    SLICE_X93Y144        MUXF8 (Prop_muxf8_I0_O)      0.056    25.576 r  u_datamem/DataMemReadExp_OBUF[24]_inst_i_22/O
+                         net (fo=1, routed)           0.936    26.511    u_datamem/DataMemReadExp_OBUF[24]_inst_i_22_n_0
+    SLICE_X89Y151        LUT6 (Prop_lut6_I3_O)        0.153    26.664 r  u_datamem/DataMemReadExp_OBUF[24]_inst_i_7/O
+                         net (fo=1, routed)           0.000    26.664    u_datamem/DataMemReadExp_OBUF[24]_inst_i_7_n_0
+    SLICE_X89Y151        MUXF7 (Prop_muxf7_I1_O)      0.129    26.793 r  u_datamem/DataMemReadExp_OBUF[24]_inst_i_3/O
+                         net (fo=1, routed)           0.000    26.793    u_datamem/DataMemReadExp_OBUF[24]_inst_i_3_n_0
+    SLICE_X89Y151        MUXF8 (Prop_muxf8_I1_O)      0.054    26.847 r  u_datamem/DataMemReadExp_OBUF[24]_inst_i_1/O
+                         net (fo=3, routed)           1.065    27.913    u_instrmembrom/u_mem_generator_0/WD3TempExp[31][23]
+    SLICE_X100Y136       LUT3 (Prop_lut3_I0_O)        0.153    28.066 r  u_instrmembrom/u_mem_generator_0/WD3TempExp_OBUF[24]_inst_i_1/O
+                         net (fo=1, routed)           4.237    32.303    WD3TempExp_OBUF[24]
+    AD12                 OBUF (Prop_obuf_I_O)         2.287    34.590 r  WD3TempExp_OBUF[24]_inst/O
+                         net (fo=0)                   0.000    34.590    WD3TempExp[24]
+    AD12                                                              r  WD3TempExp[24] (OUT)
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
   Source:                 u_pcaddr/store_reg[0]/C
                             (rising edge-triggered cell FDRE)
-  Destination:            ALUResultExp[26]
+  Destination:            WD3TempExp[23]
                             (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        27.410ns  (logic 3.400ns (12.405%)  route 24.010ns (87.595%))
-  Logic Levels:           12  (FDRE=1 LUT2=2 LUT3=3 LUT5=2 LUT6=3 OBUF=1)
+  Data Path Delay:        34.556ns  (logic 4.596ns (13.301%)  route 29.960ns (86.699%))
+  Logic Levels:           22  (CARRY4=4 FDRE=1 LUT3=2 LUT4=2 LUT5=1 LUT6=6 MUXF7=2 MUXF8=2 OBUF=1 RAMD32=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X122Y193       FDRE                         0.000     0.000 r  u_pcaddr/store_reg[0]/C
-    SLICE_X122Y193       FDRE (Prop_fdre_C_Q)         0.308     0.308 r  u_pcaddr/store_reg[0]/Q
-                         net (fo=61, routed)          3.350     3.658    u_instrmembrom/u_mem_generator/SimpleCPU01Design_i/dist_mem_gen_0/U0/synth_options.dist_mem_inst/gen_rom.rom_inst/a[0]
-    SLICE_X48Y212        LUT3 (Prop_lut3_I2_O)        0.065     3.723 f  u_instrmembrom/u_mem_generator/SimpleCPU01Design_i/dist_mem_gen_0/U0/synth_options.dist_mem_inst/gen_rom.rom_inst/spo[30]_INST_0/O
-                         net (fo=9, routed)           4.154     7.877    u_instrmembrom/u_mem_generator/spo_0[30]
-    SLICE_X139Y215       LUT2 (Prop_lut2_I1_O)        0.179     8.056 f  u_instrmembrom/u_mem_generator/ALUControlExp_OBUF[4]_inst_i_4/O
-                         net (fo=35, routed)          0.959     9.015    u_instrmembrom/u_mem_generator/ALUControlExp_OBUF[4]_inst_i_4_n_0
-    SLICE_X144Y212       LUT3 (Prop_lut3_I0_O)        0.170     9.185 r  u_instrmembrom/u_mem_generator/ALUSrcAExp_OBUF_inst_i_1/O
-                         net (fo=159, routed)         3.271    12.456    u_instrmembrom/u_mem_generator/bbstub_spo[3]
-    SLICE_X158Y207       LUT3 (Prop_lut3_I1_O)        0.053    12.509 f  u_instrmembrom/u_mem_generator/SrcAExp_OBUF[3]_inst_i_2/O
-                         net (fo=131, routed)         2.069    14.578    u_instrmembrom/u_mem_generator/SrcAExp_OBUF[1]
-    SLICE_X138Y202       LUT2 (Prop_lut2_I0_O)        0.053    14.631 f  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[30]_inst_i_12/O
-                         net (fo=17, routed)          0.826    15.457    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[30]_inst_i_12_n_0
-    SLICE_X139Y205       LUT5 (Prop_lut5_I4_O)        0.053    15.510 r  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[25]_inst_i_14/O
-                         net (fo=2, routed)           0.425    15.935    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[25]_inst_i_14_n_0
-    SLICE_X140Y205       LUT6 (Prop_lut6_I5_O)        0.053    15.988 f  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[25]_inst_i_6/O
-                         net (fo=2, routed)           0.521    16.510    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[25]_inst_i_6_n_0
-    SLICE_X139Y209       LUT5 (Prop_lut5_I3_O)        0.053    16.563 f  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[26]_inst_i_9/O
-                         net (fo=1, routed)           0.599    17.162    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[26]_inst_i_9_n_0
-    SLICE_X138Y209       LUT6 (Prop_lut6_I0_O)        0.053    17.215 f  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[26]_inst_i_4/O
-                         net (fo=1, routed)           0.319    17.534    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[26]_inst_i_4_n_0
-    SLICE_X138Y209       LUT6 (Prop_lut6_I4_O)        0.053    17.587 r  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[26]_inst_i_1/O
-                         net (fo=5, routed)           7.516    25.103    ALUResultExp_OBUF[26]
-    AL29                 OBUF (Prop_obuf_I_O)         2.307    27.410 r  ALUResultExp_OBUF[26]_inst/O
-                         net (fo=0)                   0.000    27.410    ALUResultExp[26]
-    AL29                                                              r  ALUResultExp[26] (OUT)
+    SLICE_X54Y202        FDRE                         0.000     0.000 r  u_pcaddr/store_reg[0]/C
+    SLICE_X54Y202        FDRE (Prop_fdre_C_Q)         0.308     0.308 r  u_pcaddr/store_reg[0]/Q
+                         net (fo=41, routed)          2.681     2.989    u_pcaddr/Q[0]
+    SLICE_X46Y250        LUT4 (Prop_lut4_I2_O)        0.065     3.054 r  u_pcaddr/SimpleCPU01Design_i_i_7/O
+                         net (fo=16, routed)          1.250     4.304    u_instrmembrom/u_mem_generator_1/SimpleCPU01Design_i/dist_mem_gen_0/U0/synth_options.dist_mem_inst/gen_rom.rom_inst/a[3]
+    SLICE_X46Y248        LUT5 (Prop_lut5_I1_O)        0.168     4.472 r  u_instrmembrom/u_mem_generator_1/SimpleCPU01Design_i/dist_mem_gen_0/U0/synth_options.dist_mem_inst/gen_rom.rom_inst/spo[0]_INST_0/O
+                         net (fo=37, routed)          5.029     9.501    u_regfiles/regs_reg_r2_0_31_0_5/ADDRC0
+    SLICE_X56Y165        RAMD32 (Prop_ramd32_RADR0_O)
+                                                      0.063     9.564 f  u_regfiles/regs_reg_r2_0_31_0_5/RAMC/O
+                         net (fo=91, routed)          5.079    14.644    u_instrmembrom/u_mem_generator_0/RD2Exp_OBUF[4]
+    SLICE_X120Y170       LUT3 (Prop_lut3_I0_O)        0.175    14.819 f  u_instrmembrom/u_mem_generator_0/SrcBExp_OBUF[4]_inst_i_1/O
+                         net (fo=15, routed)          1.911    16.730    u_instrmembrom/u_mem_generator_3/p_2_out_inferred__0/i__carry__6[0]
+    SLICE_X125Y184       LUT6 (Prop_lut6_I5_O)        0.164    16.894 r  u_instrmembrom/u_mem_generator_3/i__carry_i_2/O
+                         net (fo=1, routed)           0.251    17.145    u_alu/out2_inferred__5/i__carry__0_0[2]
+    SLICE_X122Y184       CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.244    17.389 r  u_alu/out2_inferred__5/i__carry/CO[3]
+                         net (fo=1, routed)           0.000    17.389    u_alu/out2_inferred__5/i__carry_n_0
+    SLICE_X122Y185       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060    17.449 r  u_alu/out2_inferred__5/i__carry__0/CO[3]
+                         net (fo=1, routed)           0.000    17.449    u_alu/out2_inferred__5/i__carry__0_n_0
+    SLICE_X122Y186       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060    17.509 r  u_alu/out2_inferred__5/i__carry__1/CO[3]
+                         net (fo=1, routed)           0.000    17.509    u_alu/out2_inferred__5/i__carry__1_n_0
+    SLICE_X122Y187       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060    17.569 r  u_alu/out2_inferred__5/i__carry__2/CO[3]
+                         net (fo=1, routed)           0.752    18.320    u_instrmembrom/u_mem_generator_0/ALUResultExp_OBUF[0]_inst_i_7_1[0]
+    SLICE_X118Y184       LUT4 (Prop_lut4_I3_O)        0.053    18.373 r  u_instrmembrom/u_mem_generator_0/ALUResultExp_OBUF[0]_inst_i_10/O
+                         net (fo=1, routed)           0.315    18.689    u_instrmembrom/u_mem_generator_0/ALUResultExp_OBUF[0]_inst_i_10_n_0
+    SLICE_X118Y184       LUT6 (Prop_lut6_I0_O)        0.053    18.742 r  u_instrmembrom/u_mem_generator_0/ALUResultExp_OBUF[0]_inst_i_7/O
+                         net (fo=1, routed)           1.057    19.798    u_instrmembrom/u_mem_generator_3/WD3Exp_OBUF[0]_inst_i_2_2
+    SLICE_X110Y176       LUT6 (Prop_lut6_I5_O)        0.053    19.851 f  u_instrmembrom/u_mem_generator_3/ALUResultExp_OBUF[0]_inst_i_3/O
+                         net (fo=19, routed)          2.246    22.097    u_instrmembrom/u_mem_generator_3/ALUResultExp_OBUF[0]_inst_i_3_n_0
+    SLICE_X89Y176        LUT6 (Prop_lut6_I2_O)        0.053    22.150 r  u_instrmembrom/u_mem_generator_3/store[3][7]_i_4/O
+                         net (fo=126, routed)         2.628    24.778    u_datamem/DataMemReadExp_OBUF[23]_inst_i_47_0
+    SLICE_X96Y157        LUT6 (Prop_lut6_I4_O)        0.053    24.831 r  u_datamem/DataMemReadExp_OBUF[23]_inst_i_90/O
+                         net (fo=1, routed)           0.000    24.831    u_datamem/DataMemReadExp_OBUF[23]_inst_i_90_n_0
+    SLICE_X96Y157        MUXF7 (Prop_muxf7_I1_O)      0.140    24.971 r  u_datamem/DataMemReadExp_OBUF[23]_inst_i_41/O
+                         net (fo=1, routed)           0.000    24.971    u_datamem/DataMemReadExp_OBUF[23]_inst_i_41_n_0
+    SLICE_X96Y157        MUXF8 (Prop_muxf8_I0_O)      0.057    25.028 r  u_datamem/DataMemReadExp_OBUF[23]_inst_i_16/O
+                         net (fo=1, routed)           0.876    25.904    u_datamem/DataMemReadExp_OBUF[23]_inst_i_16_n_0
+    SLICE_X85Y160        LUT6 (Prop_lut6_I0_O)        0.156    26.060 r  u_datamem/DataMemReadExp_OBUF[23]_inst_i_6/O
+                         net (fo=1, routed)           0.000    26.060    u_datamem/DataMemReadExp_OBUF[23]_inst_i_6_n_0
+    SLICE_X85Y160        MUXF7 (Prop_muxf7_I0_O)      0.127    26.187 r  u_datamem/DataMemReadExp_OBUF[23]_inst_i_3/O
+                         net (fo=1, routed)           0.000    26.187    u_datamem/DataMemReadExp_OBUF[23]_inst_i_3_n_0
+    SLICE_X85Y160        MUXF8 (Prop_muxf8_I1_O)      0.054    26.241 r  u_datamem/DataMemReadExp_OBUF[23]_inst_i_1/O
+                         net (fo=3, routed)           1.472    27.713    u_instrmembrom/u_mem_generator_0/WD3TempExp[31][22]
+    SLICE_X96Y135        LUT3 (Prop_lut3_I0_O)        0.153    27.866 r  u_instrmembrom/u_mem_generator_0/WD3TempExp_OBUF[23]_inst_i_1/O
+                         net (fo=1, routed)           4.413    32.279    WD3TempExp_OBUF[23]
+    AD11                 OBUF (Prop_obuf_I_O)         2.277    34.556 r  WD3TempExp_OBUF[23]_inst/O
+                         net (fo=0)                   0.000    34.556    WD3TempExp[23]
+    AD11                                                              r  WD3TempExp[23] (OUT)
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
   Source:                 u_pcaddr/store_reg[0]/C
                             (rising edge-triggered cell FDRE)
-  Destination:            ALUResultExp[30]
+  Destination:            WD3TempExp[22]
                             (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        27.387ns  (logic 3.468ns (12.662%)  route 23.919ns (87.338%))
-  Logic Levels:           11  (FDRE=1 LUT2=1 LUT3=4 LUT6=4 OBUF=1)
+  Data Path Delay:        34.465ns  (logic 4.576ns (13.277%)  route 29.889ns (86.723%))
+  Logic Levels:           22  (CARRY4=4 FDRE=1 LUT3=2 LUT4=2 LUT5=1 LUT6=6 MUXF7=2 MUXF8=2 OBUF=1 RAMD32=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X122Y193       FDRE                         0.000     0.000 r  u_pcaddr/store_reg[0]/C
-    SLICE_X122Y193       FDRE (Prop_fdre_C_Q)         0.308     0.308 r  u_pcaddr/store_reg[0]/Q
-                         net (fo=61, routed)          3.350     3.658    u_instrmembrom/u_mem_generator/SimpleCPU01Design_i/dist_mem_gen_0/U0/synth_options.dist_mem_inst/gen_rom.rom_inst/a[0]
-    SLICE_X48Y212        LUT3 (Prop_lut3_I2_O)        0.065     3.723 f  u_instrmembrom/u_mem_generator/SimpleCPU01Design_i/dist_mem_gen_0/U0/synth_options.dist_mem_inst/gen_rom.rom_inst/spo[30]_INST_0/O
-                         net (fo=9, routed)           4.154     7.877    u_instrmembrom/u_mem_generator/spo_0[30]
-    SLICE_X139Y215       LUT2 (Prop_lut2_I1_O)        0.179     8.056 f  u_instrmembrom/u_mem_generator/ALUControlExp_OBUF[4]_inst_i_4/O
-                         net (fo=35, routed)          0.959     9.015    u_instrmembrom/u_mem_generator/ALUControlExp_OBUF[4]_inst_i_4_n_0
-    SLICE_X144Y212       LUT3 (Prop_lut3_I0_O)        0.170     9.185 r  u_instrmembrom/u_mem_generator/ALUSrcAExp_OBUF_inst_i_1/O
-                         net (fo=159, routed)         3.271    12.456    u_instrmembrom/u_mem_generator/bbstub_spo[3]
-    SLICE_X158Y207       LUT3 (Prop_lut3_I1_O)        0.053    12.509 r  u_instrmembrom/u_mem_generator/SrcAExp_OBUF[3]_inst_i_2/O
-                         net (fo=131, routed)         2.755    15.264    u_instrmembrom/u_mem_generator/SrcAExp_OBUF[1]
-    SLICE_X140Y207       LUT6 (Prop_lut6_I2_O)        0.053    15.317 f  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[31]_inst_i_14/O
-                         net (fo=2, routed)           0.566    15.883    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[31]_inst_i_14_n_0
-    SLICE_X143Y207       LUT6 (Prop_lut6_I0_O)        0.053    15.936 f  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[30]_inst_i_11/O
-                         net (fo=2, routed)           0.421    16.357    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[30]_inst_i_11_n_0
-    SLICE_X139Y206       LUT3 (Prop_lut3_I0_O)        0.056    16.413 f  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[30]_inst_i_5/O
-                         net (fo=2, routed)           0.610    17.023    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[30]_inst_i_5_n_0
-    SLICE_X138Y206       LUT6 (Prop_lut6_I0_O)        0.170    17.193 r  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[30]_inst_i_2/O
-                         net (fo=1, routed)           0.800    17.993    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[30]_inst_i_2_n_0
-    SLICE_X138Y209       LUT6 (Prop_lut6_I1_O)        0.053    18.046 r  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[30]_inst_i_1/O
-                         net (fo=7, routed)           7.033    25.079    ALUResultExp_OBUF[30]
-    AJ29                 OBUF (Prop_obuf_I_O)         2.308    27.387 r  ALUResultExp_OBUF[30]_inst/O
-                         net (fo=0)                   0.000    27.387    ALUResultExp[30]
-    AJ29                                                              r  ALUResultExp[30] (OUT)
+    SLICE_X54Y202        FDRE                         0.000     0.000 r  u_pcaddr/store_reg[0]/C
+    SLICE_X54Y202        FDRE (Prop_fdre_C_Q)         0.308     0.308 r  u_pcaddr/store_reg[0]/Q
+                         net (fo=41, routed)          2.681     2.989    u_pcaddr/Q[0]
+    SLICE_X46Y250        LUT4 (Prop_lut4_I2_O)        0.065     3.054 r  u_pcaddr/SimpleCPU01Design_i_i_7/O
+                         net (fo=16, routed)          1.250     4.304    u_instrmembrom/u_mem_generator_1/SimpleCPU01Design_i/dist_mem_gen_0/U0/synth_options.dist_mem_inst/gen_rom.rom_inst/a[3]
+    SLICE_X46Y248        LUT5 (Prop_lut5_I1_O)        0.168     4.472 r  u_instrmembrom/u_mem_generator_1/SimpleCPU01Design_i/dist_mem_gen_0/U0/synth_options.dist_mem_inst/gen_rom.rom_inst/spo[0]_INST_0/O
+                         net (fo=37, routed)          5.029     9.501    u_regfiles/regs_reg_r2_0_31_0_5/ADDRC0
+    SLICE_X56Y165        RAMD32 (Prop_ramd32_RADR0_O)
+                                                      0.063     9.564 f  u_regfiles/regs_reg_r2_0_31_0_5/RAMC/O
+                         net (fo=91, routed)          5.079    14.644    u_instrmembrom/u_mem_generator_0/RD2Exp_OBUF[4]
+    SLICE_X120Y170       LUT3 (Prop_lut3_I0_O)        0.175    14.819 f  u_instrmembrom/u_mem_generator_0/SrcBExp_OBUF[4]_inst_i_1/O
+                         net (fo=15, routed)          1.911    16.730    u_instrmembrom/u_mem_generator_3/p_2_out_inferred__0/i__carry__6[0]
+    SLICE_X125Y184       LUT6 (Prop_lut6_I5_O)        0.164    16.894 r  u_instrmembrom/u_mem_generator_3/i__carry_i_2/O
+                         net (fo=1, routed)           0.251    17.145    u_alu/out2_inferred__5/i__carry__0_0[2]
+    SLICE_X122Y184       CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.244    17.389 r  u_alu/out2_inferred__5/i__carry/CO[3]
+                         net (fo=1, routed)           0.000    17.389    u_alu/out2_inferred__5/i__carry_n_0
+    SLICE_X122Y185       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060    17.449 r  u_alu/out2_inferred__5/i__carry__0/CO[3]
+                         net (fo=1, routed)           0.000    17.449    u_alu/out2_inferred__5/i__carry__0_n_0
+    SLICE_X122Y186       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060    17.509 r  u_alu/out2_inferred__5/i__carry__1/CO[3]
+                         net (fo=1, routed)           0.000    17.509    u_alu/out2_inferred__5/i__carry__1_n_0
+    SLICE_X122Y187       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060    17.569 r  u_alu/out2_inferred__5/i__carry__2/CO[3]
+                         net (fo=1, routed)           0.752    18.320    u_instrmembrom/u_mem_generator_0/ALUResultExp_OBUF[0]_inst_i_7_1[0]
+    SLICE_X118Y184       LUT4 (Prop_lut4_I3_O)        0.053    18.373 r  u_instrmembrom/u_mem_generator_0/ALUResultExp_OBUF[0]_inst_i_10/O
+                         net (fo=1, routed)           0.315    18.689    u_instrmembrom/u_mem_generator_0/ALUResultExp_OBUF[0]_inst_i_10_n_0
+    SLICE_X118Y184       LUT6 (Prop_lut6_I0_O)        0.053    18.742 r  u_instrmembrom/u_mem_generator_0/ALUResultExp_OBUF[0]_inst_i_7/O
+                         net (fo=1, routed)           1.057    19.798    u_instrmembrom/u_mem_generator_3/WD3Exp_OBUF[0]_inst_i_2_2
+    SLICE_X110Y176       LUT6 (Prop_lut6_I5_O)        0.053    19.851 f  u_instrmembrom/u_mem_generator_3/ALUResultExp_OBUF[0]_inst_i_3/O
+                         net (fo=19, routed)          2.471    22.323    u_instrmembrom/u_mem_generator_3/ALUResultExp_OBUF[0]_inst_i_3_n_0
+    SLICE_X87Y181        LUT6 (Prop_lut6_I2_O)        0.053    22.376 r  u_instrmembrom/u_mem_generator_3/DataMemReadExp_OBUF[30]_inst_i_123/O
+                         net (fo=126, routed)         2.498    24.873    u_datamem/DataMemReadExp_OBUF[30]_inst_i_46_0
+    SLICE_X74Y179        LUT6 (Prop_lut6_I4_O)        0.053    24.926 r  u_datamem/DataMemReadExp_OBUF[22]_inst_i_105/O
+                         net (fo=1, routed)           0.000    24.926    u_datamem/DataMemReadExp_OBUF[22]_inst_i_105_n_0
+    SLICE_X74Y179        MUXF7 (Prop_muxf7_I1_O)      0.140    25.066 r  u_datamem/DataMemReadExp_OBUF[22]_inst_i_48/O
+                         net (fo=1, routed)           0.000    25.066    u_datamem/DataMemReadExp_OBUF[22]_inst_i_48_n_0
+    SLICE_X74Y179        MUXF8 (Prop_muxf8_I0_O)      0.057    25.123 r  u_datamem/DataMemReadExp_OBUF[22]_inst_i_20/O
+                         net (fo=1, routed)           0.565    25.688    u_datamem/DataMemReadExp_OBUF[22]_inst_i_20_n_0
+    SLICE_X83Y176        LUT6 (Prop_lut6_I0_O)        0.156    25.844 r  u_datamem/DataMemReadExp_OBUF[22]_inst_i_7/O
+                         net (fo=1, routed)           0.000    25.844    u_datamem/DataMemReadExp_OBUF[22]_inst_i_7_n_0
+    SLICE_X83Y176        MUXF7 (Prop_muxf7_I1_O)      0.129    25.973 r  u_datamem/DataMemReadExp_OBUF[22]_inst_i_3/O
+                         net (fo=1, routed)           0.000    25.973    u_datamem/DataMemReadExp_OBUF[22]_inst_i_3_n_0
+    SLICE_X83Y176        MUXF8 (Prop_muxf8_I1_O)      0.054    26.027 r  u_datamem/DataMemReadExp_OBUF[22]_inst_i_1/O
+                         net (fo=3, routed)           1.773    27.800    u_instrmembrom/u_mem_generator_0/WD3TempExp[31][21]
+    SLICE_X96Y135        LUT3 (Prop_lut3_I0_O)        0.153    27.953 r  u_instrmembrom/u_mem_generator_0/WD3TempExp_OBUF[22]_inst_i_1/O
+                         net (fo=1, routed)           4.257    32.210    WD3TempExp_OBUF[22]
+    AF11                 OBUF (Prop_obuf_I_O)         2.255    34.465 r  WD3TempExp_OBUF[22]_inst/O
+                         net (fo=0)                   0.000    34.465    WD3TempExp[22]
+    AF11                                                              r  WD3TempExp[22] (OUT)
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
   Source:                 u_pcaddr/store_reg[0]/C
                             (rising edge-triggered cell FDRE)
-  Destination:            ALUResultExp[29]
+  Destination:            WD3TempExp[1]
                             (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        27.356ns  (logic 3.530ns (12.903%)  route 23.827ns (87.097%))
-  Logic Levels:           12  (FDRE=1 LUT2=2 LUT3=3 LUT5=1 LUT6=4 OBUF=1)
+  Data Path Delay:        34.363ns  (logic 4.759ns (13.850%)  route 29.604ns (86.150%))
+  Logic Levels:           22  (CARRY4=4 FDRE=1 LUT3=2 LUT4=2 LUT5=1 LUT6=6 MUXF7=2 MUXF8=2 OBUF=1 RAMD32=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X122Y193       FDRE                         0.000     0.000 r  u_pcaddr/store_reg[0]/C
-    SLICE_X122Y193       FDRE (Prop_fdre_C_Q)         0.308     0.308 r  u_pcaddr/store_reg[0]/Q
-                         net (fo=61, routed)          3.350     3.658    u_instrmembrom/u_mem_generator/SimpleCPU01Design_i/dist_mem_gen_0/U0/synth_options.dist_mem_inst/gen_rom.rom_inst/a[0]
-    SLICE_X48Y212        LUT3 (Prop_lut3_I2_O)        0.065     3.723 f  u_instrmembrom/u_mem_generator/SimpleCPU01Design_i/dist_mem_gen_0/U0/synth_options.dist_mem_inst/gen_rom.rom_inst/spo[30]_INST_0/O
-                         net (fo=9, routed)           4.154     7.877    u_instrmembrom/u_mem_generator/spo_0[30]
-    SLICE_X139Y215       LUT2 (Prop_lut2_I1_O)        0.179     8.056 f  u_instrmembrom/u_mem_generator/ALUControlExp_OBUF[4]_inst_i_4/O
-                         net (fo=35, routed)          0.959     9.015    u_instrmembrom/u_mem_generator/ALUControlExp_OBUF[4]_inst_i_4_n_0
-    SLICE_X144Y212       LUT3 (Prop_lut3_I0_O)        0.170     9.185 r  u_instrmembrom/u_mem_generator/ALUSrcAExp_OBUF_inst_i_1/O
-                         net (fo=159, routed)         3.271    12.456    u_instrmembrom/u_mem_generator/bbstub_spo[3]
-    SLICE_X158Y207       LUT3 (Prop_lut3_I1_O)        0.053    12.509 f  u_instrmembrom/u_mem_generator/SrcAExp_OBUF[3]_inst_i_2/O
-                         net (fo=131, routed)         2.069    14.578    u_instrmembrom/u_mem_generator/SrcAExp_OBUF[1]
-    SLICE_X138Y202       LUT2 (Prop_lut2_I0_O)        0.053    14.631 f  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[30]_inst_i_12/O
-                         net (fo=17, routed)          0.976    15.607    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[30]_inst_i_12_n_0
-    SLICE_X139Y205       LUT6 (Prop_lut6_I3_O)        0.053    15.660 r  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[30]_inst_i_10/O
-                         net (fo=2, routed)           0.669    16.330    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[30]_inst_i_10_n_0
-    SLICE_X138Y208       LUT6 (Prop_lut6_I3_O)        0.053    16.383 r  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[29]_inst_i_12/O
-                         net (fo=1, routed)           0.445    16.828    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[29]_inst_i_12_n_0
-    SLICE_X139Y208       LUT5 (Prop_lut5_I0_O)        0.064    16.892 r  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[29]_inst_i_7/O
-                         net (fo=1, routed)           0.304    17.196    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[29]_inst_i_7_n_0
-    SLICE_X139Y208       LUT6 (Prop_lut6_I5_O)        0.170    17.366 r  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[29]_inst_i_2/O
-                         net (fo=1, routed)           0.675    18.040    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[29]_inst_i_2_n_0
-    SLICE_X145Y210       LUT6 (Prop_lut6_I0_O)        0.053    18.093 r  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[29]_inst_i_1/O
-                         net (fo=5, routed)           6.954    25.048    ALUResultExp_OBUF[29]
-    AK29                 OBUF (Prop_obuf_I_O)         2.309    27.356 r  ALUResultExp_OBUF[29]_inst/O
-                         net (fo=0)                   0.000    27.356    ALUResultExp[29]
-    AK29                                                              r  ALUResultExp[29] (OUT)
+    SLICE_X54Y202        FDRE                         0.000     0.000 r  u_pcaddr/store_reg[0]/C
+    SLICE_X54Y202        FDRE (Prop_fdre_C_Q)         0.308     0.308 r  u_pcaddr/store_reg[0]/Q
+                         net (fo=41, routed)          2.681     2.989    u_pcaddr/Q[0]
+    SLICE_X46Y250        LUT4 (Prop_lut4_I2_O)        0.065     3.054 r  u_pcaddr/SimpleCPU01Design_i_i_7/O
+                         net (fo=16, routed)          1.250     4.304    u_instrmembrom/u_mem_generator_1/SimpleCPU01Design_i/dist_mem_gen_0/U0/synth_options.dist_mem_inst/gen_rom.rom_inst/a[3]
+    SLICE_X46Y248        LUT5 (Prop_lut5_I1_O)        0.168     4.472 r  u_instrmembrom/u_mem_generator_1/SimpleCPU01Design_i/dist_mem_gen_0/U0/synth_options.dist_mem_inst/gen_rom.rom_inst/spo[0]_INST_0/O
+                         net (fo=37, routed)          5.029     9.501    u_regfiles/regs_reg_r2_0_31_0_5/ADDRC0
+    SLICE_X56Y165        RAMD32 (Prop_ramd32_RADR0_O)
+                                                      0.063     9.564 f  u_regfiles/regs_reg_r2_0_31_0_5/RAMC/O
+                         net (fo=91, routed)          5.079    14.644    u_instrmembrom/u_mem_generator_0/RD2Exp_OBUF[4]
+    SLICE_X120Y170       LUT3 (Prop_lut3_I0_O)        0.175    14.819 f  u_instrmembrom/u_mem_generator_0/SrcBExp_OBUF[4]_inst_i_1/O
+                         net (fo=15, routed)          1.911    16.730    u_instrmembrom/u_mem_generator_3/p_2_out_inferred__0/i__carry__6[0]
+    SLICE_X125Y184       LUT6 (Prop_lut6_I5_O)        0.164    16.894 r  u_instrmembrom/u_mem_generator_3/i__carry_i_2/O
+                         net (fo=1, routed)           0.251    17.145    u_alu/out2_inferred__5/i__carry__0_0[2]
+    SLICE_X122Y184       CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.244    17.389 r  u_alu/out2_inferred__5/i__carry/CO[3]
+                         net (fo=1, routed)           0.000    17.389    u_alu/out2_inferred__5/i__carry_n_0
+    SLICE_X122Y185       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060    17.449 r  u_alu/out2_inferred__5/i__carry__0/CO[3]
+                         net (fo=1, routed)           0.000    17.449    u_alu/out2_inferred__5/i__carry__0_n_0
+    SLICE_X122Y186       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060    17.509 r  u_alu/out2_inferred__5/i__carry__1/CO[3]
+                         net (fo=1, routed)           0.000    17.509    u_alu/out2_inferred__5/i__carry__1_n_0
+    SLICE_X122Y187       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060    17.569 r  u_alu/out2_inferred__5/i__carry__2/CO[3]
+                         net (fo=1, routed)           0.752    18.320    u_instrmembrom/u_mem_generator_0/ALUResultExp_OBUF[0]_inst_i_7_1[0]
+    SLICE_X118Y184       LUT4 (Prop_lut4_I3_O)        0.053    18.373 r  u_instrmembrom/u_mem_generator_0/ALUResultExp_OBUF[0]_inst_i_10/O
+                         net (fo=1, routed)           0.315    18.689    u_instrmembrom/u_mem_generator_0/ALUResultExp_OBUF[0]_inst_i_10_n_0
+    SLICE_X118Y184       LUT6 (Prop_lut6_I0_O)        0.053    18.742 r  u_instrmembrom/u_mem_generator_0/ALUResultExp_OBUF[0]_inst_i_7/O
+                         net (fo=1, routed)           1.057    19.798    u_instrmembrom/u_mem_generator_3/WD3Exp_OBUF[0]_inst_i_2_2
+    SLICE_X110Y176       LUT6 (Prop_lut6_I5_O)        0.053    19.851 f  u_instrmembrom/u_mem_generator_3/ALUResultExp_OBUF[0]_inst_i_3/O
+                         net (fo=19, routed)          0.705    20.556    u_instrmembrom/u_mem_generator_3/ALUResultExp_OBUF[0]_inst_i_3_n_0
+    SLICE_X106Y173       LUT6 (Prop_lut6_I2_O)        0.053    20.609 r  u_instrmembrom/u_mem_generator_3/store[3][1]_i_3/O
+                         net (fo=126, routed)         5.140    25.750    u_datamem/DataMemReadExp_OBUF[1]_inst_i_40_0
+    SLICE_X80Y155        LUT6 (Prop_lut6_I4_O)        0.053    25.803 r  u_datamem/DataMemReadExp_OBUF[1]_inst_i_111/O
+                         net (fo=1, routed)           0.000    25.803    u_datamem/DataMemReadExp_OBUF[1]_inst_i_111_n_0
+    SLICE_X80Y155        MUXF7 (Prop_muxf7_I1_O)      0.129    25.932 r  u_datamem/DataMemReadExp_OBUF[1]_inst_i_51/O
+                         net (fo=1, routed)           0.000    25.932    u_datamem/DataMemReadExp_OBUF[1]_inst_i_51_n_0
+    SLICE_X80Y155        MUXF8 (Prop_muxf8_I1_O)      0.054    25.986 r  u_datamem/DataMemReadExp_OBUF[1]_inst_i_21/O
+                         net (fo=1, routed)           0.824    26.810    u_datamem/DataMemReadExp_OBUF[1]_inst_i_21_n_0
+    SLICE_X89Y152        LUT6 (Prop_lut6_I1_O)        0.153    26.963 r  u_datamem/DataMemReadExp_OBUF[1]_inst_i_7/O
+                         net (fo=1, routed)           0.000    26.963    u_datamem/DataMemReadExp_OBUF[1]_inst_i_7_n_0
+    SLICE_X89Y152        MUXF7 (Prop_muxf7_I1_O)      0.129    27.092 r  u_datamem/DataMemReadExp_OBUF[1]_inst_i_3/O
+                         net (fo=1, routed)           0.000    27.092    u_datamem/DataMemReadExp_OBUF[1]_inst_i_3_n_0
+    SLICE_X89Y152        MUXF8 (Prop_muxf8_I1_O)      0.054    27.146 r  u_datamem/DataMemReadExp_OBUF[1]_inst_i_1/O
+                         net (fo=3, routed)           1.181    28.327    u_instrmembrom/u_mem_generator_0/WD3TempExp[31][1]
+    SLICE_X96Y135        LUT3 (Prop_lut3_I0_O)        0.165    28.492 r  u_instrmembrom/u_mem_generator_0/WD3TempExp_OBUF[1]_inst_i_1/O
+                         net (fo=1, routed)           3.428    31.920    WD3TempExp_OBUF[1]
+    AL18                 OBUF (Prop_obuf_I_O)         2.443    34.363 r  WD3TempExp_OBUF[1]_inst/O
+                         net (fo=0)                   0.000    34.363    WD3TempExp[1]
+    AL18                                                              r  WD3TempExp[1] (OUT)
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
   Source:                 u_pcaddr/store_reg[0]/C
                             (rising edge-triggered cell FDRE)
-  Destination:            ALUResultExp[25]
+  Destination:            WD3Exp[25]
                             (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        27.169ns  (logic 3.400ns (12.515%)  route 23.769ns (87.485%))
-  Logic Levels:           12  (FDRE=1 LUT2=2 LUT3=4 LUT5=1 LUT6=3 OBUF=1)
+  Data Path Delay:        34.304ns  (logic 4.646ns (13.543%)  route 29.658ns (86.457%))
+  Logic Levels:           22  (CARRY4=4 FDRE=1 LUT3=1 LUT4=2 LUT5=2 LUT6=6 MUXF7=2 MUXF8=2 OBUF=1 RAMD32=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X122Y193       FDRE                         0.000     0.000 r  u_pcaddr/store_reg[0]/C
-    SLICE_X122Y193       FDRE (Prop_fdre_C_Q)         0.308     0.308 r  u_pcaddr/store_reg[0]/Q
-                         net (fo=61, routed)          3.350     3.658    u_instrmembrom/u_mem_generator/SimpleCPU01Design_i/dist_mem_gen_0/U0/synth_options.dist_mem_inst/gen_rom.rom_inst/a[0]
-    SLICE_X48Y212        LUT3 (Prop_lut3_I2_O)        0.065     3.723 f  u_instrmembrom/u_mem_generator/SimpleCPU01Design_i/dist_mem_gen_0/U0/synth_options.dist_mem_inst/gen_rom.rom_inst/spo[30]_INST_0/O
-                         net (fo=9, routed)           4.154     7.877    u_instrmembrom/u_mem_generator/spo_0[30]
-    SLICE_X139Y215       LUT2 (Prop_lut2_I1_O)        0.179     8.056 f  u_instrmembrom/u_mem_generator/ALUControlExp_OBUF[4]_inst_i_4/O
-                         net (fo=35, routed)          0.959     9.015    u_instrmembrom/u_mem_generator/ALUControlExp_OBUF[4]_inst_i_4_n_0
-    SLICE_X144Y212       LUT3 (Prop_lut3_I0_O)        0.170     9.185 r  u_instrmembrom/u_mem_generator/ALUSrcAExp_OBUF_inst_i_1/O
-                         net (fo=159, routed)         3.271    12.456    u_instrmembrom/u_mem_generator/bbstub_spo[3]
-    SLICE_X158Y207       LUT3 (Prop_lut3_I1_O)        0.053    12.509 f  u_instrmembrom/u_mem_generator/SrcAExp_OBUF[3]_inst_i_2/O
-                         net (fo=131, routed)         2.069    14.578    u_instrmembrom/u_mem_generator/SrcAExp_OBUF[1]
-    SLICE_X138Y202       LUT2 (Prop_lut2_I0_O)        0.053    14.631 f  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[30]_inst_i_12/O
-                         net (fo=17, routed)          0.839    15.470    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[30]_inst_i_12_n_0
-    SLICE_X144Y203       LUT5 (Prop_lut5_I2_O)        0.053    15.523 f  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[25]_inst_i_15/O
-                         net (fo=3, routed)           0.550    16.073    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[25]_inst_i_15_n_0
-    SLICE_X143Y206       LUT6 (Prop_lut6_I5_O)        0.053    16.126 f  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[25]_inst_i_17/O
-                         net (fo=2, routed)           0.665    16.791    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[25]_inst_i_17_n_0
-    SLICE_X139Y207       LUT3 (Prop_lut3_I0_O)        0.053    16.844 r  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[25]_inst_i_9/O
-                         net (fo=1, routed)           0.420    17.264    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[25]_inst_i_9_n_0
-    SLICE_X140Y207       LUT6 (Prop_lut6_I4_O)        0.053    17.317 r  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[25]_inst_i_4/O
-                         net (fo=1, routed)           0.646    17.963    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[25]_inst_i_4_n_0
-    SLICE_X140Y210       LUT6 (Prop_lut6_I2_O)        0.053    18.016 r  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[25]_inst_i_1/O
-                         net (fo=5, routed)           6.846    24.862    ALUResultExp_OBUF[25]
-    AL30                 OBUF (Prop_obuf_I_O)         2.307    27.169 r  ALUResultExp_OBUF[25]_inst/O
-                         net (fo=0)                   0.000    27.169    ALUResultExp[25]
-    AL30                                                              r  ALUResultExp[25] (OUT)
+    SLICE_X54Y202        FDRE                         0.000     0.000 r  u_pcaddr/store_reg[0]/C
+    SLICE_X54Y202        FDRE (Prop_fdre_C_Q)         0.308     0.308 r  u_pcaddr/store_reg[0]/Q
+                         net (fo=41, routed)          2.681     2.989    u_pcaddr/Q[0]
+    SLICE_X46Y250        LUT4 (Prop_lut4_I2_O)        0.065     3.054 r  u_pcaddr/SimpleCPU01Design_i_i_7/O
+                         net (fo=16, routed)          1.250     4.304    u_instrmembrom/u_mem_generator_1/SimpleCPU01Design_i/dist_mem_gen_0/U0/synth_options.dist_mem_inst/gen_rom.rom_inst/a[3]
+    SLICE_X46Y248        LUT5 (Prop_lut5_I1_O)        0.168     4.472 r  u_instrmembrom/u_mem_generator_1/SimpleCPU01Design_i/dist_mem_gen_0/U0/synth_options.dist_mem_inst/gen_rom.rom_inst/spo[0]_INST_0/O
+                         net (fo=37, routed)          5.029     9.501    u_regfiles/regs_reg_r2_0_31_0_5/ADDRC0
+    SLICE_X56Y165        RAMD32 (Prop_ramd32_RADR0_O)
+                                                      0.063     9.564 f  u_regfiles/regs_reg_r2_0_31_0_5/RAMC/O
+                         net (fo=91, routed)          5.079    14.644    u_instrmembrom/u_mem_generator_0/RD2Exp_OBUF[4]
+    SLICE_X120Y170       LUT3 (Prop_lut3_I0_O)        0.175    14.819 f  u_instrmembrom/u_mem_generator_0/SrcBExp_OBUF[4]_inst_i_1/O
+                         net (fo=15, routed)          1.911    16.730    u_instrmembrom/u_mem_generator_3/p_2_out_inferred__0/i__carry__6[0]
+    SLICE_X125Y184       LUT6 (Prop_lut6_I5_O)        0.164    16.894 r  u_instrmembrom/u_mem_generator_3/i__carry_i_2/O
+                         net (fo=1, routed)           0.251    17.145    u_alu/out2_inferred__5/i__carry__0_0[2]
+    SLICE_X122Y184       CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.244    17.389 r  u_alu/out2_inferred__5/i__carry/CO[3]
+                         net (fo=1, routed)           0.000    17.389    u_alu/out2_inferred__5/i__carry_n_0
+    SLICE_X122Y185       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060    17.449 r  u_alu/out2_inferred__5/i__carry__0/CO[3]
+                         net (fo=1, routed)           0.000    17.449    u_alu/out2_inferred__5/i__carry__0_n_0
+    SLICE_X122Y186       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060    17.509 r  u_alu/out2_inferred__5/i__carry__1/CO[3]
+                         net (fo=1, routed)           0.000    17.509    u_alu/out2_inferred__5/i__carry__1_n_0
+    SLICE_X122Y187       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060    17.569 r  u_alu/out2_inferred__5/i__carry__2/CO[3]
+                         net (fo=1, routed)           0.752    18.320    u_instrmembrom/u_mem_generator_0/ALUResultExp_OBUF[0]_inst_i_7_1[0]
+    SLICE_X118Y184       LUT4 (Prop_lut4_I3_O)        0.053    18.373 r  u_instrmembrom/u_mem_generator_0/ALUResultExp_OBUF[0]_inst_i_10/O
+                         net (fo=1, routed)           0.315    18.689    u_instrmembrom/u_mem_generator_0/ALUResultExp_OBUF[0]_inst_i_10_n_0
+    SLICE_X118Y184       LUT6 (Prop_lut6_I0_O)        0.053    18.742 r  u_instrmembrom/u_mem_generator_0/ALUResultExp_OBUF[0]_inst_i_7/O
+                         net (fo=1, routed)           1.057    19.798    u_instrmembrom/u_mem_generator_3/WD3Exp_OBUF[0]_inst_i_2_2
+    SLICE_X110Y176       LUT6 (Prop_lut6_I5_O)        0.053    19.851 f  u_instrmembrom/u_mem_generator_3/ALUResultExp_OBUF[0]_inst_i_3/O
+                         net (fo=19, routed)          0.705    20.556    u_instrmembrom/u_mem_generator_3/ALUResultExp_OBUF[0]_inst_i_3_n_0
+    SLICE_X106Y173       LUT6 (Prop_lut6_I2_O)        0.053    20.609 r  u_instrmembrom/u_mem_generator_3/store[3][1]_i_3/O
+                         net (fo=126, routed)         5.545    26.154    u_datamem/DataMemReadExp_OBUF[1]_inst_i_40_0
+    SLICE_X80Y160        LUT6 (Prop_lut6_I4_O)        0.053    26.207 r  u_datamem/DataMemReadExp_OBUF[25]_inst_i_108/O
+                         net (fo=1, routed)           0.000    26.207    u_datamem/DataMemReadExp_OBUF[25]_inst_i_108_n_0
+    SLICE_X80Y160        MUXF7 (Prop_muxf7_I1_O)      0.129    26.336 r  u_datamem/DataMemReadExp_OBUF[25]_inst_i_49/O
+                         net (fo=1, routed)           0.000    26.336    u_datamem/DataMemReadExp_OBUF[25]_inst_i_49_n_0
+    SLICE_X80Y160        MUXF8 (Prop_muxf8_I1_O)      0.054    26.390 r  u_datamem/DataMemReadExp_OBUF[25]_inst_i_20/O
+                         net (fo=1, routed)           0.711    27.101    u_datamem/DataMemReadExp_OBUF[25]_inst_i_20_n_0
+    SLICE_X87Y152        LUT6 (Prop_lut6_I0_O)        0.153    27.254 r  u_datamem/DataMemReadExp_OBUF[25]_inst_i_7/O
+                         net (fo=1, routed)           0.000    27.254    u_datamem/DataMemReadExp_OBUF[25]_inst_i_7_n_0
+    SLICE_X87Y152        MUXF7 (Prop_muxf7_I1_O)      0.129    27.383 r  u_datamem/DataMemReadExp_OBUF[25]_inst_i_3/O
+                         net (fo=1, routed)           0.000    27.383    u_datamem/DataMemReadExp_OBUF[25]_inst_i_3_n_0
+    SLICE_X87Y152        MUXF8 (Prop_muxf8_I1_O)      0.054    27.437 r  u_datamem/DataMemReadExp_OBUF[25]_inst_i_1/O
+                         net (fo=3, routed)           2.182    29.619    u_instrmembrom/u_mem_generator_0/WD3TempExp[31][24]
+    SLICE_X47Y170        LUT5 (Prop_lut5_I2_O)        0.153    29.772 r  u_instrmembrom/u_mem_generator_0/WD3Exp_OBUF[25]_inst_i_1/O
+                         net (fo=3, routed)           2.191    31.962    WD3Exp_OBUF[25]
+    AJ31                 OBUF (Prop_obuf_I_O)         2.342    34.304 r  WD3Exp_OBUF[25]_inst/O
+                         net (fo=0)                   0.000    34.304    WD3Exp[25]
+    AJ31                                                              r  WD3Exp[25] (OUT)
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
   Source:                 u_pcaddr/store_reg[0]/C
                             (rising edge-triggered cell FDRE)
-  Destination:            ALUResultExp[16]
+  Destination:            WD3TempExp[19]
                             (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        27.094ns  (logic 3.406ns (12.571%)  route 23.688ns (87.429%))
-  Logic Levels:           13  (FDRE=1 LUT2=1 LUT3=5 LUT5=3 LUT6=2 OBUF=1)
+  Data Path Delay:        34.281ns  (logic 4.592ns (13.395%)  route 29.689ns (86.605%))
+  Logic Levels:           22  (CARRY4=4 FDRE=1 LUT3=2 LUT4=2 LUT5=1 LUT6=6 MUXF7=2 MUXF8=2 OBUF=1 RAMD32=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X122Y193       FDRE                         0.000     0.000 r  u_pcaddr/store_reg[0]/C
-    SLICE_X122Y193       FDRE (Prop_fdre_C_Q)         0.308     0.308 r  u_pcaddr/store_reg[0]/Q
-                         net (fo=61, routed)          3.350     3.658    u_instrmembrom/u_mem_generator/SimpleCPU01Design_i/dist_mem_gen_0/U0/synth_options.dist_mem_inst/gen_rom.rom_inst/a[0]
-    SLICE_X48Y212        LUT3 (Prop_lut3_I2_O)        0.065     3.723 f  u_instrmembrom/u_mem_generator/SimpleCPU01Design_i/dist_mem_gen_0/U0/synth_options.dist_mem_inst/gen_rom.rom_inst/spo[30]_INST_0/O
-                         net (fo=9, routed)           4.154     7.877    u_instrmembrom/u_mem_generator/spo_0[30]
-    SLICE_X139Y215       LUT2 (Prop_lut2_I1_O)        0.179     8.056 f  u_instrmembrom/u_mem_generator/ALUControlExp_OBUF[4]_inst_i_4/O
-                         net (fo=35, routed)          0.959     9.015    u_instrmembrom/u_mem_generator/ALUControlExp_OBUF[4]_inst_i_4_n_0
-    SLICE_X144Y212       LUT3 (Prop_lut3_I0_O)        0.170     9.185 r  u_instrmembrom/u_mem_generator/ALUSrcAExp_OBUF_inst_i_1/O
-                         net (fo=159, routed)         3.271    12.456    u_instrmembrom/u_mem_generator/bbstub_spo[3]
-    SLICE_X158Y207       LUT3 (Prop_lut3_I1_O)        0.053    12.509 r  u_instrmembrom/u_mem_generator/SrcAExp_OBUF[3]_inst_i_2/O
-                         net (fo=131, routed)         2.074    14.583    u_instrmembrom/u_mem_generator/SrcAExp_OBUF[1]
-    SLICE_X138Y204       LUT5 (Prop_lut5_I2_O)        0.053    14.636 r  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[18]_inst_i_14/O
-                         net (fo=1, routed)           0.319    14.956    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[18]_inst_i_14_n_0
-    SLICE_X138Y204       LUT6 (Prop_lut6_I0_O)        0.053    15.009 r  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[18]_inst_i_11/O
-                         net (fo=3, routed)           0.546    15.555    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[18]_inst_i_11_n_0
-    SLICE_X142Y202       LUT3 (Prop_lut3_I0_O)        0.053    15.608 r  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[15]_inst_i_9/O
-                         net (fo=3, routed)           0.586    16.193    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[15]_inst_i_9_n_0
-    SLICE_X145Y201       LUT3 (Prop_lut3_I2_O)        0.053    16.246 f  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[15]_inst_i_8/O
-                         net (fo=2, routed)           0.457    16.704    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[15]_inst_i_8_n_0
-    SLICE_X146Y201       LUT5 (Prop_lut5_I1_O)        0.053    16.757 f  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[16]_inst_i_8/O
-                         net (fo=1, routed)           0.687    17.444    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[16]_inst_i_8_n_0
-    SLICE_X150Y201       LUT5 (Prop_lut5_I0_O)        0.053    17.497 f  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[16]_inst_i_4/O
-                         net (fo=1, routed)           0.400    17.897    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[16]_inst_i_4_n_0
-    SLICE_X151Y202       LUT6 (Prop_lut6_I2_O)        0.053    17.950 r  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[16]_inst_i_1/O
-                         net (fo=5, routed)           6.884    24.834    ALUResultExp_OBUF[16]
-    AH24                 OBUF (Prop_obuf_I_O)         2.260    27.094 r  ALUResultExp_OBUF[16]_inst/O
-                         net (fo=0)                   0.000    27.094    ALUResultExp[16]
-    AH24                                                              r  ALUResultExp[16] (OUT)
+    SLICE_X54Y202        FDRE                         0.000     0.000 r  u_pcaddr/store_reg[0]/C
+    SLICE_X54Y202        FDRE (Prop_fdre_C_Q)         0.308     0.308 r  u_pcaddr/store_reg[0]/Q
+                         net (fo=41, routed)          2.681     2.989    u_pcaddr/Q[0]
+    SLICE_X46Y250        LUT4 (Prop_lut4_I2_O)        0.065     3.054 r  u_pcaddr/SimpleCPU01Design_i_i_7/O
+                         net (fo=16, routed)          1.250     4.304    u_instrmembrom/u_mem_generator_1/SimpleCPU01Design_i/dist_mem_gen_0/U0/synth_options.dist_mem_inst/gen_rom.rom_inst/a[3]
+    SLICE_X46Y248        LUT5 (Prop_lut5_I1_O)        0.168     4.472 r  u_instrmembrom/u_mem_generator_1/SimpleCPU01Design_i/dist_mem_gen_0/U0/synth_options.dist_mem_inst/gen_rom.rom_inst/spo[0]_INST_0/O
+                         net (fo=37, routed)          5.029     9.501    u_regfiles/regs_reg_r2_0_31_0_5/ADDRC0
+    SLICE_X56Y165        RAMD32 (Prop_ramd32_RADR0_O)
+                                                      0.063     9.564 f  u_regfiles/regs_reg_r2_0_31_0_5/RAMC/O
+                         net (fo=91, routed)          5.079    14.644    u_instrmembrom/u_mem_generator_0/RD2Exp_OBUF[4]
+    SLICE_X120Y170       LUT3 (Prop_lut3_I0_O)        0.175    14.819 f  u_instrmembrom/u_mem_generator_0/SrcBExp_OBUF[4]_inst_i_1/O
+                         net (fo=15, routed)          1.911    16.730    u_instrmembrom/u_mem_generator_3/p_2_out_inferred__0/i__carry__6[0]
+    SLICE_X125Y184       LUT6 (Prop_lut6_I5_O)        0.164    16.894 r  u_instrmembrom/u_mem_generator_3/i__carry_i_2/O
+                         net (fo=1, routed)           0.251    17.145    u_alu/out2_inferred__5/i__carry__0_0[2]
+    SLICE_X122Y184       CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.244    17.389 r  u_alu/out2_inferred__5/i__carry/CO[3]
+                         net (fo=1, routed)           0.000    17.389    u_alu/out2_inferred__5/i__carry_n_0
+    SLICE_X122Y185       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060    17.449 r  u_alu/out2_inferred__5/i__carry__0/CO[3]
+                         net (fo=1, routed)           0.000    17.449    u_alu/out2_inferred__5/i__carry__0_n_0
+    SLICE_X122Y186       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060    17.509 r  u_alu/out2_inferred__5/i__carry__1/CO[3]
+                         net (fo=1, routed)           0.000    17.509    u_alu/out2_inferred__5/i__carry__1_n_0
+    SLICE_X122Y187       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060    17.569 r  u_alu/out2_inferred__5/i__carry__2/CO[3]
+                         net (fo=1, routed)           0.752    18.320    u_instrmembrom/u_mem_generator_0/ALUResultExp_OBUF[0]_inst_i_7_1[0]
+    SLICE_X118Y184       LUT4 (Prop_lut4_I3_O)        0.053    18.373 r  u_instrmembrom/u_mem_generator_0/ALUResultExp_OBUF[0]_inst_i_10/O
+                         net (fo=1, routed)           0.315    18.689    u_instrmembrom/u_mem_generator_0/ALUResultExp_OBUF[0]_inst_i_10_n_0
+    SLICE_X118Y184       LUT6 (Prop_lut6_I0_O)        0.053    18.742 r  u_instrmembrom/u_mem_generator_0/ALUResultExp_OBUF[0]_inst_i_7/O
+                         net (fo=1, routed)           1.057    19.798    u_instrmembrom/u_mem_generator_3/WD3Exp_OBUF[0]_inst_i_2_2
+    SLICE_X110Y176       LUT6 (Prop_lut6_I5_O)        0.053    19.851 f  u_instrmembrom/u_mem_generator_3/ALUResultExp_OBUF[0]_inst_i_3/O
+                         net (fo=19, routed)          0.959    20.810    u_instrmembrom/u_mem_generator_3/ALUResultExp_OBUF[0]_inst_i_3_n_0
+    SLICE_X104Y164       LUT6 (Prop_lut6_I2_O)        0.053    20.863 r  u_instrmembrom/u_mem_generator_3/store[3][2]_i_3/O
+                         net (fo=126, routed)         3.896    24.759    u_datamem/DataMemReadExp_OBUF[10]_inst_i_51_0
+    SLICE_X79Y145        LUT6 (Prop_lut6_I4_O)        0.053    24.812 r  u_datamem/DataMemReadExp_OBUF[19]_inst_i_59/O
+                         net (fo=1, routed)           0.000    24.812    u_datamem/DataMemReadExp_OBUF[19]_inst_i_59_n_0
+    SLICE_X79Y145        MUXF7 (Prop_muxf7_I1_O)      0.129    24.941 r  u_datamem/DataMemReadExp_OBUF[19]_inst_i_25/O
+                         net (fo=1, routed)           0.000    24.941    u_datamem/DataMemReadExp_OBUF[19]_inst_i_25_n_0
+    SLICE_X79Y145        MUXF8 (Prop_muxf8_I1_O)      0.054    24.995 r  u_datamem/DataMemReadExp_OBUF[19]_inst_i_8/O
+                         net (fo=1, routed)           1.112    26.107    u_datamem/DataMemReadExp_OBUF[19]_inst_i_8_n_0
+    SLICE_X100Y155       LUT6 (Prop_lut6_I0_O)        0.153    26.260 r  u_datamem/DataMemReadExp_OBUF[19]_inst_i_4/O
+                         net (fo=1, routed)           0.000    26.260    u_datamem/DataMemReadExp_OBUF[19]_inst_i_4_n_0
+    SLICE_X100Y155       MUXF7 (Prop_muxf7_I0_O)      0.136    26.396 r  u_datamem/DataMemReadExp_OBUF[19]_inst_i_2/O
+                         net (fo=1, routed)           0.000    26.396    u_datamem/DataMemReadExp_OBUF[19]_inst_i_2_n_0
+    SLICE_X100Y155       MUXF8 (Prop_muxf8_I0_O)      0.057    26.453 r  u_datamem/DataMemReadExp_OBUF[19]_inst_i_1/O
+                         net (fo=3, routed)           1.155    27.608    u_instrmembrom/u_mem_generator_0/WD3TempExp[31][18]
+    SLICE_X100Y135       LUT3 (Prop_lut3_I0_O)        0.156    27.764 r  u_instrmembrom/u_mem_generator_0/WD3TempExp_OBUF[19]_inst_i_1/O
+                         net (fo=1, routed)           4.242    32.006    WD3TempExp_OBUF[19]
+    AH8                  OBUF (Prop_obuf_I_O)         2.275    34.281 r  WD3TempExp_OBUF[19]_inst/O
+                         net (fo=0)                   0.000    34.281    WD3TempExp[19]
+    AH8                                                               r  WD3TempExp[19] (OUT)
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
   Source:                 u_pcaddr/store_reg[0]/C
                             (rising edge-triggered cell FDRE)
-  Destination:            ALUResultExp[23]
+  Destination:            WD3TempExp[14]
                             (output port)
   Path Group:             (none)
   Path Type:              Max at Slow Process Corner
-  Data Path Delay:        26.993ns  (logic 3.387ns (12.549%)  route 23.606ns (87.451%))
-  Logic Levels:           12  (FDRE=1 LUT2=2 LUT3=3 LUT5=3 LUT6=2 OBUF=1)
+  Data Path Delay:        34.264ns  (logic 4.639ns (13.539%)  route 29.625ns (86.461%))
+  Logic Levels:           22  (CARRY4=4 FDRE=1 LUT3=2 LUT4=2 LUT5=1 LUT6=6 MUXF7=2 MUXF8=2 OBUF=1 RAMD32=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X122Y193       FDRE                         0.000     0.000 r  u_pcaddr/store_reg[0]/C
-    SLICE_X122Y193       FDRE (Prop_fdre_C_Q)         0.308     0.308 r  u_pcaddr/store_reg[0]/Q
-                         net (fo=61, routed)          3.350     3.658    u_instrmembrom/u_mem_generator/SimpleCPU01Design_i/dist_mem_gen_0/U0/synth_options.dist_mem_inst/gen_rom.rom_inst/a[0]
-    SLICE_X48Y212        LUT3 (Prop_lut3_I2_O)        0.065     3.723 f  u_instrmembrom/u_mem_generator/SimpleCPU01Design_i/dist_mem_gen_0/U0/synth_options.dist_mem_inst/gen_rom.rom_inst/spo[30]_INST_0/O
-                         net (fo=9, routed)           4.154     7.877    u_instrmembrom/u_mem_generator/spo_0[30]
-    SLICE_X139Y215       LUT2 (Prop_lut2_I1_O)        0.179     8.056 f  u_instrmembrom/u_mem_generator/ALUControlExp_OBUF[4]_inst_i_4/O
-                         net (fo=35, routed)          0.959     9.015    u_instrmembrom/u_mem_generator/ALUControlExp_OBUF[4]_inst_i_4_n_0
-    SLICE_X144Y212       LUT3 (Prop_lut3_I0_O)        0.170     9.185 r  u_instrmembrom/u_mem_generator/ALUSrcAExp_OBUF_inst_i_1/O
-                         net (fo=159, routed)         3.271    12.456    u_instrmembrom/u_mem_generator/bbstub_spo[3]
-    SLICE_X158Y207       LUT3 (Prop_lut3_I1_O)        0.053    12.509 f  u_instrmembrom/u_mem_generator/SrcAExp_OBUF[3]_inst_i_2/O
-                         net (fo=131, routed)         2.069    14.578    u_instrmembrom/u_mem_generator/SrcAExp_OBUF[1]
-    SLICE_X138Y202       LUT2 (Prop_lut2_I0_O)        0.053    14.631 f  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[30]_inst_i_12/O
-                         net (fo=17, routed)          0.826    15.457    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[30]_inst_i_12_n_0
-    SLICE_X139Y205       LUT5 (Prop_lut5_I4_O)        0.053    15.510 r  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[25]_inst_i_14/O
-                         net (fo=2, routed)           0.474    15.984    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[25]_inst_i_14_n_0
-    SLICE_X138Y205       LUT6 (Prop_lut6_I4_O)        0.053    16.037 f  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[24]_inst_i_11/O
-                         net (fo=4, routed)           0.309    16.347    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[24]_inst_i_11_n_0
-    SLICE_X139Y204       LUT5 (Prop_lut5_I2_O)        0.053    16.400 f  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[23]_inst_i_9/O
-                         net (fo=1, routed)           0.550    16.949    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[23]_inst_i_9_n_0
-    SLICE_X139Y205       LUT5 (Prop_lut5_I4_O)        0.053    17.002 r  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[23]_inst_i_4/O
-                         net (fo=1, routed)           0.597    17.600    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[23]_inst_i_4_n_0
-    SLICE_X140Y206       LUT6 (Prop_lut6_I2_O)        0.053    17.653 r  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[23]_inst_i_1/O
-                         net (fo=5, routed)           7.046    24.699    ALUResultExp_OBUF[23]
-    AL28                 OBUF (Prop_obuf_I_O)         2.294    26.993 r  ALUResultExp_OBUF[23]_inst/O
-                         net (fo=0)                   0.000    26.993    ALUResultExp[23]
-    AL28                                                              r  ALUResultExp[23] (OUT)
+    SLICE_X54Y202        FDRE                         0.000     0.000 r  u_pcaddr/store_reg[0]/C
+    SLICE_X54Y202        FDRE (Prop_fdre_C_Q)         0.308     0.308 r  u_pcaddr/store_reg[0]/Q
+                         net (fo=41, routed)          2.681     2.989    u_pcaddr/Q[0]
+    SLICE_X46Y250        LUT4 (Prop_lut4_I2_O)        0.065     3.054 r  u_pcaddr/SimpleCPU01Design_i_i_7/O
+                         net (fo=16, routed)          1.250     4.304    u_instrmembrom/u_mem_generator_1/SimpleCPU01Design_i/dist_mem_gen_0/U0/synth_options.dist_mem_inst/gen_rom.rom_inst/a[3]
+    SLICE_X46Y248        LUT5 (Prop_lut5_I1_O)        0.168     4.472 r  u_instrmembrom/u_mem_generator_1/SimpleCPU01Design_i/dist_mem_gen_0/U0/synth_options.dist_mem_inst/gen_rom.rom_inst/spo[0]_INST_0/O
+                         net (fo=37, routed)          5.029     9.501    u_regfiles/regs_reg_r2_0_31_0_5/ADDRC0
+    SLICE_X56Y165        RAMD32 (Prop_ramd32_RADR0_O)
+                                                      0.063     9.564 f  u_regfiles/regs_reg_r2_0_31_0_5/RAMC/O
+                         net (fo=91, routed)          5.079    14.644    u_instrmembrom/u_mem_generator_0/RD2Exp_OBUF[4]
+    SLICE_X120Y170       LUT3 (Prop_lut3_I0_O)        0.175    14.819 f  u_instrmembrom/u_mem_generator_0/SrcBExp_OBUF[4]_inst_i_1/O
+                         net (fo=15, routed)          1.911    16.730    u_instrmembrom/u_mem_generator_3/p_2_out_inferred__0/i__carry__6[0]
+    SLICE_X125Y184       LUT6 (Prop_lut6_I5_O)        0.164    16.894 r  u_instrmembrom/u_mem_generator_3/i__carry_i_2/O
+                         net (fo=1, routed)           0.251    17.145    u_alu/out2_inferred__5/i__carry__0_0[2]
+    SLICE_X122Y184       CARRY4 (Prop_carry4_DI[2]_CO[3])
+                                                      0.244    17.389 r  u_alu/out2_inferred__5/i__carry/CO[3]
+                         net (fo=1, routed)           0.000    17.389    u_alu/out2_inferred__5/i__carry_n_0
+    SLICE_X122Y185       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060    17.449 r  u_alu/out2_inferred__5/i__carry__0/CO[3]
+                         net (fo=1, routed)           0.000    17.449    u_alu/out2_inferred__5/i__carry__0_n_0
+    SLICE_X122Y186       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060    17.509 r  u_alu/out2_inferred__5/i__carry__1/CO[3]
+                         net (fo=1, routed)           0.000    17.509    u_alu/out2_inferred__5/i__carry__1_n_0
+    SLICE_X122Y187       CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.060    17.569 r  u_alu/out2_inferred__5/i__carry__2/CO[3]
+                         net (fo=1, routed)           0.752    18.320    u_instrmembrom/u_mem_generator_0/ALUResultExp_OBUF[0]_inst_i_7_1[0]
+    SLICE_X118Y184       LUT4 (Prop_lut4_I3_O)        0.053    18.373 r  u_instrmembrom/u_mem_generator_0/ALUResultExp_OBUF[0]_inst_i_10/O
+                         net (fo=1, routed)           0.315    18.689    u_instrmembrom/u_mem_generator_0/ALUResultExp_OBUF[0]_inst_i_10_n_0
+    SLICE_X118Y184       LUT6 (Prop_lut6_I0_O)        0.053    18.742 r  u_instrmembrom/u_mem_generator_0/ALUResultExp_OBUF[0]_inst_i_7/O
+                         net (fo=1, routed)           1.057    19.798    u_instrmembrom/u_mem_generator_3/WD3Exp_OBUF[0]_inst_i_2_2
+    SLICE_X110Y176       LUT6 (Prop_lut6_I5_O)        0.053    19.851 f  u_instrmembrom/u_mem_generator_3/ALUResultExp_OBUF[0]_inst_i_3/O
+                         net (fo=19, routed)          2.471    22.323    u_instrmembrom/u_mem_generator_3/ALUResultExp_OBUF[0]_inst_i_3_n_0
+    SLICE_X87Y181        LUT6 (Prop_lut6_I2_O)        0.053    22.376 r  u_instrmembrom/u_mem_generator_3/DataMemReadExp_OBUF[30]_inst_i_123/O
+                         net (fo=126, routed)         2.620    24.995    u_datamem/DataMemReadExp_OBUF[30]_inst_i_46_0
+    SLICE_X74Y180        LUT6 (Prop_lut6_I4_O)        0.053    25.048 r  u_datamem/DataMemReadExp_OBUF[14]_inst_i_107/O
+                         net (fo=1, routed)           0.000    25.048    u_datamem/DataMemReadExp_OBUF[14]_inst_i_107_n_0
+    SLICE_X74Y180        MUXF7 (Prop_muxf7_I1_O)      0.123    25.171 r  u_datamem/DataMemReadExp_OBUF[14]_inst_i_49/O
+                         net (fo=1, routed)           0.000    25.171    u_datamem/DataMemReadExp_OBUF[14]_inst_i_49_n_0
+    SLICE_X74Y180        MUXF8 (Prop_muxf8_I1_O)      0.054    25.225 r  u_datamem/DataMemReadExp_OBUF[14]_inst_i_20/O
+                         net (fo=1, routed)           1.019    26.244    u_datamem/DataMemReadExp_OBUF[14]_inst_i_20_n_0
+    SLICE_X84Y175        LUT6 (Prop_lut6_I0_O)        0.156    26.400 r  u_datamem/DataMemReadExp_OBUF[14]_inst_i_7/O
+                         net (fo=1, routed)           0.000    26.400    u_datamem/DataMemReadExp_OBUF[14]_inst_i_7_n_0
+    SLICE_X84Y175        MUXF7 (Prop_muxf7_I1_O)      0.129    26.529 r  u_datamem/DataMemReadExp_OBUF[14]_inst_i_3/O
+                         net (fo=1, routed)           0.000    26.529    u_datamem/DataMemReadExp_OBUF[14]_inst_i_3_n_0
+    SLICE_X84Y175        MUXF8 (Prop_muxf8_I1_O)      0.054    26.583 r  u_datamem/DataMemReadExp_OBUF[14]_inst_i_1/O
+                         net (fo=3, routed)           1.915    28.498    u_instrmembrom/u_mem_generator_0/WD3TempExp[31][14]
+    SLICE_X102Y136       LUT3 (Prop_lut3_I0_O)        0.153    28.651 r  u_instrmembrom/u_mem_generator_0/WD3TempExp_OBUF[14]_inst_i_1/O
+                         net (fo=1, routed)           3.275    31.926    WD3TempExp_OBUF[14]
+    AM18                 OBUF (Prop_obuf_I_O)         2.338    34.264 r  WD3TempExp_OBUF[14]_inst/O
+                         net (fo=0)                   0.000    34.264    WD3TempExp[14]
+    AM18                                                              r  WD3TempExp[14] (OUT)
   -------------------------------------------------------------------    -------------------
 
 
@@ -624,227 +876,197 @@ Slack:                    inf
   Destination:            u_pcaddr/store_reg[0]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        0.408ns  (logic 0.146ns (35.804%)  route 0.262ns (64.196%))
+  Data Path Delay:        0.296ns  (logic 0.146ns (49.277%)  route 0.150ns (50.723%))
   Logic Levels:           2  (FDRE=1 LUT4=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X122Y193       FDRE                         0.000     0.000 r  u_pcaddr/store_reg[0]/C
-    SLICE_X122Y193       FDRE (Prop_fdre_C_Q)         0.118     0.118 r  u_pcaddr/store_reg[0]/Q
-                         net (fo=61, routed)          0.142     0.260    u_instrmembrom/u_mem_generator/Q[0]
-    SLICE_X124Y194       LUT4 (Prop_lut4_I2_O)        0.028     0.288 r  u_instrmembrom/u_mem_generator/PCExp_OBUF[0]_inst_i_1/O
-                         net (fo=2, routed)           0.120     0.408    u_pcaddr/D[0]
-    SLICE_X122Y193       FDRE                                         r  u_pcaddr/store_reg[0]/D
+    SLICE_X54Y202        FDRE                         0.000     0.000 r  u_pcaddr/store_reg[0]/C
+    SLICE_X54Y202        FDRE (Prop_fdre_C_Q)         0.118     0.118 r  u_pcaddr/store_reg[0]/Q
+                         net (fo=41, routed)          0.150     0.268    u_instrmembrom/u_mem_generator_3/Q[0]
+    SLICE_X54Y202        LUT4 (Prop_lut4_I2_O)        0.028     0.296 r  u_instrmembrom/u_mem_generator_3/PCExp_OBUF[0]_inst_i_1/O
+                         net (fo=2, routed)           0.000     0.296    u_pcaddr/D[0]
+    SLICE_X54Y202        FDRE                                         r  u_pcaddr/store_reg[0]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 u_regfiles/regs_reg_r1_0_31_30_31/DP/CLK
+  Source:                 u_regfiles/regs_reg_r2_0_31_6_11/RAMB_D1/CLK
                             (rising edge-triggered cell RAMD32)
-  Destination:            u_regfiles/regs_reg_r1_0_31_30_31/DP/I
+  Destination:            u_datamem/store_reg[1][1]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        1.181ns  (logic 0.378ns (32.008%)  route 0.803ns (67.992%))
-  Logic Levels:           4  (LUT5=1 LUT6=2 RAMD32=1)
+  Data Path Delay:        0.680ns  (logic 0.325ns (47.802%)  route 0.355ns (52.198%))
+  Logic Levels:           2  (LUT6=1 RAMD32=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X140Y208       RAMD32                       0.000     0.000 r  u_regfiles/regs_reg_r1_0_31_30_31/DP/CLK
-    SLICE_X140Y208       RAMD32 (Prop_ramd32_CLK_O)
-                                                      0.294     0.294 r  u_regfiles/regs_reg_r1_0_31_30_31/DP/O
-                         net (fo=14, routed)          0.365     0.659    u_instrmembrom/u_mem_generator/RD1Exp_OBUF[30]
-    SLICE_X147Y212       LUT5 (Prop_lut5_I1_O)        0.028     0.687 r  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[30]_inst_i_7/O
-                         net (fo=1, routed)           0.121     0.808    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[30]_inst_i_7_n_0
-    SLICE_X147Y211       LUT6 (Prop_lut6_I0_O)        0.028     0.836 f  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[30]_inst_i_3/O
-                         net (fo=1, routed)           0.194     1.030    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[30]_inst_i_3_n_0
-    SLICE_X138Y209       LUT6 (Prop_lut6_I2_O)        0.028     1.058 r  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[30]_inst_i_1/O
-                         net (fo=7, routed)           0.123     1.181    u_regfiles/regs_reg_r1_0_31_30_31/D
-    SLICE_X140Y208       RAMD32                                       r  u_regfiles/regs_reg_r1_0_31_30_31/DP/I
+    SLICE_X58Y165        RAMD32                       0.000     0.000 r  u_regfiles/regs_reg_r2_0_31_6_11/RAMB_D1/CLK
+    SLICE_X58Y165        RAMD32 (Prop_ramd32_CLK_O)
+                                                      0.297     0.297 r  u_regfiles/regs_reg_r2_0_31_6_11/RAMB_D1/O
+                         net (fo=26, routed)          0.355     0.652    u_regfiles/RD2Exp_OBUF[9]
+    SLICE_X74Y165        LUT6 (Prop_lut6_I5_O)        0.028     0.680 r  u_regfiles/store[1][1]_i_1/O
+                         net (fo=1, routed)           0.000     0.680    u_datamem/store_reg[1][7]_1[1]
+    SLICE_X74Y165        FDRE                                         r  u_datamem/store_reg[1][1]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 u_regfiles/regs_reg_r1_0_31_30_31/DP/CLK
+  Source:                 u_regfiles/regs_reg_r2_0_31_6_11/RAMB/CLK
                             (rising edge-triggered cell RAMD32)
-  Destination:            u_regfiles/regs_reg_r2_0_31_30_31/DP/I
+  Destination:            u_datamem/store_reg[0][0]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        1.223ns  (logic 0.378ns (30.899%)  route 0.845ns (69.101%))
-  Logic Levels:           4  (LUT5=1 LUT6=2 RAMD32=1)
+  Data Path Delay:        0.755ns  (logic 0.372ns (49.280%)  route 0.383ns (50.720%))
+  Logic Levels:           2  (LUT6=1 RAMD32=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X140Y208       RAMD32                       0.000     0.000 r  u_regfiles/regs_reg_r1_0_31_30_31/DP/CLK
-    SLICE_X140Y208       RAMD32 (Prop_ramd32_CLK_O)
-                                                      0.294     0.294 r  u_regfiles/regs_reg_r1_0_31_30_31/DP/O
-                         net (fo=14, routed)          0.365     0.659    u_instrmembrom/u_mem_generator/RD1Exp_OBUF[30]
-    SLICE_X147Y212       LUT5 (Prop_lut5_I1_O)        0.028     0.687 r  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[30]_inst_i_7/O
-                         net (fo=1, routed)           0.121     0.808    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[30]_inst_i_7_n_0
-    SLICE_X147Y211       LUT6 (Prop_lut6_I0_O)        0.028     0.836 f  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[30]_inst_i_3/O
-                         net (fo=1, routed)           0.194     1.030    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[30]_inst_i_3_n_0
-    SLICE_X138Y209       LUT6 (Prop_lut6_I2_O)        0.028     1.058 r  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[30]_inst_i_1/O
-                         net (fo=7, routed)           0.165     1.223    u_regfiles/regs_reg_r2_0_31_30_31/D
-    SLICE_X140Y208       RAMD32                                       r  u_regfiles/regs_reg_r2_0_31_30_31/DP/I
+    SLICE_X58Y165        RAMD32                       0.000     0.000 r  u_regfiles/regs_reg_r2_0_31_6_11/RAMB/CLK
+    SLICE_X58Y165        RAMD32 (Prop_ramd32_CLK_O)
+                                                      0.301     0.301 r  u_regfiles/regs_reg_r2_0_31_6_11/RAMB/O
+                         net (fo=30, routed)          0.383     0.684    u_regfiles/RD2Exp_OBUF[8]
+    SLICE_X74Y164        LUT6 (Prop_lut6_I5_O)        0.071     0.755 r  u_regfiles/store[0][0]_i_1/O
+                         net (fo=1, routed)           0.000     0.755    u_datamem/D[0]
+    SLICE_X74Y164        FDRE                                         r  u_datamem/store_reg[0][0]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
-  Source:                 u_regfiles/regs_reg_r1_0_31_30_31/DP/CLK
+  Source:                 u_regfiles/regs_reg_r2_0_31_24_29/RAMC/CLK
                             (rising edge-triggered cell RAMD32)
-  Destination:            u_regfiles/regs_reg_r2_0_31_30_31/SP/I
+  Destination:            u_datamem/store_reg[1][4]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        1.223ns  (logic 0.378ns (30.899%)  route 0.845ns (69.101%))
-  Logic Levels:           4  (LUT5=1 LUT6=2 RAMD32=1)
+  Data Path Delay:        0.758ns  (logic 0.364ns (48.041%)  route 0.394ns (51.959%))
+  Logic Levels:           2  (LUT6=1 RAMD32=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X140Y208       RAMD32                       0.000     0.000 r  u_regfiles/regs_reg_r1_0_31_30_31/DP/CLK
-    SLICE_X140Y208       RAMD32 (Prop_ramd32_CLK_O)
-                                                      0.294     0.294 r  u_regfiles/regs_reg_r1_0_31_30_31/DP/O
-                         net (fo=14, routed)          0.365     0.659    u_instrmembrom/u_mem_generator/RD1Exp_OBUF[30]
-    SLICE_X147Y212       LUT5 (Prop_lut5_I1_O)        0.028     0.687 r  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[30]_inst_i_7/O
-                         net (fo=1, routed)           0.121     0.808    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[30]_inst_i_7_n_0
-    SLICE_X147Y211       LUT6 (Prop_lut6_I0_O)        0.028     0.836 f  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[30]_inst_i_3/O
-                         net (fo=1, routed)           0.194     1.030    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[30]_inst_i_3_n_0
-    SLICE_X138Y209       LUT6 (Prop_lut6_I2_O)        0.028     1.058 r  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[30]_inst_i_1/O
-                         net (fo=7, routed)           0.165     1.223    u_regfiles/regs_reg_r2_0_31_30_31/D
-    SLICE_X140Y208       RAMD32                                       r  u_regfiles/regs_reg_r2_0_31_30_31/SP/I
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 u_regfiles/regs_reg_r1_0_31_30_31/DP/CLK
-                            (rising edge-triggered cell RAMD32)
-  Destination:            u_regfiles/regs_reg_r1_0_31_30_31/SP/I
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        1.235ns  (logic 0.378ns (30.617%)  route 0.857ns (69.383%))
-  Logic Levels:           4  (LUT5=1 LUT6=2 RAMD32=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X140Y208       RAMD32                       0.000     0.000 r  u_regfiles/regs_reg_r1_0_31_30_31/DP/CLK
-    SLICE_X140Y208       RAMD32 (Prop_ramd32_CLK_O)
-                                                      0.294     0.294 r  u_regfiles/regs_reg_r1_0_31_30_31/DP/O
-                         net (fo=14, routed)          0.365     0.659    u_instrmembrom/u_mem_generator/RD1Exp_OBUF[30]
-    SLICE_X147Y212       LUT5 (Prop_lut5_I1_O)        0.028     0.687 r  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[30]_inst_i_7/O
-                         net (fo=1, routed)           0.121     0.808    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[30]_inst_i_7_n_0
-    SLICE_X147Y211       LUT6 (Prop_lut6_I0_O)        0.028     0.836 f  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[30]_inst_i_3/O
-                         net (fo=1, routed)           0.194     1.030    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[30]_inst_i_3_n_0
-    SLICE_X138Y209       LUT6 (Prop_lut6_I2_O)        0.028     1.058 r  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[30]_inst_i_1/O
-                         net (fo=7, routed)           0.177     1.235    u_regfiles/regs_reg_r1_0_31_30_31/D
-    SLICE_X140Y208       RAMD32                                       r  u_regfiles/regs_reg_r1_0_31_30_31/SP/I
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 u_regfiles/regs_reg_r2_0_31_0_5/RAMA/CLK
-                            (rising edge-triggered cell RAMD32)
-  Destination:            u_regfiles/regs_reg_r2_0_31_12_17/RAMC/I
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        1.262ns  (logic 0.481ns (38.102%)  route 0.781ns (61.898%))
-  Logic Levels:           3  (LUT5=1 LUT6=1 RAMD32=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X152Y203       RAMD32                       0.000     0.000 r  u_regfiles/regs_reg_r2_0_31_0_5/RAMA/CLK
-    SLICE_X152Y203       RAMD32 (Prop_ramd32_CLK_O)
-                                                      0.385     0.385 r  u_regfiles/regs_reg_r2_0_31_0_5/RAMA/O
-                         net (fo=11, routed)          0.305     0.690    u_instrmembrom/u_mem_generator/RD2Exp_OBUF[0]
-    SLICE_X150Y201       LUT5 (Prop_lut5_I3_O)        0.068     0.758 f  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[16]_inst_i_4/O
-                         net (fo=1, routed)           0.168     0.925    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[16]_inst_i_4_n_0
-    SLICE_X151Y202       LUT6 (Prop_lut6_I2_O)        0.028     0.953 r  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[16]_inst_i_1/O
-                         net (fo=5, routed)           0.309     1.262    u_regfiles/regs_reg_r2_0_31_12_17/DIC0
-    SLICE_X148Y191       RAMD32                                       r  u_regfiles/regs_reg_r2_0_31_12_17/RAMC/I
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 u_regfiles/regs_reg_r2_0_31_0_5/RAMA/CLK
-                            (rising edge-triggered cell RAMD32)
-  Destination:            u_regfiles/regs_reg_r2_0_31_0_5/RAMA/I
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        1.278ns  (logic 0.555ns (43.438%)  route 0.723ns (56.562%))
-  Logic Levels:           4  (LUT5=2 LUT6=1 RAMD32=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X152Y203       RAMD32                       0.000     0.000 r  u_regfiles/regs_reg_r2_0_31_0_5/RAMA/CLK
-    SLICE_X152Y203       RAMD32 (Prop_ramd32_CLK_O)
-                                                      0.385     0.385 r  u_regfiles/regs_reg_r2_0_31_0_5/RAMA/O
-                         net (fo=11, routed)          0.251     0.636    u_instrmembrom/u_mem_generator/RD2Exp_OBUF[0]
-    SLICE_X152Y202       LUT5 (Prop_lut5_I0_O)        0.068     0.704 r  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[0]_inst_i_12/O
-                         net (fo=1, routed)           0.120     0.824    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[0]_inst_i_12_n_0
-    SLICE_X151Y202       LUT5 (Prop_lut5_I1_O)        0.033     0.857 f  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[0]_inst_i_6/O
-                         net (fo=2, routed)           0.140     0.997    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[0]_inst_i_6_n_0
-    SLICE_X150Y200       LUT6 (Prop_lut6_I5_O)        0.069     1.066 r  u_instrmembrom/u_mem_generator/WD3Exp_OBUF[0]_inst_i_2/O
-                         net (fo=3, routed)           0.212     1.278    u_regfiles/regs_reg_r2_0_31_0_5/DIA0
-    SLICE_X152Y203       RAMD32                                       r  u_regfiles/regs_reg_r2_0_31_0_5/RAMA/I
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 u_regfiles/regs_reg_r2_0_31_0_5/RAMB/CLK
-                            (rising edge-triggered cell RAMD32)
-  Destination:            u_regfiles/regs_reg_r2_0_31_18_23/RAMA/I
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        1.292ns  (logic 0.400ns (30.951%)  route 0.892ns (69.049%))
-  Logic Levels:           3  (LUT6=2 RAMD32=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X152Y203       RAMD32                       0.000     0.000 r  u_regfiles/regs_reg_r2_0_31_0_5/RAMB/CLK
-    SLICE_X152Y203       RAMD32 (Prop_ramd32_CLK_O)
-                                                      0.301     0.301 r  u_regfiles/regs_reg_r2_0_31_0_5/RAMB/O
-                         net (fo=8, routed)           0.468     0.769    u_instrmembrom/u_mem_generator/RD2Exp_OBUF[2]
-    SLICE_X148Y201       LUT6 (Prop_lut6_I4_O)        0.071     0.840 f  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[18]_inst_i_4/O
-                         net (fo=1, routed)           0.100     0.939    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[18]_inst_i_4_n_0
-    SLICE_X148Y202       LUT6 (Prop_lut6_I2_O)        0.028     0.967 r  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[18]_inst_i_1/O
-                         net (fo=5, routed)           0.325     1.292    u_regfiles/regs_reg_r2_0_31_18_23/DIA0
-    SLICE_X148Y192       RAMD32                                       r  u_regfiles/regs_reg_r2_0_31_18_23/RAMA/I
-  -------------------------------------------------------------------    -------------------
-
-Slack:                    inf
-  Source:                 u_regfiles/regs_reg_r2_0_31_0_5/RAMA/CLK
-                            (rising edge-triggered cell RAMD32)
-  Destination:            u_regfiles/regs_reg_r1_0_31_0_5/RAMA/I
-  Path Group:             (none)
-  Path Type:              Min at Fast Process Corner
-  Data Path Delay:        1.322ns  (logic 0.555ns (41.983%)  route 0.767ns (58.017%))
-  Logic Levels:           4  (LUT5=2 LUT6=1 RAMD32=1)
-
-    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
-  -------------------------------------------------------------------    -------------------
-    SLICE_X152Y203       RAMD32                       0.000     0.000 r  u_regfiles/regs_reg_r2_0_31_0_5/RAMA/CLK
-    SLICE_X152Y203       RAMD32 (Prop_ramd32_CLK_O)
-                                                      0.385     0.385 r  u_regfiles/regs_reg_r2_0_31_0_5/RAMA/O
-                         net (fo=11, routed)          0.251     0.636    u_instrmembrom/u_mem_generator/RD2Exp_OBUF[0]
-    SLICE_X152Y202       LUT5 (Prop_lut5_I0_O)        0.068     0.704 r  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[0]_inst_i_12/O
-                         net (fo=1, routed)           0.120     0.824    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[0]_inst_i_12_n_0
-    SLICE_X151Y202       LUT5 (Prop_lut5_I1_O)        0.033     0.857 f  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[0]_inst_i_6/O
-                         net (fo=2, routed)           0.140     0.997    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[0]_inst_i_6_n_0
-    SLICE_X150Y200       LUT6 (Prop_lut6_I5_O)        0.069     1.066 r  u_instrmembrom/u_mem_generator/WD3Exp_OBUF[0]_inst_i_2/O
-                         net (fo=3, routed)           0.256     1.322    u_regfiles/regs_reg_r1_0_31_0_5/DIA0
-    SLICE_X152Y204       RAMD32                                       r  u_regfiles/regs_reg_r1_0_31_0_5/RAMA/I
+    SLICE_X58Y173        RAMD32                       0.000     0.000 r  u_regfiles/regs_reg_r2_0_31_24_29/RAMC/CLK
+    SLICE_X58Y173        RAMD32 (Prop_ramd32_CLK_O)
+                                                      0.296     0.296 r  u_regfiles/regs_reg_r2_0_31_24_29/RAMC/O
+                         net (fo=22, routed)          0.394     0.690    u_regfiles/RD2Exp_OBUF[28]
+    SLICE_X72Y176        LUT6 (Prop_lut6_I1_O)        0.068     0.758 r  u_regfiles/store[1][4]_i_1/O
+                         net (fo=1, routed)           0.000     0.758    u_datamem/store_reg[1][7]_1[4]
+    SLICE_X72Y176        FDRE                                         r  u_datamem/store_reg[1][4]/D
   -------------------------------------------------------------------    -------------------
 
 Slack:                    inf
   Source:                 u_regfiles/regs_reg_r2_0_31_6_11/RAMC/CLK
                             (rising edge-triggered cell RAMD32)
-  Destination:            u_regfiles/regs_reg_r1_0_31_24_29/RAMB/I
+  Destination:            u_datamem/store_reg[0][2]/D
   Path Group:             (none)
   Path Type:              Min at Fast Process Corner
-  Data Path Delay:        1.341ns  (logic 0.392ns (29.243%)  route 0.949ns (70.757%))
-  Logic Levels:           3  (LUT6=2 RAMD32=1)
+  Data Path Delay:        0.771ns  (logic 0.364ns (47.221%)  route 0.407ns (52.779%))
+  Logic Levels:           2  (LUT6=1 RAMD32=1)
 
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
   -------------------------------------------------------------------    -------------------
-    SLICE_X148Y195       RAMD32                       0.000     0.000 r  u_regfiles/regs_reg_r2_0_31_6_11/RAMC/CLK
-    SLICE_X148Y195       RAMD32 (Prop_ramd32_CLK_O)
+    SLICE_X58Y165        RAMD32                       0.000     0.000 r  u_regfiles/regs_reg_r2_0_31_6_11/RAMC/CLK
+    SLICE_X58Y165        RAMD32 (Prop_ramd32_CLK_O)
                                                       0.296     0.296 r  u_regfiles/regs_reg_r2_0_31_6_11/RAMC/O
-                         net (fo=10, routed)          0.577     0.873    u_instrmembrom/u_mem_generator/RD2Exp_OBUF[10]
-    SLICE_X138Y209       LUT6 (Prop_lut6_I1_O)        0.068     0.941 f  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[26]_inst_i_4/O
-                         net (fo=1, routed)           0.122     1.063    u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[26]_inst_i_4_n_0
-    SLICE_X138Y209       LUT6 (Prop_lut6_I4_O)        0.028     1.091 r  u_instrmembrom/u_mem_generator/ALUResultExp_OBUF[26]_inst_i_1/O
-                         net (fo=5, routed)           0.249     1.341    u_regfiles/regs_reg_r1_0_31_24_29/DIB0
-    SLICE_X132Y208       RAMD32                                       r  u_regfiles/regs_reg_r1_0_31_24_29/RAMB/I
+                         net (fo=27, routed)          0.407     0.703    u_regfiles/RD2Exp_OBUF[10]
+    SLICE_X75Y164        LUT6 (Prop_lut6_I5_O)        0.068     0.771 r  u_regfiles/store[0][2]_i_1/O
+                         net (fo=1, routed)           0.000     0.771    u_datamem/D[2]
+    SLICE_X75Y164        FDRE                                         r  u_datamem/store_reg[0][2]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_regfiles/regs_reg_r2_0_31_6_11/RAMA_D1/CLK
+                            (rising edge-triggered cell RAMD32)
+  Destination:            u_datamem/store_reg[1][7]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.779ns  (logic 0.402ns (51.626%)  route 0.377ns (48.374%))
+  Logic Levels:           2  (LUT6=1 RAMD32=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X58Y165        RAMD32                       0.000     0.000 r  u_regfiles/regs_reg_r2_0_31_6_11/RAMA_D1/CLK
+    SLICE_X58Y165        RAMD32 (Prop_ramd32_CLK_O)
+                                                      0.374     0.374 r  u_regfiles/regs_reg_r2_0_31_6_11/RAMA_D1/O
+                         net (fo=96, routed)          0.377     0.751    u_regfiles/RD2Exp_OBUF[7]
+    SLICE_X73Y165        LUT6 (Prop_lut6_I2_O)        0.028     0.779 r  u_regfiles/store[1][7]_i_2/O
+                         net (fo=1, routed)           0.000     0.779    u_datamem/store_reg[1][7]_1[7]
+    SLICE_X73Y165        FDRE                                         r  u_datamem/store_reg[1][7]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_regfiles/regs_reg_r2_0_31_6_11/RAMB_D1/CLK
+                            (rising edge-triggered cell RAMD32)
+  Destination:            u_datamem/store_reg[129][1]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.784ns  (logic 0.325ns (41.462%)  route 0.459ns (58.538%))
+  Logic Levels:           2  (LUT6=1 RAMD32=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X58Y165        RAMD32                       0.000     0.000 r  u_regfiles/regs_reg_r2_0_31_6_11/RAMB_D1/CLK
+    SLICE_X58Y165        RAMD32 (Prop_ramd32_CLK_O)
+                                                      0.297     0.297 r  u_regfiles/regs_reg_r2_0_31_6_11/RAMB_D1/O
+                         net (fo=26, routed)          0.459     0.756    u_regfiles/RD2Exp_OBUF[9]
+    SLICE_X79Y166        LUT6 (Prop_lut6_I5_O)        0.028     0.784 r  u_regfiles/store[129][1]_i_1/O
+                         net (fo=1, routed)           0.000     0.784    u_datamem/store_reg[129][7]_1[1]
+    SLICE_X79Y166        FDRE                                         r  u_datamem/store_reg[129][1]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_regfiles/regs_reg_r2_0_31_0_5/RAMC_D1/CLK
+                            (rising edge-triggered cell RAMD32)
+  Destination:            u_datamem/store_reg[22][5]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.801ns  (logic 0.322ns (40.197%)  route 0.479ns (59.803%))
+  Logic Levels:           2  (LUT6=1 RAMD32=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X56Y165        RAMD32                       0.000     0.000 r  u_regfiles/regs_reg_r2_0_31_0_5/RAMC_D1/CLK
+    SLICE_X56Y165        RAMD32 (Prop_ramd32_CLK_O)
+                                                      0.294     0.294 r  u_regfiles/regs_reg_r2_0_31_0_5/RAMC_D1/O
+                         net (fo=91, routed)          0.479     0.773    u_instrmembrom/u_mem_generator_3/RD2Exp_OBUF[5]
+    SLICE_X73Y168        LUT6 (Prop_lut6_I4_O)        0.028     0.801 r  u_instrmembrom/u_mem_generator_3/store[22][5]_i_1/O
+                         net (fo=1, routed)           0.000     0.801    u_datamem/store_reg[22][7]_1[5]
+    SLICE_X73Y168        FDRE                                         r  u_datamem/store_reg[22][5]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_regfiles/regs_reg_r2_0_31_12_17/RAMC/CLK
+                            (rising edge-triggered cell RAMD32)
+  Destination:            u_datamem/store_reg[1][0]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.808ns  (logic 0.364ns (45.023%)  route 0.444ns (54.977%))
+  Logic Levels:           2  (LUT6=1 RAMD32=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X52Y167        RAMD32                       0.000     0.000 r  u_regfiles/regs_reg_r2_0_31_12_17/RAMC/CLK
+    SLICE_X52Y167        RAMD32 (Prop_ramd32_CLK_O)
+                                                      0.296     0.296 r  u_regfiles/regs_reg_r2_0_31_12_17/RAMC/O
+                         net (fo=21, routed)          0.444     0.740    u_regfiles/RD2Exp_OBUF[16]
+    SLICE_X73Y165        LUT6 (Prop_lut6_I0_O)        0.068     0.808 r  u_regfiles/store[1][0]_i_1/O
+                         net (fo=1, routed)           0.000     0.808    u_datamem/store_reg[1][7]_1[0]
+    SLICE_X73Y165        FDRE                                         r  u_datamem/store_reg[1][0]/D
+  -------------------------------------------------------------------    -------------------
+
+Slack:                    inf
+  Source:                 u_regfiles/regs_reg_r2_0_31_18_23/RAMC/CLK
+                            (rising edge-triggered cell RAMD32)
+  Destination:            u_datamem/store_reg[1][6]/D
+  Path Group:             (none)
+  Path Type:              Min at Fast Process Corner
+  Data Path Delay:        0.815ns  (logic 0.364ns (44.667%)  route 0.451ns (55.333%))
+  Logic Levels:           2  (LUT6=1 RAMD32=1)
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+    SLICE_X58Y170        RAMD32                       0.000     0.000 r  u_regfiles/regs_reg_r2_0_31_18_23/RAMC/CLK
+    SLICE_X58Y170        RAMD32 (Prop_ramd32_CLK_O)
+                                                      0.296     0.296 r  u_regfiles/regs_reg_r2_0_31_18_23/RAMC/O
+                         net (fo=22, routed)          0.451     0.747    u_regfiles/RD2Exp_OBUF[22]
+    SLICE_X72Y176        LUT6 (Prop_lut6_I0_O)        0.068     0.815 r  u_regfiles/store[1][6]_i_1/O
+                         net (fo=1, routed)           0.000     0.815    u_datamem/store_reg[1][7]_1[6]
+    SLICE_X72Y176        FDRE                                         r  u_datamem/store_reg[1][6]/D
   -------------------------------------------------------------------    -------------------
 
 

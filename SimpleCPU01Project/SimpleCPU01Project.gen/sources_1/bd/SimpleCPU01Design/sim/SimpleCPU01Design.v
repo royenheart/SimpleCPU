@@ -1,7 +1,7 @@
 //Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
-//Date        : Tue Mar 22 15:05:27 2022
+//Date        : Tue Mar 22 15:22:49 2022
 //Host        : LAPTOP-TDKNUURL running 64-bit major release  (build 9200)
 //Command     : generate_target SimpleCPU01Design.bd
 //Design      : SimpleCPU01Design
@@ -14,13 +14,13 @@ module SimpleCPU01Design
    (a_0,
     spo_0);
   input [9:0]a_0;
-  output [31:0]spo_0;
+  output [7:0]spo_0;
 
   wire [9:0]a_0_1;
-  wire [31:0]dist_mem_gen_0_spo;
+  wire [7:0]dist_mem_gen_0_spo;
 
   assign a_0_1 = a_0[9:0];
-  assign spo_0[31:0] = dist_mem_gen_0_spo;
+  assign spo_0[7:0] = dist_mem_gen_0_spo;
   SimpleCPU01Design_dist_mem_gen_0_0 dist_mem_gen_0
        (.a(a_0_1),
         .spo(dist_mem_gen_0_spo));

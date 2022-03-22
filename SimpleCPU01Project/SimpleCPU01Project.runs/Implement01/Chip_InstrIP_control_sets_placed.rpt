@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
-| Date         : Tue Mar 22 15:08:57 2022
+| Date         : Tue Mar 22 15:26:16 2022
 | Host         : LAPTOP-TDKNUURL running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Chip_InstrIP_control_sets_placed.rpt
 | Design       : Chip_InstrIP
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Total control sets                                       |     1 |
-|    Minimum number of control sets                        |     1 |
+| Total control sets                                       |   258 |
+|    Minimum number of control sets                        |   258 |
 |    Addition due to synthesis replication                 |     0 |
 |    Addition due to physical synthesis replication        |     0 |
 | Unused register locations in slices containing registers |     0 |
@@ -39,15 +39,15 @@ Table of Contents
 +--------------------+-------+
 |       Fanout       | Count |
 +--------------------+-------+
-| Total control sets |     1 |
+| Total control sets |   258 |
 | >= 0 to < 4        |     0 |
 | >= 4 to < 6        |     0 |
 | >= 6 to < 8        |     0 |
-| >= 8 to < 10       |     0 |
+| >= 8 to < 10       |   256 |
 | >= 10 to < 12      |     0 |
 | >= 12 to < 14      |     0 |
 | >= 14 to < 16      |     0 |
-| >= 16              |     1 |
+| >= 16              |     2 |
 +--------------------+-------+
 * Control sets can be remapped at either synth_design or opt_design
 
@@ -58,10 +58,10 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              32 |           13 |
+| No           | No                    | No                     |              32 |           12 |
 | No           | No                    | Yes                    |               0 |            0 |
 | No           | Yes                   | No                     |               0 |            0 |
-| Yes          | No                    | No                     |               0 |            0 |
+| Yes          | No                    | No                     |            2048 |         1383 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
@@ -70,10 +70,267 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+----------------+---------------+------------------+------------------+----------------+--------------+
-|  Clock Signal  | Enable Signal | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
-+----------------+---------------+------------------+------------------+----------------+--------------+
-|  clk_IBUF_BUFG |               |                  |               24 |            120 |         5.00 |
-+----------------+---------------+------------------+------------------+----------------+--------------+
++----------------+-----------------------------------------------------------------------+------------------+------------------+----------------+--------------+
+|  Clock Signal  |                             Enable Signal                             | Set/Reset Signal | Slice Load Count | Bel Load Count | Bels / Slice |
++----------------+-----------------------------------------------------------------------+------------------+------------------+----------------+--------------+
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_74[0] |                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_12[0] |                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_14[0] |                  |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_17[0] |                  |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_18[0] |                  |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_22[0] |                  |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_28[0] |                  |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_29[0] |                  |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_0[0]  |                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_11[0] |                  |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_13[0] |                  |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/E[0]                                 |                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_19[0] |                  |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_15[0] |                  |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5[0]    |                  |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_2[0]  |                  |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_10[0] |                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_16[0] |                  |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_20[0] |                  |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_21[0] |                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_23[0] |                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_25[0] |                  |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_26[0] |                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_24[0] |                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_27[0] |                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_1[0]  |                  |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_67[0] |                  |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_46[0] |                  |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_6[0]  |                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_3[0]  |                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_73[0] |                  |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_71[0] |                  |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_56[0] |                  |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_7[0]  |                  |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_76[0] |                  |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_8[0]  |                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_9[0]  |                  |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_36[0] |                  |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_72[0] |                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_32[0] |                  |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_69[0] |                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/MemWriteExp_OBUF_inst_i_1[0]         |                  |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_37[0] |                  |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_51[0] |                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_75[0] |                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_31[0] |                  |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_45[0] |                  |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_63[0] |                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_57[0] |                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_33[0] |                  |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_53[0] |                  |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_58[0] |                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_41[0] |                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_43[0] |                  |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_44[0] |                  |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_34[0] |                  |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_4[0]  |                  |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_35[0] |                  |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_42[0] |                  |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_48[0] |                  |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_61[0] |                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_65[0] |                  |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_68[0] |                  |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_47[0] |                  |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_73[0]                |                  |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_39[0] |                  |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_60[0] |                  |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_49[0] |                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_52[0] |                  |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_55[0] |                  |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_62[0] |                  |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_59[0] |                  |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_40[0] |                  |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_70[0] |                  |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_38[0] |                  |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_5[0]  |                  |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_54[0] |                  |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_66[0] |                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_50[0] |                  |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_30[0] |                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/ExtendImmExp_OBUF[31]_inst_i_5_64[0] |                  |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_12[0]              |                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2[0]                 |                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_1[0]               |                  |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_15[0]              |                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_19[0]              |                  |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_20[0]              |                  |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_23[0]              |                  |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_24[0]              |                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_27[0]              |                  |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_13[0]              |                  |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_29[0]              |                  |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_30[0]              |                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_31[0]              |                  |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_0[0]               |                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_33[0]              |                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_35[0]              |                  |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_25[0]              |                  |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_36[0]              |                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_22[0]              |                  |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_37[0]              |                  |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_38[0]              |                  |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_11[0]              |                  |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_18[0]              |                  |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_28[0]              |                  |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_39[0]              |                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_43[0]              |                  |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_3[0]               |                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_16[0]              |                  |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_17[0]              |                  |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_21[0]              |                  |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_34[0]              |                  |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_14[0]              |                  |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_40[0]              |                  |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_41[0]              |                  |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_10[0]              |                  |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_32[0]              |                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_4[0]               |                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_42[0]              |                  |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_26[0]              |                  |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_2[0]               |                  |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_81[0]              |                  |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_65[0]              |                  |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_6[0]               |                  |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_72[0]              |                  |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_58[0]              |                  |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_73[0]              |                  |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_82[0]              |                  |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_85[0]              |                  |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_83[0]              |                  |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_53[0]              |                  |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_45[0]              |                  |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_46[0]              |                  |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_47[0]              |                  |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_49[0]              |                  |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_52[0]              |                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_59[0]              |                  |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_55[0]              |                  |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_62[0]              |                  |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_66[0]              |                  |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_67[0]              |                  |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_74[0]              |                  |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_75[0]              |                  |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_7[0]               |                  |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_78[0]              |                  |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_84[0]              |                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_51[0]              |                  |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_69[0]              |                  |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_77[0]              |                  |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_70[0]              |                  |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_79[0]              |                  |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_8[0]               |                  |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_9[0]               |                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_86[0]              |                  |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_71[0]              |                  |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_44[0]              |                  |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_60[0]              |                  |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_5[0]               |                  |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_48[0]              |                  |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_68[0]              |                  |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_57[0]              |                  |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_76[0]              |                  |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_80[0]              |                  |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_50[0]              |                  |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_56[0]              |                  |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_61[0]              |                  |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_54[0]              |                  |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_64[0]              |                  |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[105][7]_i_2_63[0]              |                  |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_1[0]                 |                  |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_30[0]                |                  |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_25[0]                |                  |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_3[0]                 |                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_31[0]                |                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_18[0]                |                  |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_26[0]                |                  |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_12[0]                |                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_2[0]                 |                  |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_0[0]                 |                  |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_13[0]                |                  |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_20[0]                |                  |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_21[0]                |                  |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_27[0]                |                  |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_32[0]                |                  |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_33[0]                |                  |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_29[0]                |                  |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_36[0]                |                  |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_39[0]                |                  |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_40[0]                |                  |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_35[0]                |                  |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_41[0]                |                  |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_37[0]                |                  |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_42[0]                |                  |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_43[0]                |                  |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_44[0]                |                  |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3[0]                   |                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_10[0]                |                  |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_11[0]                |                  |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_23[0]                |                  |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_38[0]                |                  |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_4[0]                 |                  |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_45[0]                |                  |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_46[0]                |                  |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_47[0]                |                  |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_19[0]                |                  |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_15[0]                |                  |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_16[0]                |                  |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_22[0]                |                  |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_17[0]                |                  |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_24[0]                |                  |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_14[0]                |                  |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_28[0]                |                  |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_34[0]                |                  |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_49[0]                |                  |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_53[0]                |                  |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_54[0]                |                  |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_63[0]                |                  |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_82[0]                |                  |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_79[0]                |                  |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_83[0]                |                  |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_84[0]                |                  |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_72[0]                |                  |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_78[0]                |                  |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_76[0]                |                  |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_71[0]                |                  |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_55[0]                |                  |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_74[0]                |                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_80[0]                |                  |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_52[0]                |                  |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_5[0]                 |                  |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_50[0]                |                  |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_67[0]                |                  |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_60[0]                |                  |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_59[0]                |                  |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_56[0]                |                  |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_57[0]                |                  |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_61[0]                |                  |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_85[0]                |                  |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_48[0]                |                  |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_65[0]                |                  |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_75[0]                |                  |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_58[0]                |                  |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_69[0]                |                  |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_77[0]                |                  |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_8[0]                 |                  |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_86[0]                |                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_9[0]                 |                  |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_6[0]                 |                  |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_64[0]                |                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_66[0]                |                  |                3 |              8 |         2.67 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_81[0]                |                  |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_62[0]                |                  |                7 |              8 |         1.14 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_7[0]                 |                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_68[0]                |                  |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_51[0]                |                  |                6 |              8 |         1.33 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_3/store[7][7]_i_3_70[0]                |                  |                8 |              8 |         1.00 |
+|  clk_IBUF_BUFG |                                                                       |                  |               12 |             32 |         2.67 |
+|  clk_IBUF_BUFG | u_instrmembrom/u_mem_generator_0/RegWriteExp_OBUF                     |                  |               11 |             88 |         8.00 |
++----------------+-----------------------------------------------------------------------+------------------+------------------+----------------+--------------+
 
 

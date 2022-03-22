@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xF32EB471F32EB471",
+      "boundary_crc": "0xD274C4B0D274C4B0",
       "device": "xc7vx485tffg1157-1",
       "gen_directory": "../../../../SimpleCPU01Project.gen/sources_1/bd/SimpleCPU01Design",
       "name": "SimpleCPU01Design",
@@ -21,7 +21,7 @@
       },
       "spo_0": {
         "direction": "O",
-        "left": "31",
+        "left": "7",
         "right": "0"
       }
     },
@@ -36,7 +36,7 @@
             "value": "../../../../../../../Coe/InstrMemCoe.coe"
           },
           "data_width": {
-            "value": "32"
+            "value": "8"
           },
           "depth": {
             "value": "1024"

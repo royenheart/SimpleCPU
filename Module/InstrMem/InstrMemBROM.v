@@ -25,12 +25,31 @@ module InstrMemBROM(
     output wire [31:0] RD
 );
 
+wire [9:0] address;
+assign address = A[9:0];
+
 wire [31:0] instrs;
 assign RD = instrs;
 
-SimpleCPU01Design_wrapper u_mem_generator(
-    .a_0        (A [31:0]),
-    .spo_0      (instrs [31:0])
+SimpleCPU01Design_wrapper u_mem_generator_0(
+    .a_0        (address),
+    .spo_0      (instrs [31:24])
+);
+
+SimpleCPU01Design_wrapper u_mem_generator_1(
+    .a_0        (address + 1'd1),
+    .spo_0      (instrs [23:16])
+);
+
+
+SimpleCPU01Design_wrapper u_mem_generator_2(
+    .a_0        (address + 1'd2),
+    .spo_0      (instrs [15:8])
+);
+
+SimpleCPU01Design_wrapper u_mem_generator_3(
+    .a_0        (address + 1'd3),
+    .spo_0      (instrs [7:0])
 );
 
 endmodule

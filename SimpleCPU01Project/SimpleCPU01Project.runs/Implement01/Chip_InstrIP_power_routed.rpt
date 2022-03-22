@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
-| Date             : Tue Mar 22 15:09:42 2022
+| Date             : Tue Mar 22 15:27:13 2022
 | Host             : LAPTOP-TDKNUURL running 64-bit major release  (build 9200)
 | Command          : report_power -file Chip_InstrIP_power_routed.rpt -pb Chip_InstrIP_power_summary_routed.pb -rpx Chip_InstrIP_power_routed.rpx
 | Design           : Chip_InstrIP
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+-----------------------------------+
-| Total On-Chip Power (W)  | 287.439 (Junction temp exceeded!) |
+| Total On-Chip Power (W)  | 600.708 (Junction temp exceeded!) |
 | Design Power Budget (W)  | Unspecified*                      |
 | Power Budget Margin (W)  | NA                                |
-| Dynamic (W)              | 280.808                           |
+| Dynamic (W)              | 594.076                           |
 | Device Static (W)        | 6.632                             |
 | Effective TJA (C/W)      | 1.4                               |
 | Max Ambient (C)          | 0.0                               |
@@ -52,18 +52,18 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Slice Logic              |     9.895 |     1222 |       --- |             --- |
-|   LUT as Logic           |     8.772 |      887 |    303600 |            0.29 |
-|   LUT as Distributed RAM |     0.613 |       44 |    130800 |            0.03 |
-|   CARRY4                 |     0.450 |       78 |     75900 |            0.10 |
-|   F7/F8 Muxes            |     0.040 |       21 |    303600 |           <0.01 |
-|   Register               |     0.014 |       32 |    607200 |           <0.01 |
+| Slice Logic              |    83.171 |     8329 |       --- |             --- |
+|   LUT as Logic           |    78.707 |     4171 |    303600 |            1.37 |
+|   F7/F8 Muxes            |     3.192 |     1678 |    303600 |            0.55 |
+|   LUT as Distributed RAM |     0.756 |       44 |    130800 |            0.03 |
+|   CARRY4                 |     0.484 |       78 |     75900 |            0.10 |
+|   Register               |     0.025 |     2080 |    607200 |            0.34 |
 |   BUFG                   |     0.006 |        1 |        32 |            3.13 |
-|   Others                 |     0.000 |       14 |       --- |             --- |
-| Signals                  |    28.195 |     1099 |       --- |             --- |
-| I/O                      |   242.718 |      511 |       600 |           85.17 |
+|   Others                 |     0.000 |       12 |       --- |             --- |
+| Signals                  |   147.193 |     4349 |       --- |             --- |
+| I/O                      |   363.712 |      511 |       600 |           85.17 |
 | Static Power             |     6.632 |          |           |                 |
-| Total                    |   287.439 |          |           |                 |
+| Total                    |   600.708 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,11 +73,11 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |    43.927 |      38.094 |      5.834 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |    20.183 |      19.869 |      0.314 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |   236.202 |     230.368 |      5.834 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |    30.088 |      29.774 |      0.314 |       NA    | Unspecified | NA         |
 | Vcco33    |       3.300 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vcco18    |       1.800 |   114.973 |     114.972 |      0.001 |       NA    | Unspecified | NA         |
+| Vcco18    |       1.800 |   172.288 |     172.287 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
@@ -144,27 +144,34 @@ Table of Contents
 +-------------------------------+-----------+
 | Name                          | Power (W) |
 +-------------------------------+-----------+
-| Chip_InstrIP                  |   280.808 |
-|   u_alu                       |     3.003 |
-|   u_instrmembrom              |    27.108 |
-|     u_mem_generator           |    27.108 |
-|       SimpleCPU01Design_i     |     2.504 |
-|   u_pcaddr                    |     2.306 |
-|   u_regfiles                  |     5.652 |
-|     regs_reg_r1_0_31_0_5      |     0.367 |
-|     regs_reg_r1_0_31_12_17    |     0.402 |
-|     regs_reg_r1_0_31_18_23    |     0.404 |
-|     regs_reg_r1_0_31_24_29    |     0.393 |
-|     regs_reg_r1_0_31_30_31    |     0.082 |
-|     regs_reg_r1_0_31_30_31__0 |     0.077 |
-|     regs_reg_r1_0_31_6_11     |     0.400 |
-|     regs_reg_r2_0_31_0_5      |     0.379 |
-|     regs_reg_r2_0_31_12_17    |     0.377 |
-|     regs_reg_r2_0_31_18_23    |     0.347 |
-|     regs_reg_r2_0_31_24_29    |     0.370 |
-|     regs_reg_r2_0_31_30_31    |     0.064 |
-|     regs_reg_r2_0_31_30_31__0 |     0.068 |
-|     regs_reg_r2_0_31_6_11     |     0.377 |
+| Chip_InstrIP                  |   594.076 |
+|   u_alu                       |     3.627 |
+|   u_datamem                   |    55.182 |
+|   u_instrmembrom              |   140.741 |
+|     u_mem_generator_0         |    16.931 |
+|       SimpleCPU01Design_i     |     1.380 |
+|     u_mem_generator_1         |     2.369 |
+|       SimpleCPU01Design_i     |     2.369 |
+|     u_mem_generator_2         |     6.788 |
+|       SimpleCPU01Design_i     |     2.365 |
+|     u_mem_generator_3         |   114.654 |
+|       SimpleCPU01Design_i     |     3.034 |
+|   u_pcaddr                    |     3.021 |
+|   u_regfiles                  |    27.563 |
+|     regs_reg_r1_0_31_0_5      |     0.821 |
+|     regs_reg_r1_0_31_12_17    |     0.769 |
+|     regs_reg_r1_0_31_18_23    |     0.840 |
+|     regs_reg_r1_0_31_24_29    |     0.765 |
+|     regs_reg_r1_0_31_30_31    |     0.125 |
+|     regs_reg_r1_0_31_30_31__0 |     0.145 |
+|     regs_reg_r1_0_31_6_11     |     0.789 |
+|     regs_reg_r2_0_31_0_5      |     2.150 |
+|     regs_reg_r2_0_31_12_17    |     0.874 |
+|     regs_reg_r2_0_31_18_23    |     0.875 |
+|     regs_reg_r2_0_31_24_29    |     0.939 |
+|     regs_reg_r2_0_31_30_31    |     0.133 |
+|     regs_reg_r2_0_31_30_31__0 |     0.174 |
+|     regs_reg_r2_0_31_6_11     |     1.301 |
 +-------------------------------+-----------+
 
 
