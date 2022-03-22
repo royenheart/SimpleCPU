@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="Implement01" LaunchPart="xc7vx485tffg1157-1" LaunchTime="1647932800">
+  <File Type="ROUTE-PWR" Name="Chip_InstrIP_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="Chip_InstrIP.tcl"/>
+  <File Type="BITSTR-MMI" Name="Chip_InstrIP.mmi"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="Chip_InstrIP_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="Chip_InstrIP_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR-SUM" Name="Chip_InstrIP_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="Chip_InstrIP_reports.tcl"/>
+  <File Type="OPT-TIMING" Name="Chip_InstrIP_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="Chip_InstrIP_opt.dcp"/>
+  <File Type="OPT-DRC" Name="Chip_InstrIP_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="Chip_InstrIP.hwdef"/>
+  <File Type="PWROPT-DCP" Name="Chip_InstrIP_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="Chip_InstrIP_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="Chip_InstrIP_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="Chip_InstrIP_placed.dcp"/>
+  <File Type="PLACE-IO" Name="Chip_InstrIP_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="Chip_InstrIP_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="Chip_InstrIP_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="Chip_InstrIP_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="Chip_InstrIP_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="Chip_InstrIP_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="Chip_InstrIP_incremental_reuse_pre_placed.rpt"/>
+  <File Type="BG-BIN" Name="Chip_InstrIP.bin"/>
+  <File Type="PLACE-TIMING" Name="Chip_InstrIP_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="Chip_InstrIP_postplace_pwropt.dcp"/>
+  <File Type="BITSTR-MSK" Name="Chip_InstrIP.msk"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="Chip_InstrIP_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="Chip_InstrIP_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="Chip_InstrIP_drc_physopted.rpt"/>
+  <File Type="BITSTR-RBT" Name="Chip_InstrIP.rbt"/>
+  <File Type="PHYSOPT-TIMING" Name="Chip_InstrIP_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="Chip_InstrIP_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="Chip_InstrIP_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="Chip_InstrIP_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="Chip_InstrIP_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="Chip_InstrIP_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="Chip_InstrIP_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="Chip_InstrIP_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="Chip_InstrIP_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Chip_InstrIP_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="Chip_InstrIP_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="Chip_InstrIP_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="Chip_InstrIP_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="Chip_InstrIP_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="Chip_InstrIP_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="Chip_InstrIP_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="Chip_InstrIP_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="Chip_InstrIP_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="Chip_InstrIP_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="Chip_InstrIP_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="Chip_InstrIP_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="Chip_InstrIP_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="Chip_InstrIP_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="Chip_InstrIP_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="Chip_InstrIP_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="Chip_InstrIP_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="Chip_InstrIP_bus_skew_postroute_physopted.rpt"/>
+  <File Type="BG-BIT" Name="Chip_InstrIP.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="Chip_InstrIP_bus_skew_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="Chip_InstrIP_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-NKY" Name="Chip_InstrIP.nky"/>
+  <File Type="BITSTR-BMM" Name="Chip_InstrIP_bd.bmm"/>
+  <File Type="PDI-FILE" Name="Chip_InstrIP.pdi"/>
+  <File Type="RCFI_FILE" Name="Chip_InstrIP.rcfi"/>
+  <File Type="CFI_FILE" Name="Chip_InstrIP.cfi"/>
+  <File Type="RNPI_FILE" Name="Chip_InstrIP.rnpi"/>
+  <File Type="NPI_FILE" Name="Chip_InstrIP.npi"/>
+  <File Type="RBD_FILE" Name="Chip_InstrIP.rbd"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="Chip_InstrIP.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="Chip_InstrIP.sysdef"/>
+  <File Type="BG-BGN" Name="Chip_InstrIP.bgn"/>
+  <File Type="BG-DRC" Name="Chip_InstrIP.drc"/>
+  <File Type="RDI-RDI" Name="Chip_InstrIP.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/bd/SimpleCPU01Design/SimpleCPU01Design.bd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Module/ALU/ALU.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Module/CU/CU.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Module/Storage/DataMem.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Module/Extend/Extend.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Module/InstrMem/InstrMemBROM.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Module/PCAddr.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Module/Storage/RegFiles.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PGENDIR/sources_1/bd/SimpleCPU01Design/hdl/SimpleCPU01Design_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Module/Chip_InstrIP.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Module/Chip.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Module/InstrMem/InstrMem.v">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Coe/InstrMemCoe.coe">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="Chip_InstrIP"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/ConstrsFiles01">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <File Path="$PSRCDIR/utils_1/imports/synth_1/Chip.dcp">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedInSteps" Val="Synthesis01"/>
+        <Attr Name="AutoDcp" Val="1"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2021"/>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="SimpleCPU01Design_dist_mem_gen_0_0"/>
+</GenRun>

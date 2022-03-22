@@ -1,0 +1,68 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xF32EB471F32EB471",
+      "device": "xc7vx485tffg1157-1",
+      "gen_directory": "../../../../SimpleCPU01Project.gen/sources_1/bd/SimpleCPU01Design",
+      "name": "SimpleCPU01Design",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2021.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "dist_mem_gen_0": ""
+    },
+    "ports": {
+      "a_0": {
+        "direction": "I",
+        "left": "9",
+        "right": "0"
+      },
+      "spo_0": {
+        "direction": "O",
+        "left": "31",
+        "right": "0"
+      }
+    },
+    "components": {
+      "dist_mem_gen_0": {
+        "vlnv": "xilinx.com:ip:dist_mem_gen:8.0",
+        "xci_name": "SimpleCPU01Design_dist_mem_gen_0_0",
+        "xci_path": "ip\\SimpleCPU01Design_dist_mem_gen_0_0\\SimpleCPU01Design_dist_mem_gen_0_0.xci",
+        "inst_hier_path": "dist_mem_gen_0",
+        "parameters": {
+          "coefficient_file": {
+            "value": "../../../../../../../Coe/InstrMemCoe.coe"
+          },
+          "data_width": {
+            "value": "32"
+          },
+          "depth": {
+            "value": "1024"
+          },
+          "input_options": {
+            "value": "non_registered"
+          },
+          "memory_type": {
+            "value": "rom"
+          }
+        }
+      }
+    },
+    "nets": {
+      "a_0_1": {
+        "ports": [
+          "a_0",
+          "dist_mem_gen_0/a"
+        ]
+      },
+      "dist_mem_gen_0_spo": {
+        "ports": [
+          "dist_mem_gen_0/spo",
+          "spo_0"
+        ]
+      }
+    }
+  }
+}

@@ -3,7 +3,7 @@
 // Company: 
 // Engineer:
 // 
-// Create Date: 2022/03/09 19:07:12
+// Create Date: 2022/03/13 13:10:33
 // Design Name: 
 // Module Name:
 // Project Name: 
@@ -19,9 +19,18 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 module Chip_test;
+// Chip Parameters
+parameter PERIOD  = 10;
+// Chip Inputs
+reg   [31:0]  control01                    = 0 ;
+// Chip Outputs
+wire  [31:0]  control02                    ;
 
-Chip  u_Chip (
+Chip #(
+    .PERIOD ( PERIOD ))
+ u_Chip (
+    .control01               ( control01  [31:0] ),
 
+    .control02               ( control02  [31:0] )
 );
-
 endmodule
