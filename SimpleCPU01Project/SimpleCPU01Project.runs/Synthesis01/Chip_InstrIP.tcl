@@ -91,13 +91,19 @@ OPTRACE "Adding files" START { }
 add_files D:/Git/SimpleCPU01/Coe/InstrMemCoe.coe
 read_verilog -library xil_defaultlib {
   D:/Git/SimpleCPU01/Module/ALU/ALU.v
+  D:/Git/SimpleCPU01/Module/Algorithm/CLA16.v
+  D:/Git/SimpleCPU01/Module/Algorithm/CLA32.v
+  D:/Git/SimpleCPU01/Module/Algorithm/CLA_4.v
+  D:/Git/SimpleCPU01/Module/Algorithm/CLA_add4.v
   D:/Git/SimpleCPU01/Module/CU/CU.v
   D:/Git/SimpleCPU01/Module/Storage/DataMem.v
   D:/Git/SimpleCPU01/Module/Extend/Extend.v
   D:/Git/SimpleCPU01/Module/InstrMem/InstrMemBROM.v
+  D:/Git/SimpleCPU01/Module/Algorithm/Multiplier.v
   D:/Git/SimpleCPU01/Module/PCAddr.v
   D:/Git/SimpleCPU01/Module/Storage/RegFiles.v
   D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.gen/sources_1/bd/SimpleCPU01Design/hdl/SimpleCPU01Design_wrapper.v
+  D:/Git/SimpleCPU01/Module/Algorithm/add1.v
   D:/Git/SimpleCPU01/Module/Chip_InstrIP.v
 }
 add_files D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.srcs/sources_1/bd/SimpleCPU01Design/SimpleCPU01Design.bd

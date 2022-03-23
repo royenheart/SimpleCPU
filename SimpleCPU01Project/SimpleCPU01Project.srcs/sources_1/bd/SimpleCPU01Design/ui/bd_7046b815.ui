@@ -11,7 +11,7 @@ preplace inst dist_mem_gen_0 -pg 1 -lvl 1 -x 120 -y 60 -defaultsOSRD
 preplace netloc a_0_1 1 0 1 NJ 60
 preplace netloc dist_mem_gen_0_spo 1 1 1 N 60
 levelinfo -pg 1 0 120 240
-pagesize -pg 1 -db -bbox -sgen -100 0 360 120
+pagesize -pg 1 -db -bbox -sgen -110 0 360 120
 "
 }
 0

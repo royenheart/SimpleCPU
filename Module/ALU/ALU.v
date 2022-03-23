@@ -29,41 +29,52 @@ module ALU(
 
     initial
     begin
-        // 初始化数据
+        // 初始化数�?
         out <= 32'd0;
         zero <= 1'b0;
     end
 
-    reg [31:0] C;
-    reg [31:0] D;
-    reg [31:0] ans;
+    wire [31:0] BNegativeComplement;
+    wire [31:0] BNegative;
+    wire [31:0] AddOut;
+    wire AddOverflow;
+    wire [31:0] SubOut;
+    wire subOverflow;
+    wire [31:0] SubuOut;
+    wire subuOverflow;
+    wire [31:0] MulOut;
+    
+    CLA32 Addu(.a(A),.b(B),.c_in(1'b0),.sum(AddOut),.overflow(AddOverflow));   //加法
+
+    assign BNegativeComplement = B[31] ? {1'b1, B[30:0]} : {1'b0, ~B[30:0] + 1}; 
+    CLA32 sub(.a(A),.b(BNegativeComplement),.c_in(1'b0),.sum(SubOut),.overflow(SubOverflow));   //有符号数减法
+
+    assign BNegative = ~B+1 ; 
+    CLA32 subu(.a(A),.b(BNegative),.c_in(1'b0),.sum(SubuOut),.overflow(SubuOverflow));   //无符号数减法
+
+    Multiplier mul1(.A(A), .B(B), .result(MulOut));
+
     always@(*)
     begin
         case(op)
             5'b00000: 
                 begin
-                    C = A[31] ? ({A[31],~A[30:0]}+1) : A; 
-                    D = B[31] ? ({B[31],~B[30:0]}+1) : B; 
-                    ans = C + D;
-                    out = ans[31] ? ({ans[31],~(ans[30:0]-1)}) : ans;
+                    out = AddOut;
                     zero = 1'b0;
                 end
             5'b00001: 
                 begin
-                    out = A + B;
+                    out = AddOut;
                     zero = 1'b0;
                 end
             5'b00010: 
                 begin
-                    C = A[31] ? ({A[31],~A[30:0]}+1) : A; 
-                    D = B[31] ? ({!B[31], B[30:0]}) : (~B + 1);
-                    ans = C + D;
-                    out = ans[31] ? ({ans[31],~(ans[30:0]-1)}) : ans;
+                    out = SubOut;
                     zero = 1'b0;
                 end
             5'b00011: 
                 begin
-                    out = A - B;
+                    out = SubuOut;
                     zero = 1'b0;
                 end
             5'b00100: 
@@ -88,15 +99,14 @@ module ALU(
                 end
             5'b01000:
                 begin
-                    if(A[31] == 1 && B[31] == 1) out = {31'b0, A[30:0] > B[30:0] ? 1:0};
                     if(A[31] == 1 && B[31] == 0) out = {31'b0, 1'b1};
-                    if(A[31] == 0 && B[31] == 1) out = {31'b0, 1'b0};
-                    if(A[31] == 0 && B[31] == 0) out = {31'b0, A < B ? 1:0};
+                    else if(A[31] == 0 && B[31] == 1) out = {31'b0, 1'b0};
+                    else out = SubOut ? 1 : 0;
                     zero = 1'b0;
                 end
             5'b01001:
                 begin
-                    out = {31'b0, A < B ? 1 : 0};
+                    out = SubuOverflow ? 0 : 1;
                     zero = 1'b0;
                 end
             5'b01010:
@@ -117,16 +127,21 @@ module ALU(
             5'b01101:
                 begin
                     out = 32'b0;
-                    zero = (A == B) ? 1'b1 : 1'b0;
+                    zero = SubOut ? 1'b0 : 1'b1;
                 end
             5'b01110:
                 begin
                     out = 32'b0;
-                    zero = (A != B) ? 1'b1 : 1'b0;
+                    zero = SubOut ? 1'b1 : 1'b0;
                 end
             5'b01111:
                 begin
                     out = B << 16;
+                    zero = 1'b0;
+                end
+            5'b10000: //mul
+                begin
+                    out = MulOut;
                     zero = 1'b0;
                 end
             default:

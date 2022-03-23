@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="Synthesis01" LaunchPart="xc7vx485tffg1157-1" LaunchTime="1647933829" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/Chip.dcp">
+<GenRun Id="Synthesis01" LaunchPart="xc7vx485tffg1157-1" LaunchTime="1648025977" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/Chip.dcp">
   <File Type="PA-TCL" Name="Chip_InstrIP.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="Chip_InstrIP_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="Chip_InstrIP_reports.tcl"/>
@@ -19,6 +19,34 @@
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../Module/ALU/ALU.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Module/Algorithm/CLA16.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Module/Algorithm/CLA32.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Module/Algorithm/CLA_4.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Module/Algorithm/CLA_add4.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -53,6 +81,13 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../Module/Algorithm/Multiplier.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PPRDIR/../Module/PCAddr.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -68,6 +103,13 @@
       </FileInfo>
     </File>
     <File Path="$PGENDIR/sources_1/bd/SimpleCPU01Design/hdl/SimpleCPU01Design_wrapper.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../Module/Algorithm/add1.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -132,5 +174,4 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="SimpleCPU01Design_dist_mem_gen_0_0"/>
 </GenRun>

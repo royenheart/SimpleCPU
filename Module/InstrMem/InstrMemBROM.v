@@ -37,18 +37,17 @@ SimpleCPU01Design_wrapper u_mem_generator_0(
 );
 
 SimpleCPU01Design_wrapper u_mem_generator_1(
-    .a_0        (address + 1'd1),
+    .a_0        (address + 1),
     .spo_0      (instrs [23:16])
 );
 
-
 SimpleCPU01Design_wrapper u_mem_generator_2(
-    .a_0        (address + 1'd2),
+    .a_0        (address + 2),
     .spo_0      (instrs [15:8])
 );
 
 SimpleCPU01Design_wrapper u_mem_generator_3(
-    .a_0        (address + 1'd3),
+    .a_0        (address + 3),
     .spo_0      (instrs [7:0])
 );
 
