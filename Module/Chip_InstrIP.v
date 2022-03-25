@@ -231,7 +231,7 @@ DataMem u_datamem(
 
 // InstrMem - Start //
 
-InstrMemBROM u_instrmembrom (
+InstrMemROM u_instrmemrom (
     .A  (IPC [31:0]),
     .RD (instr [31:0])
 );

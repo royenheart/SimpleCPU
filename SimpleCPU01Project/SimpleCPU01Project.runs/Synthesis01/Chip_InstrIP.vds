@@ -2,8 +2,8 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Wed Mar 23 16:59:42 2022
-# Process ID: 30636
+# Start of session at: Fri Mar 25 12:42:59 2022
+# Process ID: 8136
 # Current directory: D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.runs/Synthesis01
 # Command line: vivado.exe -log Chip_InstrIP.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Chip_InstrIP.tcl
 # Log file: D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.runs/Synthesis01/Chip_InstrIP.vds
@@ -21,19 +21,19 @@ Command: synth_design -top Chip_InstrIP -part xc7vx485tffg1157-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx485t'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx485t'
-INFO: [Common 17-86] Your Synthesis license expires in 20 day(s)
+INFO: [Common 17-86] Your Synthesis license expires in 18 day(s)
 INFO: [Common 17-1540] The version limit for your license is '2022.01' and has expired for new software. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for new releases.
 INFO: [Device 21-403] Loading part xc7vx485tffg1157-1
 WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis because the design is too small; reverting to default synthesis
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 32752
+INFO: [Synth 8-7075] Helper process launched with PID 20700
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1412.543 ; gain = 27.625
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1411.234 ; gain = 28.352
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Chip_InstrIP' [D:/Git/SimpleCPU01/Module/Chip_InstrIP.v:23]
-INFO: [Synth 8-6157] synthesizing module 'ALU' [D:/Git/SimpleCPU01/Module/ALU/ALU.v:22]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [D:/Git/SimpleCPU01/Module/ALU/ALU.v:25]
 INFO: [Synth 8-6157] synthesizing module 'CLA32' [D:/Git/SimpleCPU01/Module/Algorithm/CLA32.v:23]
 INFO: [Synth 8-6157] synthesizing module 'CLA16' [D:/Git/SimpleCPU01/Module/Algorithm/CLA16.v:23]
 INFO: [Synth 8-6157] synthesizing module 'CLA_add4' [D:/Git/SimpleCPU01/Module/Algorithm/CLA_add4.v:23]
@@ -44,18 +44,16 @@ INFO: [Synth 8-6155] done synthesizing module 'CLA_4' (2#1) [D:/Git/SimpleCPU01/
 INFO: [Synth 8-6155] done synthesizing module 'CLA_add4' (3#1) [D:/Git/SimpleCPU01/Module/Algorithm/CLA_add4.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'CLA16' (4#1) [D:/Git/SimpleCPU01/Module/Algorithm/CLA16.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'CLA32' (5#1) [D:/Git/SimpleCPU01/Module/Algorithm/CLA32.v:23]
-WARNING: [Synth 8-689] width (1) of port connection 'sum' does not match port width (32) of module 'CLA32' [D:/Git/SimpleCPU01/Module/ALU/ALU.v:47]
 INFO: [Synth 8-6157] synthesizing module 'Multiplier' [D:/Git/SimpleCPU01/Module/Algorithm/Multiplier.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'Multiplier' (6#1) [D:/Git/SimpleCPU01/Module/Algorithm/Multiplier.v:23]
-WARNING: [Synth 8-3848] Net AComplement in module/entity ALU does not have driver. [D:/Git/SimpleCPU01/Module/ALU/ALU.v:50]
-INFO: [Synth 8-6155] done synthesizing module 'ALU' (7#1) [D:/Git/SimpleCPU01/Module/ALU/ALU.v:22]
-INFO: [Synth 8-6157] synthesizing module 'CU' [D:/Git/SimpleCPU01/Module/CU/CU.v:22]
-INFO: [Synth 8-6155] done synthesizing module 'CU' (8#1) [D:/Git/SimpleCPU01/Module/CU/CU.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (7#1) [D:/Git/SimpleCPU01/Module/ALU/ALU.v:25]
+INFO: [Synth 8-6157] synthesizing module 'CU' [D:/Git/SimpleCPU01/Module/CU/CU.v:25]
+INFO: [Synth 8-6155] done synthesizing module 'CU' (8#1) [D:/Git/SimpleCPU01/Module/CU/CU.v:25]
 INFO: [Synth 8-6157] synthesizing module 'Extend' [D:/Git/SimpleCPU01/Module/Extend/Extend.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'Extend' (9#1) [D:/Git/SimpleCPU01/Module/Extend/Extend.v:23]
 INFO: [Synth 8-6157] synthesizing module 'DataMem' [D:/Git/SimpleCPU01/Module/Storage/DataMem.v:22]
 CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file '../../../../../Data/DataMem.txt'; please make sure the file is added to project and has read permission, ignoring [D:/Git/SimpleCPU01/Module/Storage/DataMem.v:39]
-INFO: [Synth 8-155] case statement is not full and has no default [D:/Git/SimpleCPU01/Module/Storage/DataMem.v:47]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Git/SimpleCPU01/Module/Storage/DataMem.v:50]
 WARNING: [Synth 8-4767] Trying to implement RAM 'store_reg' in registers. Block RAM or DRAM implementation is not possible; see log for reasons.
 Reason is one or more of the following :
 	1: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
@@ -63,110 +61,110 @@ Reason is one or more of the following :
 	3: No valid read/write found for RAM. 
 RAM "store_reg" dissolved into registers
 INFO: [Synth 8-6155] done synthesizing module 'DataMem' (10#1) [D:/Git/SimpleCPU01/Module/Storage/DataMem.v:22]
-INFO: [Synth 8-6157] synthesizing module 'InstrMemBROM' [D:/Git/SimpleCPU01/Module/InstrMem/InstrMemBROM.v:23]
+INFO: [Synth 8-6157] synthesizing module 'InstrMemROM' [D:/Git/SimpleCPU01/Module/InstrMem/InstrMemROM.v:23]
 INFO: [Synth 8-6157] synthesizing module 'SimpleCPU01Design_wrapper' [D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.gen/sources_1/bd/SimpleCPU01Design/hdl/SimpleCPU01Design_wrapper.v:12]
 INFO: [Synth 8-6157] synthesizing module 'SimpleCPU01Design' [d:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.gen/sources_1/bd/SimpleCPU01Design/synth/SimpleCPU01Design.v:13]
-INFO: [Synth 8-6157] synthesizing module 'SimpleCPU01Design_dist_mem_gen_0_0' [D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.runs/Synthesis01/.Xil/Vivado-30636-LAPTOP-TDKNUURL/realtime/SimpleCPU01Design_dist_mem_gen_0_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'SimpleCPU01Design_dist_mem_gen_0_0' (11#1) [D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.runs/Synthesis01/.Xil/Vivado-30636-LAPTOP-TDKNUURL/realtime/SimpleCPU01Design_dist_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'SimpleCPU01Design_dist_mem_gen_0_0' [D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.runs/Synthesis01/.Xil/Vivado-8136-LAPTOP-TDKNUURL/realtime/SimpleCPU01Design_dist_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'SimpleCPU01Design_dist_mem_gen_0_0' (11#1) [D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.runs/Synthesis01/.Xil/Vivado-8136-LAPTOP-TDKNUURL/realtime/SimpleCPU01Design_dist_mem_gen_0_0_stub.v:6]
 INFO: [Synth 8-6155] done synthesizing module 'SimpleCPU01Design' (12#1) [d:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.gen/sources_1/bd/SimpleCPU01Design/synth/SimpleCPU01Design.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'SimpleCPU01Design_wrapper' (13#1) [D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.gen/sources_1/bd/SimpleCPU01Design/hdl/SimpleCPU01Design_wrapper.v:12]
-WARNING: [Synth 8-689] width (32) of port connection 'a_0' does not match port width (10) of module 'SimpleCPU01Design_wrapper' [D:/Git/SimpleCPU01/Module/InstrMem/InstrMemBROM.v:40]
-WARNING: [Synth 8-689] width (32) of port connection 'a_0' does not match port width (10) of module 'SimpleCPU01Design_wrapper' [D:/Git/SimpleCPU01/Module/InstrMem/InstrMemBROM.v:45]
-WARNING: [Synth 8-689] width (32) of port connection 'a_0' does not match port width (10) of module 'SimpleCPU01Design_wrapper' [D:/Git/SimpleCPU01/Module/InstrMem/InstrMemBROM.v:50]
-INFO: [Synth 8-6155] done synthesizing module 'InstrMemBROM' (14#1) [D:/Git/SimpleCPU01/Module/InstrMem/InstrMemBROM.v:23]
+WARNING: [Synth 8-689] width (32) of port connection 'a_0' does not match port width (10) of module 'SimpleCPU01Design_wrapper' [D:/Git/SimpleCPU01/Module/InstrMem/InstrMemROM.v:40]
+WARNING: [Synth 8-689] width (32) of port connection 'a_0' does not match port width (10) of module 'SimpleCPU01Design_wrapper' [D:/Git/SimpleCPU01/Module/InstrMem/InstrMemROM.v:45]
+WARNING: [Synth 8-689] width (32) of port connection 'a_0' does not match port width (10) of module 'SimpleCPU01Design_wrapper' [D:/Git/SimpleCPU01/Module/InstrMem/InstrMemROM.v:50]
+INFO: [Synth 8-6155] done synthesizing module 'InstrMemROM' (14#1) [D:/Git/SimpleCPU01/Module/InstrMem/InstrMemROM.v:23]
 INFO: [Synth 8-6157] synthesizing module 'RegFiles' [D:/Git/SimpleCPU01/Module/Storage/RegFiles.v:22]
 CRITICAL WARNING: [Synth 8-4445] could not open $readmem data file '../../../../../Data/RegFiles.txt'; please make sure the file is added to project and has read permission, ignoring [D:/Git/SimpleCPU01/Module/Storage/RegFiles.v:39]
-INFO: [Synth 8-155] case statement is not full and has no default [D:/Git/SimpleCPU01/Module/Storage/RegFiles.v:47]
+INFO: [Synth 8-155] case statement is not full and has no default [D:/Git/SimpleCPU01/Module/Storage/RegFiles.v:49]
 INFO: [Synth 8-6155] done synthesizing module 'RegFiles' (15#1) [D:/Git/SimpleCPU01/Module/Storage/RegFiles.v:22]
 INFO: [Synth 8-6157] synthesizing module 'PCAddr' [D:/Git/SimpleCPU01/Module/PCAddr.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'PCAddr' (16#1) [D:/Git/SimpleCPU01/Module/PCAddr.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'Chip_InstrIP' (17#1) [D:/Git/SimpleCPU01/Module/Chip_InstrIP.v:23]
 WARNING: [Synth 8-3917] design Chip_InstrIP has port PCPlusAddrExp[1] driven by constant 0
 WARNING: [Synth 8-3917] design Chip_InstrIP has port PCPlusAddrExp[0] driven by constant 0
-WARNING: [Synth 8-7129] Port A[31] in module InstrMemBROM is either unconnected or has no load
-WARNING: [Synth 8-7129] Port A[30] in module InstrMemBROM is either unconnected or has no load
-WARNING: [Synth 8-7129] Port A[29] in module InstrMemBROM is either unconnected or has no load
-WARNING: [Synth 8-7129] Port A[28] in module InstrMemBROM is either unconnected or has no load
-WARNING: [Synth 8-7129] Port A[27] in module InstrMemBROM is either unconnected or has no load
-WARNING: [Synth 8-7129] Port A[26] in module InstrMemBROM is either unconnected or has no load
-WARNING: [Synth 8-7129] Port A[25] in module InstrMemBROM is either unconnected or has no load
-WARNING: [Synth 8-7129] Port A[24] in module InstrMemBROM is either unconnected or has no load
-WARNING: [Synth 8-7129] Port A[23] in module InstrMemBROM is either unconnected or has no load
-WARNING: [Synth 8-7129] Port A[22] in module InstrMemBROM is either unconnected or has no load
-WARNING: [Synth 8-7129] Port A[21] in module InstrMemBROM is either unconnected or has no load
-WARNING: [Synth 8-7129] Port A[20] in module InstrMemBROM is either unconnected or has no load
-WARNING: [Synth 8-7129] Port A[19] in module InstrMemBROM is either unconnected or has no load
-WARNING: [Synth 8-7129] Port A[18] in module InstrMemBROM is either unconnected or has no load
-WARNING: [Synth 8-7129] Port A[17] in module InstrMemBROM is either unconnected or has no load
-WARNING: [Synth 8-7129] Port A[16] in module InstrMemBROM is either unconnected or has no load
-WARNING: [Synth 8-7129] Port A[15] in module InstrMemBROM is either unconnected or has no load
-WARNING: [Synth 8-7129] Port A[14] in module InstrMemBROM is either unconnected or has no load
-WARNING: [Synth 8-7129] Port A[13] in module InstrMemBROM is either unconnected or has no load
-WARNING: [Synth 8-7129] Port A[12] in module InstrMemBROM is either unconnected or has no load
-WARNING: [Synth 8-7129] Port A[11] in module InstrMemBROM is either unconnected or has no load
-WARNING: [Synth 8-7129] Port A[10] in module InstrMemBROM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[31] in module InstrMemROM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[30] in module InstrMemROM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[29] in module InstrMemROM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[28] in module InstrMemROM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[27] in module InstrMemROM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[26] in module InstrMemROM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[25] in module InstrMemROM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[24] in module InstrMemROM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[23] in module InstrMemROM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[22] in module InstrMemROM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[21] in module InstrMemROM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[20] in module InstrMemROM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[19] in module InstrMemROM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[18] in module InstrMemROM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[17] in module InstrMemROM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[16] in module InstrMemROM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[15] in module InstrMemROM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[14] in module InstrMemROM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[13] in module InstrMemROM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[12] in module InstrMemROM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[11] in module InstrMemROM is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[10] in module InstrMemROM is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1530.637 ; gain = 145.719
+Finished RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1530.164 ; gain = 147.281
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1530.637 ; gain = 145.719
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1549.086 ; gain = 166.203
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1530.637 ; gain = 145.719
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1549.086 ; gain = 166.203
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.129 . Memory (MB): peak = 1530.637 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.120 . Memory (MB): peak = 1549.086 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [d:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.gen/sources_1/bd/SimpleCPU01Design/ip/SimpleCPU01Design_dist_mem_gen_0_0/SimpleCPU01Design_dist_mem_gen_0_0/SimpleCPU01Design_dist_mem_gen_0_0_in_context.xdc] for cell 'u_instrmembrom/u_mem_generator_0/SimpleCPU01Design_i/dist_mem_gen_0'
-Finished Parsing XDC File [d:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.gen/sources_1/bd/SimpleCPU01Design/ip/SimpleCPU01Design_dist_mem_gen_0_0/SimpleCPU01Design_dist_mem_gen_0_0/SimpleCPU01Design_dist_mem_gen_0_0_in_context.xdc] for cell 'u_instrmembrom/u_mem_generator_0/SimpleCPU01Design_i/dist_mem_gen_0'
-Parsing XDC File [d:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.gen/sources_1/bd/SimpleCPU01Design/ip/SimpleCPU01Design_dist_mem_gen_0_0/SimpleCPU01Design_dist_mem_gen_0_0/SimpleCPU01Design_dist_mem_gen_0_0_in_context.xdc] for cell 'u_instrmembrom/u_mem_generator_1/SimpleCPU01Design_i/dist_mem_gen_0'
-Finished Parsing XDC File [d:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.gen/sources_1/bd/SimpleCPU01Design/ip/SimpleCPU01Design_dist_mem_gen_0_0/SimpleCPU01Design_dist_mem_gen_0_0/SimpleCPU01Design_dist_mem_gen_0_0_in_context.xdc] for cell 'u_instrmembrom/u_mem_generator_1/SimpleCPU01Design_i/dist_mem_gen_0'
-Parsing XDC File [d:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.gen/sources_1/bd/SimpleCPU01Design/ip/SimpleCPU01Design_dist_mem_gen_0_0/SimpleCPU01Design_dist_mem_gen_0_0/SimpleCPU01Design_dist_mem_gen_0_0_in_context.xdc] for cell 'u_instrmembrom/u_mem_generator_2/SimpleCPU01Design_i/dist_mem_gen_0'
-Finished Parsing XDC File [d:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.gen/sources_1/bd/SimpleCPU01Design/ip/SimpleCPU01Design_dist_mem_gen_0_0/SimpleCPU01Design_dist_mem_gen_0_0/SimpleCPU01Design_dist_mem_gen_0_0_in_context.xdc] for cell 'u_instrmembrom/u_mem_generator_2/SimpleCPU01Design_i/dist_mem_gen_0'
-Parsing XDC File [d:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.gen/sources_1/bd/SimpleCPU01Design/ip/SimpleCPU01Design_dist_mem_gen_0_0/SimpleCPU01Design_dist_mem_gen_0_0/SimpleCPU01Design_dist_mem_gen_0_0_in_context.xdc] for cell 'u_instrmembrom/u_mem_generator_3/SimpleCPU01Design_i/dist_mem_gen_0'
-Finished Parsing XDC File [d:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.gen/sources_1/bd/SimpleCPU01Design/ip/SimpleCPU01Design_dist_mem_gen_0_0/SimpleCPU01Design_dist_mem_gen_0_0/SimpleCPU01Design_dist_mem_gen_0_0_in_context.xdc] for cell 'u_instrmembrom/u_mem_generator_3/SimpleCPU01Design_i/dist_mem_gen_0'
+Parsing XDC File [d:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.gen/sources_1/bd/SimpleCPU01Design/ip/SimpleCPU01Design_dist_mem_gen_0_0/SimpleCPU01Design_dist_mem_gen_0_0/SimpleCPU01Design_dist_mem_gen_0_0_in_context.xdc] for cell 'u_instrmemrom/u_mem_generator_0/SimpleCPU01Design_i/dist_mem_gen_0'
+Finished Parsing XDC File [d:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.gen/sources_1/bd/SimpleCPU01Design/ip/SimpleCPU01Design_dist_mem_gen_0_0/SimpleCPU01Design_dist_mem_gen_0_0/SimpleCPU01Design_dist_mem_gen_0_0_in_context.xdc] for cell 'u_instrmemrom/u_mem_generator_0/SimpleCPU01Design_i/dist_mem_gen_0'
+Parsing XDC File [d:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.gen/sources_1/bd/SimpleCPU01Design/ip/SimpleCPU01Design_dist_mem_gen_0_0/SimpleCPU01Design_dist_mem_gen_0_0/SimpleCPU01Design_dist_mem_gen_0_0_in_context.xdc] for cell 'u_instrmemrom/u_mem_generator_1/SimpleCPU01Design_i/dist_mem_gen_0'
+Finished Parsing XDC File [d:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.gen/sources_1/bd/SimpleCPU01Design/ip/SimpleCPU01Design_dist_mem_gen_0_0/SimpleCPU01Design_dist_mem_gen_0_0/SimpleCPU01Design_dist_mem_gen_0_0_in_context.xdc] for cell 'u_instrmemrom/u_mem_generator_1/SimpleCPU01Design_i/dist_mem_gen_0'
+Parsing XDC File [d:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.gen/sources_1/bd/SimpleCPU01Design/ip/SimpleCPU01Design_dist_mem_gen_0_0/SimpleCPU01Design_dist_mem_gen_0_0/SimpleCPU01Design_dist_mem_gen_0_0_in_context.xdc] for cell 'u_instrmemrom/u_mem_generator_2/SimpleCPU01Design_i/dist_mem_gen_0'
+Finished Parsing XDC File [d:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.gen/sources_1/bd/SimpleCPU01Design/ip/SimpleCPU01Design_dist_mem_gen_0_0/SimpleCPU01Design_dist_mem_gen_0_0/SimpleCPU01Design_dist_mem_gen_0_0_in_context.xdc] for cell 'u_instrmemrom/u_mem_generator_2/SimpleCPU01Design_i/dist_mem_gen_0'
+Parsing XDC File [d:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.gen/sources_1/bd/SimpleCPU01Design/ip/SimpleCPU01Design_dist_mem_gen_0_0/SimpleCPU01Design_dist_mem_gen_0_0/SimpleCPU01Design_dist_mem_gen_0_0_in_context.xdc] for cell 'u_instrmemrom/u_mem_generator_3/SimpleCPU01Design_i/dist_mem_gen_0'
+Finished Parsing XDC File [d:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.gen/sources_1/bd/SimpleCPU01Design/ip/SimpleCPU01Design_dist_mem_gen_0_0/SimpleCPU01Design_dist_mem_gen_0_0/SimpleCPU01Design_dist_mem_gen_0_0_in_context.xdc] for cell 'u_instrmemrom/u_mem_generator_3/SimpleCPU01Design_i/dist_mem_gen_0'
 Parsing XDC File [D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.runs/Synthesis01/dont_touch.xdc]
 Finished Parsing XDC File [D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.runs/Synthesis01/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1643.570 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1648.211 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.040 . Memory (MB): peak = 1643.570 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 1648.211 ; gain = 0.000
 WARNING: [Designutils 20-4072] Reference run did not run incremental synthesis because the design is too small; reverting to default synthesis
 INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1643.570 ; gain = 258.652
+Finished Constraint Validation : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1648.211 ; gain = 265.328
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7vx485tffg1157-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1643.570 ; gain = 258.652
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1648.211 ; gain = 265.328
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property KEEP_HIERARCHY = SOFT for u_instrmembrom/u_mem_generator_0/SimpleCPU01Design_i. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for u_instrmembrom/u_mem_generator_1/SimpleCPU01Design_i. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for u_instrmembrom/u_mem_generator_2/SimpleCPU01Design_i. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for u_instrmembrom/u_mem_generator_3/SimpleCPU01Design_i. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for u_instrmembrom/u_mem_generator_0/SimpleCPU01Design_i/dist_mem_gen_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for u_instrmembrom/u_mem_generator_1/SimpleCPU01Design_i/dist_mem_gen_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for u_instrmembrom/u_mem_generator_2/SimpleCPU01Design_i/dist_mem_gen_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for u_instrmembrom/u_mem_generator_3/SimpleCPU01Design_i/dist_mem_gen_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_instrmemrom/u_mem_generator_0/SimpleCPU01Design_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_instrmemrom/u_mem_generator_1/SimpleCPU01Design_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_instrmemrom/u_mem_generator_2/SimpleCPU01Design_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_instrmemrom/u_mem_generator_3/SimpleCPU01Design_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_instrmemrom/u_mem_generator_0/SimpleCPU01Design_i/dist_mem_gen_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_instrmemrom/u_mem_generator_1/SimpleCPU01Design_i/dist_mem_gen_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_instrmemrom/u_mem_generator_2/SimpleCPU01Design_i/dist_mem_gen_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for u_instrmemrom/u_mem_generator_3/SimpleCPU01Design_i/dist_mem_gen_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1643.570 ; gain = 258.652
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1648.211 ; gain = 265.328
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:24 ; elapsed = 00:00:26 . Memory (MB): peak = 1643.570 ; gain = 258.652
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1648.211 ; gain = 265.328
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -243,7 +241,7 @@ WARNING: [Synth 8-7129] Port A[10] in module DataMem is either unconnected or ha
 WARNING: [Synth 8-7129] Port A[9] in module DataMem is either unconnected or has no load
 WARNING: [Synth 8-7129] Port A[8] in module DataMem is either unconnected or has no load
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:49 ; elapsed = 00:00:51 . Memory (MB): peak = 1738.297 ; gain = 353.379
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:04 ; elapsed = 00:01:06 . Memory (MB): peak = 1752.754 ; gain = 369.871
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -264,13 +262,13 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:55 ; elapsed = 00:00:57 . Memory (MB): peak = 1738.297 ; gain = 353.379
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:10 ; elapsed = 00:01:11 . Memory (MB): peak = 1752.754 ; gain = 369.871
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:55 ; elapsed = 00:00:58 . Memory (MB): peak = 1738.297 ; gain = 353.379
+Finished Timing Optimization : Time (s): cpu = 00:01:11 ; elapsed = 00:01:12 . Memory (MB): peak = 1752.754 ; gain = 369.871
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -290,7 +288,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:00 ; elapsed = 00:01:03 . Memory (MB): peak = 1990.840 ; gain = 605.922
+Finished Technology Mapping : Time (s): cpu = 00:01:15 ; elapsed = 00:01:17 . Memory (MB): peak = 1948.000 ; gain = 565.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -308,37 +306,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:07 ; elapsed = 00:01:09 . Memory (MB): peak = 1990.840 ; gain = 605.922
+Finished IO Insertion : Time (s): cpu = 00:01:21 ; elapsed = 00:01:23 . Memory (MB): peak = 1948.000 ; gain = 565.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:07 ; elapsed = 00:01:09 . Memory (MB): peak = 1990.840 ; gain = 605.922
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:21 ; elapsed = 00:01:23 . Memory (MB): peak = 1948.000 ; gain = 565.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:08 ; elapsed = 00:01:11 . Memory (MB): peak = 1990.840 ; gain = 605.922
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:22 ; elapsed = 00:01:23 . Memory (MB): peak = 1948.000 ; gain = 565.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:09 ; elapsed = 00:01:11 . Memory (MB): peak = 1990.840 ; gain = 605.922
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:22 ; elapsed = 00:01:24 . Memory (MB): peak = 1948.000 ; gain = 565.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:09 ; elapsed = 00:01:12 . Memory (MB): peak = 1990.840 ; gain = 605.922
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:23 ; elapsed = 00:01:24 . Memory (MB): peak = 1948.000 ; gain = 565.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:09 ; elapsed = 00:01:12 . Memory (MB): peak = 1990.840 ; gain = 605.922
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:23 ; elapsed = 00:01:24 . Memory (MB): peak = 1948.000 ; gain = 565.117
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -359,13 +357,13 @@ Report Cell Usage:
 |2     |SimpleCPU01Design_dist_mem_gen_0_0 |     3|
 |5     |BUFG                               |     1|
 |6     |CARRY4                             |   536|
-|7     |LUT1                               |  1154|
-|8     |LUT2                               |  1094|
-|9     |LUT3                               |   248|
-|10    |LUT4                               |   220|
-|11    |LUT5                               |  1461|
-|12    |LUT6                               |  5498|
-|13    |MUXF7                              |  1134|
+|7     |LUT1                               |   858|
+|8     |LUT2                               |  1039|
+|9     |LUT3                               |   642|
+|10    |LUT4                               |   338|
+|11    |LUT5                               |  1440|
+|12    |LUT6                               |  5526|
+|13    |MUXF7                              |  1137|
 |14    |MUXF8                              |   544|
 |15    |RAM32M                             |    10|
 |16    |RAM32X1D                           |     4|
@@ -374,29 +372,29 @@ Report Cell Usage:
 |19    |OBUF                               |   510|
 +------+-----------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:09 ; elapsed = 00:01:12 . Memory (MB): peak = 1990.840 ; gain = 605.922
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:23 ; elapsed = 00:01:24 . Memory (MB): peak = 1948.000 ; gain = 565.117
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 31 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:57 ; elapsed = 00:01:08 . Memory (MB): peak = 1990.840 ; gain = 492.988
-Synthesis Optimization Complete : Time (s): cpu = 00:01:09 ; elapsed = 00:01:12 . Memory (MB): peak = 1990.840 ; gain = 605.922
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:11 ; elapsed = 00:01:20 . Memory (MB): peak = 1948.000 ; gain = 465.992
+Synthesis Optimization Complete : Time (s): cpu = 00:01:23 ; elapsed = 00:01:24 . Memory (MB): peak = 1948.000 ; gain = 565.117
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.404 . Memory (MB): peak = 1990.840 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 2228 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.369 . Memory (MB): peak = 1948.000 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 2231 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1990.840 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1948.000 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 14 instances were transformed.
   RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 10 instances
   RAM32X1D => RAM32X1D (RAMD32(x2)): 4 instances
 
-Synth Design complete, checksum: fe63fd98
+Synth Design complete, checksum: 64ee9663
 INFO: [Common 17-83] Releasing license: Synthesis
-59 Infos, 63 Warnings, 2 Critical Warnings and 0 Errors encountered.
+59 Infos, 61 Warnings, 2 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:21 ; elapsed = 00:01:25 . Memory (MB): peak = 1990.840 ; gain = 605.922
+synth_design: Time (s): cpu = 00:01:34 ; elapsed = 00:01:42 . Memory (MB): peak = 1948.000 ; gain = 565.117
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Common 17-1381] The checkpoint 'D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.runs/Synthesis01/Chip_InstrIP.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Chip_InstrIP_utilization_synth.rpt -pb Chip_InstrIP_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Mar 23 17:01:18 2022...
+INFO: [Common 17-206] Exiting Vivado at Fri Mar 25 12:44:54 2022...

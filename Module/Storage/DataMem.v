@@ -30,16 +30,20 @@ module DataMem (
     output wire[31:0] RD
 );
 
-// A为32位地址，故需要2^32个8位寄存器（为方便进行仿真，仅使用256个）
-reg [31:0] store[255:0];
+// A为32位地址，故需要2^32个8位寄存器（为方便进行仿真，仅使用512个）
+reg [7:0] store[255:0];
 
 initial
 begin
     // 数据初始化（十六进制读入）
+    // 若遇到无法载入问题，请尝试修改路径（绝对路径或相对路径）
     $readmemh("../../../../../Data/DataMem.txt", store);
 end
 
-assign RD = store[A];
+assign RD[31:24] = store[A];
+assign RD[23:16] = store[A+1];
+assign RD[15:8] = store[A+2];
+assign RD[7:0] = store[A+3];
 
 // 当时钟上升沿时改变进行数据写
 always@(posedge clk)
@@ -49,7 +53,10 @@ begin
         1'b1:
         begin
             // MIPS使用小端模式进行数据存储
-            store[A] <= WD;
+            store[A] <= WD[31:24];
+            store[A+1] <= WD[23:16];
+            store[A+2] <= WD[15:8];
+            store[A+3] <= WD[7:0];
         end
     endcase
 end

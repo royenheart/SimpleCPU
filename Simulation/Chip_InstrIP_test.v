@@ -21,7 +21,10 @@
 module Chip_InstrIP_test;
 
 // Chip_InstrIP Parameters
-parameter PERIOD  = 10;
+// 前仿使用时延
+// parameter PERIOD  = 10;
+// 综合时序仿真使用时延
+parameter PERIOD  = 100;
 
 // Chip_InstrIP Outputs
 wire  [31:0]  instr                        ;

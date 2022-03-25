@@ -70,7 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "Synthesis01" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 4
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
 OPTRACE "Creating in-memory project" START { }
@@ -98,7 +97,7 @@ read_verilog -library xil_defaultlib {
   D:/Git/SimpleCPU01/Module/CU/CU.v
   D:/Git/SimpleCPU01/Module/Storage/DataMem.v
   D:/Git/SimpleCPU01/Module/Extend/Extend.v
-  D:/Git/SimpleCPU01/Module/InstrMem/InstrMemBROM.v
+  D:/Git/SimpleCPU01/Module/InstrMem/InstrMemROM.v
   D:/Git/SimpleCPU01/Module/Algorithm/Multiplier.v
   D:/Git/SimpleCPU01/Module/PCAddr.v
   D:/Git/SimpleCPU01/Module/Storage/RegFiles.v

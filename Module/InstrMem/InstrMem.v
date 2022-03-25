@@ -30,6 +30,7 @@ reg [7:0] instrs[255:0];
 initial
 begin
     // 数据初始化（十六进制读入）
+    // 若遇到无法载入问题，请尝试修改路径（绝对路径或相对路径）
     $readmemh("../../../../../Data/InstrMem.txt", instrs);
 end
 
