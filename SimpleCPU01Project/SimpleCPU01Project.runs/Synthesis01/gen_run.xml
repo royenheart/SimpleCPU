@@ -1,14 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="Synthesis01" LaunchPart="xc7vx485tffg1157-1" LaunchTime="1648183375" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/Chip.dcp">
+<GenRun Id="Synthesis01" LaunchPart="xc7vx485tffg1157-1" LaunchTime="1648223430" LaunchIncrCheckpoint="$PSRCDIR/utils_1/imports/synth_1/Chip.dcp">
   <File Type="PA-TCL" Name="Chip_InstrIP.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="Chip_InstrIP_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="Chip_InstrIP_reports.tcl"/>
   <File Type="RDS-RDS" Name="Chip_InstrIP.vds"/>
   <File Type="RDS-UTIL" Name="Chip_InstrIP_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="Chip_InstrIP_utilization_synth.pb"/>
   <File Type="RDS-DCP" Name="Chip_InstrIP.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="Chip_InstrIP_timing_summary_synth.rpt"/>
-  <File Type="VDS-TIMING-PB" Name="Chip_InstrIP_timing_summary_synth.pb"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
     <File Path="$PSRCDIR/sources_1/bd/SimpleCPU01Design/SimpleCPU01Design.bd">
@@ -123,7 +120,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../Module/Chip.v">
+    <File Path="$PPRDIR/../Module/InstrMem/InstrMem.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -131,7 +128,7 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../Module/InstrMem/InstrMem.v">
+    <File Path="$PPRDIR/../Module/Chip.v">
       <FileInfo>
         <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -171,10 +168,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2021"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="SimpleCPU01Design_dist_mem_gen_0_0"/>
 </GenRun>

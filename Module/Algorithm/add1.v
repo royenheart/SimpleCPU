@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: 
+// Engineer: ç‹è‹¥è­
 // 
 // Create Date: 2021/11/08 18:04:09
 // Design Name: 
@@ -19,7 +19,8 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module add1(input a, input b, input c_in, output sum, output G, output P);  //³¬Ç°½øÎ»¼Ó·¨Æ÷ÖĞ1Î»¼Ó·¨Æ÷£¨¼ÆËãP¡¢G¡¢sum£©
+module add1(input a, input b, input c_in, output sum, output G, output P);  
+//è¶…å‰è¿›ä½åŠ æ³•å™¨ä¸­1ä½åŠ æ³•å™¨ï¼ˆè®¡ç®—Pã€Gã€sumï¼‰
         xor a1(sum, a, b, c_in);
         and a2(G, a, b);
         or a3(P, a, b);

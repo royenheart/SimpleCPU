@@ -21,25 +21,54 @@
 
 // 指令地址寄存
 module PCAddr(
-    input wire [31:0] PC,
-    input wire clk,
-    output wire [31:0] IPC
+    clk, rst,
+    Branch, CurPC, ExtendImm, address, RS, NextPC
 );
 
-reg [31:0] store;
+input clk;
+input rst;
+input [1:0] Branch;
+input [31:0] CurPC;
+input [31:0] ExtendImm;
+input [25:0] address;
+input [31:0] RS;
+output [31:0] NextPC;
+    
+wire clk;
+wire rst;
+wire [1:0] Branch;
+wire [31:0] CurPC;
+wire [31:0] ExtendImm;
+wire [25:0] address;
+wire [31:0] RS;
+reg [31:0] NextPC;
 
 // 初始化数据
 initial
 begin
-    store <= 32'd0;
+    NextPC <= 32'b0;
 end
 
-// 向指令存储器传输当前指令地址
-assign IPC = store;
+wire [31:0] PCPlus4, PCPlusExtend, PCPlusAddr;
+// PC + 4
+assign PCPlus4 = CurPC + 3'b100;
+// PC + 4 + (sign-extend)immediate<<2
+assign PCPlusExtend = PCPlus4 + (ExtendImm << 2);
+// PC = (PC+4)[31..28],address,0,0
+assign PCPlusAddr = {PCPlus4[31:28], address, 2'b00};
 
-always@(posedge clk)
+always@(*)
 begin
-    store <= PC;
+    if(!rst) NextPC <= 32'b0;
+    else begin
+        case(Branch)
+            2'b00: NextPC <= PCPlus4;
+            2'b01: NextPC <= PCPlusExtend;
+            2'b10: NextPC <= PCPlusAddr;
+            2'b11: NextPC <= RS;
+        endcase
+    end
 end
 
 endmodule
+

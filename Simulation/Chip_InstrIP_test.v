@@ -22,9 +22,9 @@ module Chip_InstrIP_test;
 
 // Chip_InstrIP Parameters
 // 前仿使用时延
-// parameter PERIOD  = 10;
+parameter PERIOD  = 10;
 // 综合时序仿真使用时延
-parameter PERIOD  = 100;
+// parameter PERIOD  = 100;
 
 // Chip_InstrIP Outputs
 wire  [31:0]  instr                        ;
@@ -38,7 +38,7 @@ wire  [4:0]  ALUControl                    ;
 wire  [1:0]  Branch                        ;
 wire  ALUSrcA                              ;
 wire  ALUSrcB                              ;
-wire  [4:0]  RegDst                        ;
+wire  RegDst                               ;
 wire  Extend                               ;
 wire  PCtoReg                              ;
 wire  [4:0]  A3Temp                        ;
@@ -52,17 +52,21 @@ wire  [31:0]  ALUResult                    ;
 wire  [31:0]  DataMemRead                  ;
 wire  [31:0]  WD3Temp                      ;
 wire  [31:0]  WD3                          ;
-wire  [31:0]  PCPlus4                      ;
-wire  [31:0]  PCPlusExtend                 ;
-wire  [31:0]  PCPlusAddr                   ;
+// wire  [31:0]  PCPlus4                      ;
+// wire  [31:0]  PCPlusExtend                 ;
+// wire  [31:0]  PCPlusAddr                   ;
 reg           clk                          ;
-wire          cclk;
+reg           rst                          ;
+wire          cclk                         ;
+wire          rrst                         ;
 
 assign cclk = clk;
+assign rrst = rst;
 
 initial 
 begin
     clk = 1'b0;
+    rst = 1'b1;
     forever 
     begin
         #(PERIOD/2) clk = ~clk;  
@@ -83,7 +87,7 @@ Chip_InstrIP #(
     .BranchExp                  ( Branch        [1:0]  ),
     .ALUSrcAExp                 ( ALUSrcA              ),
     .ALUSrcBExp                 ( ALUSrcB              ),
-    .RegDstExp                  ( RegDst        [4:0]  ),
+    .RegDstExp                  ( RegDst               ),
     .ExtendExp                  ( Extend               ),
     .PCtoRegExp                 ( PCtoReg              ),
     .A3TempExp                  ( A3Temp        [4:0]  ),
@@ -97,10 +101,11 @@ Chip_InstrIP #(
     .DataMemReadExp             ( DataMemRead   [31:0] ),
     .WD3TempExp                 ( WD3Temp       [31:0] ),
     .WD3Exp                     ( WD3           [31:0] ),
-    .PCPlus4Exp                 ( PCPlus4       [31:0] ),
-    .PCPlusExtendExp            ( PCPlusExtend  [31:0] ),
-    .PCPlusAddrExp              ( PCPlusAddr    [31:0] ),
-    .clk                        ( clk                  )
+    // .PCPlus4Exp                 ( PCPlus4       [31:0] ),
+    // .PCPlusExtendExp            ( PCPlusExtend  [31:0] ),
+    // .PCPlusAddrExp              ( PCPlusAddr    [31:0] ),
+    .clk                        ( cclk                  ),
+    .rst                        ( rrst                  )
 );
 
 endmodule

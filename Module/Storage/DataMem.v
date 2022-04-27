@@ -20,15 +20,23 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 module DataMem (
-    // 32位数据存储地址
-    input wire [31:0] A,
-    // 32位数据读取
-    input wire [31:0] WD,
-    // 数据存储判断
-    input wire WE,
-    input wire clk,
-    output wire[31:0] RD
+    clk, A, WD, WE, RD
 );
+
+input clk;
+// 32位数据存储地址
+input [31:0] A;
+// 32位数据读取
+input [31:0] WD;
+// 数据存储判断
+input WE;
+output [31:0] RD;
+
+wire clk;
+wire [31:0] A;
+wire [31:0] WD;
+wire WE;
+wire[31:0] RD;
 
 // A为32位地址，故需要2^32个8位寄存器（为方便进行仿真，仅使用512个）
 reg [7:0] store[255:0];

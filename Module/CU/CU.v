@@ -23,44 +23,155 @@
 `include "../headers/DefineCU.vh"
 
 module CU(
-    // 6位操作数输入
-    input wire [5:0] op,
-    // 6位功能数输入，与op共同决定输出
-    input wire [5:0] func,
-    // ALU Zero信号，用于判断条件跳转语句是否成立?
-    // 只在跳转指令时需要进行判断?
-    input wire zero,
-    output wire MemtoReg,
-    output wire MemWrite,
-    output wire RegWrite,
-    // 5位ALU功能选择
-    output wire [4:0] ALUControl,
-    output wire [1:0] Branch,
-    output wire ALUSrcA,
-    output wire ALUSrcB,
-    output wire [4:0] RegDst,
-    output wire Extend,
-    output wire PCtoReg
+    clk, rst,
+    op, func, zero, MemtoReg, MemWrite, RegWrite, ALUControl, Branch,
+    ALUSrcA, ALUSrcB, RegDst, Extend, PCtoReg, PCWre, IRWre, InstrMemRW
 );
 
+input clk;
+input rst;
+// 6位操作数输入
+input [5:0] op;
+// 6位功能数输入，与op共同决定输出
+input [5:0] func;
+// ALU Zero信号，用于判断条件跳转语句是否成立
+// 只在跳转指令时需要进行判断
+input zero;
+//内存读控制
+output MemtoReg;
+//内存写控制
+output MemWrite;
+output RegWrite;
+// 5位ALU功能选择
+output [4:0] ALUControl;
+output [1:0] Branch;
+output ALUSrcA;
+output ALUSrcB;
+output RegDst;
+output Extend;
+output PCtoReg;
+output PCWre;
+output IRWre;
+output InstrMemRW;
+   
+wire clk;
+wire rst;
+wire [5:0] op;
+wire [5:0] func;
+wire zero;
+reg MemtoReg;
+reg MemWrite;
+reg RegWrite;
+reg [4:0] ALUControl;
+reg [1:0] Branch;
+reg ALUSrcA;
+reg ALUSrcB;
+reg RegDst;
+reg Extend;
+reg PCtoReg;
+reg PCWre;
+reg IRWre;
+reg InstrMemRW;
+
 wire [11:0] opfunc;
+reg [3:0] State, NextState;
 
 assign opfunc = {op,func};
+initial begin
+    State = `InitState;
+    NextState = 4'b0000;
+    MemtoReg = 1'b0;
+    MemWrite = 1'b0;
+    RegWrite = 1'b0;
+    ALUControl = 5'b00000;
+    Branch = 2'b00;
+    ALUSrcA = 1'b0;
+    ALUSrcB = 1'b0;
+    RegDst = 1'b0;
+    Extend = 1'b0;
+    PCtoReg = 1'b0;
+    PCWre = 1'b0;
+    IRWre = 1'b0;
+    InstrMemRW = 1'b0;
+end
 
-assign MemtoReg = (op == `CUlw)?1'b1:1'b0;
-assign MemWrite = (op == `CUsw)?1'b1:1'b0;
-assign RegWrite = (op == `CUsw)?1'b0:1'b1;
-assign ALUControl[4] = (opfunc == `CUjr || opfunc == `CUmul || op == `CUj || op == `CUjal)?1'b1:1'b0;
-assign ALUControl[3] = (opfunc == `CUslt || opfunc == `CUsltu || opfunc == `CUsll || opfunc == `CUsrl || opfunc == `CUsra || opfunc == `CUsllv || opfunc == `CUsrlv || opfunc == `CUsrav || opfunc == `CUjr || op == `CUlui || op == `CUbeq || op == `CUbne || op == `CUslti || op == `CUsltiu || op == `CUj || op == `CUjal)?1'b1:1'b0;
-assign ALUControl[2] = (opfunc == `CUand || opfunc == `CUor || opfunc == `CUxor || opfunc == `CUnor || opfunc == `CUsra || opfunc == `CUsrav || opfunc == `CUjr || op == `CUandi || op == `CUori || op == `CUxori || op == `CUlui || op == `CUbeq || op == `CUbne || op == `CUj || op == `CUjal)?1'b1:1'b0;
-assign ALUControl[1] = (opfunc == `CUsub || opfunc == `CUsubu || opfunc == `CUxor || opfunc == `CUnor || opfunc == `CUsll || opfunc == `CUsrl || opfunc == `CUsllv || opfunc == `CUsrlv || opfunc == `CUjr || op == `CUxori || op == `CUlui || op == `CUbne || op == `CUj || op == `CUjal)?1'b1:1'b0;
-assign ALUControl[0] = (opfunc == `CUaddu || opfunc == `CUsubu || opfunc == `CUor || opfunc == `CUnor || opfunc == `CUsltu || opfunc == `CUsltiu || opfunc == `CUsrl || opfunc == `CUsrlv || opfunc == `CUjr || op == `CUori || op == `CUlui || op == `CUbeq || op == `CUj || op == `CUjal)?1'b1:1'b0;
-assign Branch[1] = (op == `CUj || op == `CUjal || opfunc == `CUjr)?1'b1:1'b0;
-assign Branch[0] = (opfunc == `CUjr || (op == `CUbeq && zero == 1'b1) || (op == `CUbne && zero == 1'b1))?1'b1:1'b0;
-assign ALUSrcA = (opfunc == `CUsll || opfunc == `CUsrl || opfunc == `CUsra)?1'b1:1'b0;
-assign ALUSrcB = (op == `CUaddi || op == `CUaddiu || op == `CUandi || op == `CUori || op == `CUxori || op == `CUlui || op == `CUlw || op == `CUsw || op == `CUslti || op == `CUsltiu)?1'b1:1'b0;
-assign RegDst = (opfunc == `CUadd || opfunc == `CUaddu || opfunc == `CUsub || opfunc == `CUsubu || opfunc == `CUand || opfunc == `CUor || opfunc == `CUxor || opfunc == `CUnor || opfunc == `CUslt || opfunc == `CUsltu || opfunc == `CUsll || opfunc == `CUsrl || opfunc == `CUsra || opfunc == `CUsllv || opfunc == `CUsrlv || opfunc == `CUsrav || opfunc == `CUjr || opfunc == `CUmul)?1'b1:1'b0;
-assign Extend = (op == `CUaddi || op == `CUaddiu || op == `CUlw || op == `CUsw || op == `CUbeq || op == `CUbne || op == `CUslti || op == `CUsltiu)?1'b1:1'b0;
-assign PCtoReg = (op == `CUjal)?1'b1:1'b0;
+//状态机
+always @(posedge clk) begin
+    if(rst == 1'b0) begin
+        State <= `IF;
+    end
+    else begin
+        State <= NextState;
+    end
+end
+
+always @(*) begin
+    case(State)
+        `InitState: NextState <= `IF;
+        `IF: NextState <= `ID;
+        `ID:begin
+            case(op)
+                `CURcal:begin
+                    case(opfunc)
+                        `CUadd, `CUaddu, `CUsub, `CUsubu, `CUand, `CUor, `CUxor, `CUnor, `CUslt, `CUsltu, `CUsll, 
+                            `CUsrl, `CUsra, `CUsllv, `CUsrlv, `CUsrav: NextState <= `EXER;
+                        `CUjr: NextState <= `IF;
+                    endcase
+                end
+                `CUaddi, `CUaddiu, `CUandi, `CUori, `CUxori, `CUlui, `CUslti, `CUsltiu: NextState <= `EXEI;
+                `CUbeq, `CUbne: NextState <= `EXEB;
+                `CUlw, `CUsw: NextState <= `EXEW;
+                `CUjal: NextState <= `WBJAR;
+                `CUj: NextState <= `IF;
+                `CUmulop: NextState <= `EXER;
+            endcase
+        end
+        `EXER: NextState <= `WBR;
+        `WBR: NextState <= `IF;
+        `EXEI: NextState <= `WBI;
+        `WBI: NextState <= `IF;
+        `EXEB: NextState <= `IF;
+        `EXEW:begin
+            case(op)
+                `CUlw: NextState <= `MEMLW;
+                `CUsw: NextState <= `MEMSW;
+            endcase
+        end
+        `MEMLW: NextState <= `WBLW;
+        `WBLW: NextState <= `IF;
+        `MEMSW: NextState <= `IF;
+        `WBJAR: NextState <= `IF;
+        default: NextState <= `IF;
+    endcase
+end
+
+
+always @(*) begin
+    MemtoReg <= (State == `WBLW)?1'b1:1'b0;
+    MemWrite <= (State == `MEMSW)?1'b1:1'b0;
+    RegWrite <= (State == `WBR || State == `WBI || State == `WBLW || State == `WBJAR)?1'b1:1'b0;
+
+    if(State == `EXER || State == `EXEI || State == `EXEB || State == `EXEW) begin
+        ALUControl[4] <= (opfunc == `CUjr || opfunc == `CUmul || op == `CUj || op == `CUjal)?1'b1:1'b0;
+        ALUControl[3] <= (opfunc == `CUslt || opfunc == `CUsltu || opfunc == `CUsll || opfunc == `CUsrl || opfunc == `CUsra || opfunc == `CUsllv || opfunc == `CUsrlv || opfunc == `CUsrav || opfunc == `CUjr || op == `CUlui || op == `CUbeq || op == `CUbne || op == `CUslti || op == `CUsltiu || op == `CUj || op == `CUjal)?1'b1:1'b0;
+        ALUControl[2] <= (opfunc == `CUand || opfunc == `CUor || opfunc == `CUxor || opfunc == `CUnor || opfunc == `CUsra || opfunc == `CUsrav || opfunc == `CUjr || op == `CUandi || op == `CUori || op == `CUxori || op == `CUlui || op == `CUbeq || op == `CUbne || op == `CUj || op == `CUjal)?1'b1:1'b0;
+        ALUControl[1] <= (opfunc == `CUsub || opfunc == `CUsubu || opfunc == `CUxor || opfunc == `CUnor || opfunc == `CUsll || opfunc == `CUsrl || opfunc == `CUsllv || opfunc == `CUsrlv || opfunc == `CUjr || op == `CUxori || op == `CUlui || op == `CUbne || op == `CUj || op == `CUjal)?1'b1:1'b0;
+        ALUControl[0] <= (opfunc == `CUaddu || opfunc == `CUsubu || opfunc == `CUor || opfunc == `CUnor || opfunc == `CUsltu || opfunc == `CUsltiu || opfunc == `CUsrl || opfunc == `CUsrlv || opfunc == `CUjr || op == `CUori || op == `CUlui || op == `CUbeq || op == `CUj || op == `CUjal)?1'b1:1'b0;
+    end
+
+    Branch[1] <= ((State == `ID && op == `CUj) || (State == `WBJAR) || (State == `ID && opfunc == `CUjr))?1'b1:1'b0;
+    Branch[0] <= ((State == `ID && opfunc == `CUjr) || (State == `EXEB && zero == 1'b1))?1'b1:1'b0;
+
+    ALUSrcA <= (State == `EXER && (opfunc == `CUsll || opfunc == `CUsrl || opfunc == `CUsra))?1'b1:1'b0;
+    ALUSrcB <= (State == `EXEI || State == `EXEW)?1'b1:1'b0;
+
+    RegDst <= (State == `EXER)?1'b1:1'b0;
+    Extend <= ((State ==`EXEI && (op == `CUaddi || op == `CUaddiu || op == `CUslti || op == `CUsltiu)) || (State == `EXEW) || (State == `EXEB) )?1'b1:1'b0;
+    PCtoReg <= (State == `WBJAR)?1'b1:1'b0;
+
+    PCWre <= (NextState == `IF && State != `InitState)?1'b1:1'b0;
+    IRWre <= (State == `IF)?1'b1:1'b0;
+    InstrMemRW <= (State == `IF)?1'b1:1'b0;
+end
 
 endmodule

@@ -2,8 +2,8 @@
 # Vivado v2021.2 (64-bit)
 # SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
 # IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
-# Start of session at: Fri Mar 25 12:45:04 2022
-# Process ID: 15344
+# Start of session at: Fri Mar 25 23:52:24 2022
+# Process ID: 25696
 # Current directory: D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.runs/Implement01
 # Command line: vivado.exe -log Chip_InstrIP.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source Chip_InstrIP.tcl -notrace
 # Log file: D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.runs/Implement01/Chip_InstrIP.vdi

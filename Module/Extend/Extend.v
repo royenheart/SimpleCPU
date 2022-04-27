@@ -21,11 +21,19 @@
 
 
 module Extend(
-        input ExtSel,
-        input wire [15:0] immediate,
-        output [31:0] Extendout
-    );
-    assign Extendout[15:0] = immediate;
-    assign Extendout[31:16] = (ExtSel & immediate[15]) ? {16{1'b1}} : {16{1'b0}};
+    ExtSel, immediate, Extendout
+);
+
+input ExtSel;
+input [15:0] immediate;
+output [31:0] Extendout;
+
+wire ExtSel;
+wire [15:0] immediate;
+wire [31:0] Extendout;
+
+assign Extendout[15:0] = immediate;
+assign Extendout[31:16] = (ExtSel & immediate[15]) ? {16{1'b1}} : {16{1'b0}};
+
 endmodule
 

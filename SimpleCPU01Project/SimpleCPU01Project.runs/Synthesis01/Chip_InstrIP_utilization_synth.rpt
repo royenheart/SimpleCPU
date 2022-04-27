@@ -1,7 +1,7 @@
 Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2021.2 (win64) Build 3367213 Tue Oct 19 02:48:09 MDT 2021
-| Date         : Fri Mar 25 12:44:54 2022
+| Date         : Fri Mar 25 23:52:14 2022
 | Host         : LAPTOP-TDKNUURL running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Chip_InstrIP_utilization_synth.rpt -pb Chip_InstrIP_utilization_synth.pb
 | Design       : Chip_InstrIP
@@ -31,16 +31,16 @@ Table of Contents
 +----------------------------+------+-------+------------+-----------+-------+
 |          Site Type         | Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+------+-------+------------+-----------+-------+
-| Slice LUTs*                | 8751 |     0 |          0 |    303600 |  2.88 |
-|   LUT as Logic             | 8703 |     0 |          0 |    303600 |  2.87 |
-|   LUT as Memory            |   48 |     0 |          0 |    130800 |  0.04 |
-|     LUT as Distributed RAM |   48 |     0 |            |           |       |
+| Slice LUTs*                | 5650 |     0 |          0 |    303600 |  1.86 |
+|   LUT as Logic             | 5474 |     0 |          0 |    303600 |  1.80 |
+|   LUT as Memory            |  176 |     0 |          0 |    130800 |  0.13 |
+|     LUT as Distributed RAM |  176 |     0 |            |           |       |
 |     LUT as Shift Register  |    0 |     0 |            |           |       |
-| Slice Registers            | 2080 |     0 |          0 |    607200 |  0.34 |
-|   Register as Flip Flop    | 2080 |     0 |          0 |    607200 |  0.34 |
+| Slice Registers            |   32 |     0 |          0 |    607200 | <0.01 |
+|   Register as Flip Flop    |   32 |     0 |          0 |    607200 | <0.01 |
 |   Register as Latch        |    0 |     0 |          0 |    607200 |  0.00 |
-| F7 Muxes                   | 1137 |     0 |          0 |    151800 |  0.75 |
-| F8 Muxes                   |  544 |     0 |          0 |     75900 |  0.72 |
+| F7 Muxes                   |   80 |     0 |          0 |    151800 |  0.05 |
+| F8 Muxes                   |   32 |     0 |          0 |     75900 |  0.04 |
 +----------------------------+------+-------+------------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
@@ -60,7 +60,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 2080  |          Yes |       Reset |            - |
+| 32    |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -154,18 +154,19 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT6     | 5526 |                 LUT |
-| FDRE     | 2080 |        Flop & Latch |
-| LUT5     | 1440 |                 LUT |
-| MUXF7    | 1137 |               MuxFx |
-| LUT2     | 1039 |                 LUT |
-| LUT1     |  858 |                 LUT |
-| LUT3     |  642 |                 LUT |
-| MUXF8    |  544 |               MuxFx |
+| LUT6     | 2533 |                 LUT |
+| LUT5     | 1241 |                 LUT |
+| LUT2     | 1033 |                 LUT |
+| LUT1     |  863 |                 LUT |
+| LUT3     |  578 |                 LUT |
 | CARRY4   |  536 |          CarryLogic |
 | OBUF     |  510 |                  IO |
-| LUT4     |  338 |                 LUT |
+| LUT4     |  272 |                 LUT |
+| RAMS64E  |  128 |  Distributed Memory |
+| MUXF7    |   80 |               MuxFx |
 | RAMD32   |   68 |  Distributed Memory |
+| MUXF8    |   32 |               MuxFx |
+| FDRE     |   32 |        Flop & Latch |
 | RAMS32   |   20 |  Distributed Memory |
 | IBUF     |    1 |                  IO |
 | BUFG     |    1 |               Clock |

@@ -16,6 +16,7 @@
 `define CUsrlv 12'b000000000110
 `define CUsrav 12'b000000000111
 `define CUjr 12'b000000001000
+`define CURcal 6'b000000
 `define CUaddi 6'b001000
 `define CUaddiu 6'b001001
 `define CUandi 6'b001100
@@ -31,3 +32,18 @@
 `define CUj 6'b000010
 `define CUjal 6'b000011
 `define CUmul 12'b011100000010
+`define CUmulop 12'b011100
+
+`define InitState 4'b1111   //初始状态
+`define IF 4'b0000          //取指
+`define ID 4'b0001          //译码
+`define EXER 4'b0010        //执行：R型计算类
+`define WBR 4'b0011         //写回：R型计算类
+`define EXEI 4'b0100        //执行：I型计算类
+`define WBI 4'b0101         //写回：I型计算类
+`define EXEB 4'b0110        //执行：beq bne
+`define EXEW 4'b0111        //执行：lw sw
+`define MEMLW 4'b1000       //访存：lw
+`define WBLW 4'b1001        //写回：lw
+`define MEMSW 4'b1010       //访存：sw
+`define WBJAR 4'b1011       //写回：jar
