@@ -1,0 +1,3 @@
+DataMemBRAMDesign_blk_mem_gen_0_0.v,verilog,xil_defaultlib,../../../bd/DataMemBRAMDesign/ip/DataMemBRAMDesign_blk_mem_gen_0_0/sim/DataMemBRAMDesign_blk_mem_gen_0_0.v,
+DataMemBRAMDesign.v,verilog,xil_defaultlib,../../../bd/DataMemBRAMDesign/sim/DataMemBRAMDesign.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

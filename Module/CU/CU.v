@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: 谢皓泽
+// Engineer: 谢皓泽、王若譞
 // 
 // Create Date: 2022/03/06 18:58:34
 // Design Name: 
@@ -31,9 +31,9 @@ module CU(
 input clk;
 input rst;
 // 6位操作数输入
-input [5:0] op;
+input op;
 // 6位功能数输入，与op共同决定输出
-input [5:0] func;
+input func;
 // ALU Zero信号，用于判断条件跳转语句是否成立
 // 只在跳转指令时需要进行判断
 input zero;
@@ -43,8 +43,8 @@ output MemtoReg;
 output MemWrite;
 output RegWrite;
 // 5位ALU功能选择
-output [4:0] ALUControl;
-output [1:0] Branch;
+output ALUControl;
+output Branch;
 output ALUSrcA;
 output ALUSrcB;
 output RegDst;

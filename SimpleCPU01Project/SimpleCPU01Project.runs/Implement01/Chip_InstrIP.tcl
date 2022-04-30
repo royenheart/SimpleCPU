@@ -146,6 +146,7 @@ OPTRACE "add files" START { }
   add_files D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.srcs/sources_1/bd/SimpleCPU01Design/SimpleCPU01Design.bd
   set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }
+  read_xdc D:/Git/SimpleCPU01/Constraints/Chip_InstrIP.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }

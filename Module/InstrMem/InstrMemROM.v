@@ -65,4 +65,5 @@ always @(*) begin
     if (InstrMemRW) RD <= instrs;
     else RD <= 32'b0;
 end
+
 endmodule

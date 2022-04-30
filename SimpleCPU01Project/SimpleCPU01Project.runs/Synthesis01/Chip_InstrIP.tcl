@@ -92,6 +92,7 @@ set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 add_files D:/Git/SimpleCPU01/Coe/InstrMemCoe.coe
+add_files D:/Git/SimpleCPU01/Coe/DataMemCoe.coe
 read_verilog -library xil_defaultlib {
   D:/Git/SimpleCPU01/Module/ALU/ALU.v
   D:/Git/SimpleCPU01/Module/Algorithm/CLA16.v
@@ -101,10 +102,13 @@ read_verilog -library xil_defaultlib {
   D:/Git/SimpleCPU01/Module/CU/CU.v
   D:/Git/SimpleCPU01/Module/Storage/DataMem.v
   D:/Git/SimpleCPU01/Module/Extend/Extend.v
+  D:/Git/SimpleCPU01/Module/Register/IR.v
   D:/Git/SimpleCPU01/Module/InstrMem/InstrMemROM.v
   D:/Git/SimpleCPU01/Module/Algorithm/Multiplier.v
+  D:/Git/SimpleCPU01/Module/PC/PC.v
   D:/Git/SimpleCPU01/Module/PCAddr.v
   D:/Git/SimpleCPU01/Module/Storage/RegFiles.v
+  D:/Git/SimpleCPU01/Module/Register/ResultTempReg.v
   D:/Git/SimpleCPU01/SimpleCPU01Project/SimpleCPU01Project.gen/sources_1/bd/SimpleCPU01Design/hdl/SimpleCPU01Design_wrapper.v
   D:/Git/SimpleCPU01/Module/Algorithm/add1.v
   D:/Git/SimpleCPU01/Module/Chip_InstrIP.v
@@ -122,6 +126,9 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
+read_xdc D:/Git/SimpleCPU01/Constraints/Chip_InstrIP.xdc
+set_property used_in_implementation false [get_files D:/Git/SimpleCPU01/Constraints/Chip_InstrIP.xdc]
+
 read_xdc dont_touch.xdc
 set_property used_in_implementation false [get_files dont_touch.xdc]
 set_param ips.enableIPCacheLiteLoad 1

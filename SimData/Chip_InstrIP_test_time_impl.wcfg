@@ -11,15 +11,15 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="900.001 ns"></ZoomEndTime>
-      <Cursor1Time time="900.000 ns"></Cursor1Time>
+      <ZoomStartTime time="0.000000 us"></ZoomStartTime>
+      <ZoomEndTime time="44.000001 us"></ZoomEndTime>
+      <Cursor1Time time="4.375000 us"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="340"></NameColumnWidth>
-      <ValueColumnWidth column_width="150"></ValueColumnWidth>
+      <ValueColumnWidth column_width="145"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="37" />
+   <WVObjectSize size="40" />
    <wvobject fp_name="/Chip_InstrIP_test/instr" type="array">
       <obj_property name="ElementShortName">instr[31:0]</obj_property>
       <obj_property name="ObjectShortName">instr[31:0]</obj_property>
@@ -64,9 +64,9 @@
       <obj_property name="ElementShortName">ALUSrcB</obj_property>
       <obj_property name="ObjectShortName">ALUSrcB</obj_property>
    </wvobject>
-   <wvobject fp_name="/Chip_InstrIP_test/RegDst" type="array">
-      <obj_property name="ElementShortName">RegDst[4:0]</obj_property>
-      <obj_property name="ObjectShortName">RegDst[4:0]</obj_property>
+   <wvobject fp_name="/Chip_InstrIP_test/RegDst" type="logic">
+      <obj_property name="ElementShortName">RegDst</obj_property>
+      <obj_property name="ObjectShortName">RegDst</obj_property>
    </wvobject>
    <wvobject fp_name="/Chip_InstrIP_test/Extend" type="logic">
       <obj_property name="ElementShortName">Extend</obj_property>
@@ -120,18 +120,6 @@
       <obj_property name="ElementShortName">WD3[31:0]</obj_property>
       <obj_property name="ObjectShortName">WD3[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/Chip_InstrIP_test/PCPlus4" type="array">
-      <obj_property name="ElementShortName">PCPlus4[31:0]</obj_property>
-      <obj_property name="ObjectShortName">PCPlus4[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Chip_InstrIP_test/PCPlusExtend" type="array">
-      <obj_property name="ElementShortName">PCPlusExtend[31:0]</obj_property>
-      <obj_property name="ObjectShortName">PCPlusExtend[31:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/Chip_InstrIP_test/PCPlusAddr" type="array">
-      <obj_property name="ElementShortName">PCPlusAddr[31:0]</obj_property>
-      <obj_property name="ObjectShortName">PCPlusAddr[31:0]</obj_property>
-   </wvobject>
    <wvobject fp_name="/Chip_InstrIP_test/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
@@ -165,8 +153,31 @@
       <obj_property name="ObjectShortName">RD[31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/Chip_InstrIP_test/u_Chip_InstrIP/u_datamem/store" type="array">
-      <obj_property name="ElementShortName">store[255:0][31:0]</obj_property>
-      <obj_property name="ObjectShortName">store[255:0][31:0]</obj_property>
-      <obj_property name="isExpanded"></obj_property>
+      <obj_property name="ElementShortName">store[255:0][7:0]</obj_property>
+      <obj_property name="ObjectShortName">store[255:0][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Chip_InstrIP_test/u_Chip_InstrIP/u_datamem/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Chip_InstrIP_test/u_Chip_InstrIP/u_datamem/A" type="array">
+      <obj_property name="ElementShortName">A[31:0]</obj_property>
+      <obj_property name="ObjectShortName">A[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Chip_InstrIP_test/u_Chip_InstrIP/u_datamem/WD" type="array">
+      <obj_property name="ElementShortName">WD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">WD[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Chip_InstrIP_test/u_Chip_InstrIP/u_datamem/WE" type="logic">
+      <obj_property name="ElementShortName">WE</obj_property>
+      <obj_property name="ObjectShortName">WE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Chip_InstrIP_test/u_Chip_InstrIP/u_datamem/RD" type="array">
+      <obj_property name="ElementShortName">RD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">RD[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/Chip_InstrIP_test/u_Chip_InstrIP/u_datamem/store" type="array">
+      <obj_property name="ElementShortName">store[255:0][7:0]</obj_property>
+      <obj_property name="ObjectShortName">store[255:0][7:0]</obj_property>
    </wvobject>
 </wave_config>

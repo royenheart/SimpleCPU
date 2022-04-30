@@ -35,15 +35,25 @@
 `define CUmulop 12'b011100
 
 `define InitState 4'b1111   //初始状态
+// 取值阶段 - Start
 `define IF 4'b0000          //取指
+// 取值阶段 - End
+// 译码阶段 - Start
 `define ID 4'b0001          //译码
+// 译码阶段 - End
+// 执行阶段 - Start
 `define EXER 4'b0010        //执行：R型计算类
-`define WBR 4'b0011         //写回：R型计算类
 `define EXEI 4'b0100        //执行：I型计算类
-`define WBI 4'b0101         //写回：I型计算类
 `define EXEB 4'b0110        //执行：beq bne
 `define EXEW 4'b0111        //执行：lw sw
-`define MEMLW 4'b1000       //访存：lw
-`define WBLW 4'b1001        //写回：lw
-`define MEMSW 4'b1010       //访存：sw
 `define WBJAR 4'b1011       //写回：jar
+// 执行阶段 - End
+// 存储器访问阶段 - Start
+`define WBR 4'b0011         //写回：R型计算类
+`define WBI 4'b0101         //写回：I型计算类
+`define MEMLW 4'b1000       //访存：lw
+`define MEMSW 4'b1010       //访存：sw
+// 存储器访问阶段 - End
+// 写回阶段 - Start
+`define WBLW 4'b1001        //写回：lw
+// 写回阶段 - End

@@ -99,7 +99,6 @@ wire [31:0] IPC;
 // 扩展后的立即数
 wire [31:0] ExtendImm;
 //////////////////////////
-
 //CU控制单元延伸出的控制信号
 //////////////////////////
 wire MemtoReg;
@@ -117,8 +116,8 @@ wire IRWre;
 wire InstrMemRW;
 //////////////////////////
 //控制信号结束
-
 //////////////////////////
+
 // 初次判断的A3寄存器地址
 wire [4:0] A3Temp;
 // 二次判断的A3寄存器地址（和全1即$31寄存器进行选择）
@@ -218,6 +217,7 @@ PC u_pc(
 
 // PCAddr - Start //
 
+// used to select the PC
 PCAddr u_pcaddr(
     .clk        (clk),
     .rst        (rst),
@@ -363,6 +363,15 @@ DataMem u_datamem(
     .WE  (MemWrite),
     .RD  (DataMemRead)
 );
+
+// Block Ram由于读出数据有时钟延迟，与我们的设计不能匹配，因此不采用
+// DataMemBRAM u_datamem_bram(
+//     .A   (ALUResultReg),
+//     .WD  (RD2Reg),
+//     .clk (clk),
+//     .WE  (MemWrite),
+//     .RD  (DataMemRead)
+// );
 
 // DataMem - End //
 
