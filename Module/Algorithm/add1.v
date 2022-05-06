@@ -19,9 +19,25 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module add1(input a, input b, input c_in, output sum, output G, output P);  
-//超前进位加法器中1位加法器（计算P、G、sum）
-        xor a1(sum, a, b, c_in);
-        and a2(G, a, b);
-        or a3(P, a, b);
+module add1(
+    a, b, c_in, sum, G, P
+);
+
+input a;
+input b;
+input c_in;
+output sum;
+output G;
+output P;
+
+wire a;
+wire b;
+wire c_in;
+wire sum;
+wire G;
+wire P;
+
+xor a1(sum, a, b, c_in);
+and a2(G, a, b);
+or a3(P, a, b);
 endmodule

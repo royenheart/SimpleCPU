@@ -19,18 +19,30 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
-module CLA32(input [31:0] a, //32位超前进位加法器
-           input [31:0] b,
-           input c_in,
-           output [31:0] sum,
-           output overflow);
-    wire [1:0] P, G;
-    wire res1, res2, res3, c_1;
-    CLA16 add1(a[15:0], b[15:0], c_in, sum[15:0], G[0], P[0]);
-    CLA16 add2(a[31:16], b[31:16], c_1, sum[31:16], G[1], P[1]);
-    and a1(res1, P[0], c_in);
-    or a2(c_1, G[0], res1);
-    and a3(res2, P[1], P[0], c_in);
-    and a4(res3, P[1], G[0]);
-    or a5(overflow, G[1], res2, res3);
+
+module CLA32(
+     a, b, c_in, sum, overflow
+);
+
+input [31:0] a;
+input [31:0] b;
+input c_in;
+output [31:0] sum;
+output overflow;
+
+wire [31:0] a;
+wire [31:0] b;
+wire c_in;
+wire [31:0] sum;
+wire overflow;
+
+wire [1:0] P, G;
+wire res1, res2, res3, c_1;
+CLA16 add1(a[15:0], b[15:0], c_in, sum[15:0], G[0], P[0]);
+CLA16 add2(a[31:16], b[31:16], c_1, sum[31:16], G[1], P[1]);
+and a1(res1, P[0], c_in);
+or a2(c_1, G[0], res1);
+and a3(res2, P[1], P[0], c_in);
+and a4(res3, P[1], G[0]);
+or a5(overflow, G[1], res2, res3);
 endmodule
