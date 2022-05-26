@@ -1,0 +1,3 @@
+Cache02Data_blk_mem_gen_0_0.v,verilog,xil_defaultlib,../../../bd/Cache02Data/ip/Cache02Data_blk_mem_gen_0_0/sim/Cache02Data_blk_mem_gen_0_0.v,
+Cache02Data.v,verilog,xil_defaultlib,../../../bd/Cache02Data/sim/Cache02Data.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

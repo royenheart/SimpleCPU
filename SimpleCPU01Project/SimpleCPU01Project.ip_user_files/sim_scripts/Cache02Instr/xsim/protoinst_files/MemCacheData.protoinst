@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"MemCacheData": {
+			"proto_instances": {
+			}
+		}
+	}
+}

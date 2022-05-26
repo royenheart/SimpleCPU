@@ -1,0 +1,254 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xD2E9CBB7F0D1C3E3",
+      "device": "xc7vx485tffg1157-1",
+      "name": "Cache02Instr",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2021.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "Cache02Instr": ""
+    },
+    "ports": {
+      "addra_0": {
+        "direction": "I",
+        "left": "4",
+        "right": "0"
+      },
+      "clka_0": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "Cache02Instr_clka_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "dina_0": {
+        "direction": "I",
+        "left": "69",
+        "right": "0"
+      },
+      "douta_0": {
+        "direction": "O",
+        "left": "69",
+        "right": "0"
+      },
+      "ena_0": {
+        "direction": "I"
+      },
+      "wea_0": {
+        "direction": "I",
+        "left": "0",
+        "right": "0"
+      },
+      "addrb_0": {
+        "direction": "I",
+        "left": "4",
+        "right": "0"
+      },
+      "clkb_0": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "Cache02Instr_clkb_0",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "100000000",
+            "value_src": "default"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.0",
+            "value_src": "default"
+          }
+        }
+      },
+      "dinb_0": {
+        "direction": "I",
+        "left": "69",
+        "right": "0"
+      },
+      "doutb_0": {
+        "direction": "O",
+        "left": "69",
+        "right": "0"
+      },
+      "enb_0": {
+        "direction": "I"
+      },
+      "web_0": {
+        "direction": "I",
+        "left": "0",
+        "right": "0"
+      }
+    },
+    "components": {
+      "Cache02Instr": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "Cache02Instr_blk_mem_gen_0_0",
+        "xci_path": "ip\\Cache02Instr_blk_mem_gen_0_0\\Cache02Instr_blk_mem_gen_0_0.xci",
+        "inst_hier_path": "Cache02Instr",
+        "parameters": {
+          "Coe_File": {
+            "value": "../../../../../../Coe/Cache/Cache02Instr.coe"
+          },
+          "Enable_32bit_Address": {
+            "value": "false"
+          },
+          "Enable_B": {
+            "value": "Use_ENB_Pin"
+          },
+          "Load_Init_File": {
+            "value": "true"
+          },
+          "Memory_Type": {
+            "value": "True_Dual_Port_RAM"
+          },
+          "Port_B_Clock": {
+            "value": "100"
+          },
+          "Port_B_Enable_Rate": {
+            "value": "100"
+          },
+          "Port_B_Write_Rate": {
+            "value": "50"
+          },
+          "Read_Width_A": {
+            "value": "70"
+          },
+          "Read_Width_B": {
+            "value": "70"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "false"
+          },
+          "Register_PortB_Output_of_Memory_Primitives": {
+            "value": "false"
+          },
+          "Use_Byte_Write_Enable": {
+            "value": "false"
+          },
+          "Use_RSTA_Pin": {
+            "value": "false"
+          },
+          "Write_Depth_A": {
+            "value": "32"
+          },
+          "Write_Width_A": {
+            "value": "70"
+          },
+          "Write_Width_B": {
+            "value": "70"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      }
+    },
+    "nets": {
+      "Cache02Instr_douta": {
+        "ports": [
+          "Cache02Instr/douta",
+          "douta_0"
+        ]
+      },
+      "Cache02Instr_doutb": {
+        "ports": [
+          "Cache02Instr/doutb",
+          "doutb_0"
+        ]
+      },
+      "addra_0_1": {
+        "ports": [
+          "addra_0",
+          "Cache02Instr/addra"
+        ]
+      },
+      "addrb_0_1": {
+        "ports": [
+          "addrb_0",
+          "Cache02Instr/addrb"
+        ]
+      },
+      "clka_0_1": {
+        "ports": [
+          "clka_0",
+          "Cache02Instr/clka"
+        ]
+      },
+      "clkb_0_1": {
+        "ports": [
+          "clkb_0",
+          "Cache02Instr/clkb"
+        ]
+      },
+      "dina_0_1": {
+        "ports": [
+          "dina_0",
+          "Cache02Instr/dina"
+        ]
+      },
+      "dinb_0_1": {
+        "ports": [
+          "dinb_0",
+          "Cache02Instr/dinb"
+        ]
+      },
+      "ena_0_1": {
+        "ports": [
+          "ena_0",
+          "Cache02Instr/ena"
+        ]
+      },
+      "enb_0_1": {
+        "ports": [
+          "enb_0",
+          "Cache02Instr/enb"
+        ]
+      },
+      "wea_0_1": {
+        "ports": [
+          "wea_0",
+          "Cache02Instr/wea"
+        ]
+      },
+      "web_0_1": {
+        "ports": [
+          "web_0",
+          "Cache02Instr/web"
+        ]
+      }
+    }
+  }
+}
