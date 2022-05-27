@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="CacheFourSet_test_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="CacheFourSet_test" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0.000 ns"></ZoomStartTime>
+      <ZoomEndTime time="1,600.001 ns"></ZoomEndTime>
+      <Cursor1Time time="1,600.000 ns"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="81"></NameColumnWidth>
+      <ValueColumnWidth column_width="72"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="20" />
+   <wvobject fp_name="/CacheFourSet_test/datamemfoursetcache/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CacheFourSet_test/datamemfoursetcache/A" type="array">
+      <obj_property name="ElementShortName">A[10:0]</obj_property>
+      <obj_property name="ObjectShortName">A[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CacheFourSet_test/datamemfoursetcache/WD" type="array">
+      <obj_property name="ElementShortName">WD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">WD[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CacheFourSet_test/datamemfoursetcache/WE" type="logic">
+      <obj_property name="ElementShortName">WE</obj_property>
+      <obj_property name="ObjectShortName">WE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CacheFourSet_test/datamemfoursetcache/RD" type="array">
+      <obj_property name="ElementShortName">RD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">RD[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CacheFourSet_test/datamemfoursetcache/RE" type="logic">
+      <obj_property name="ElementShortName">RE</obj_property>
+      <obj_property name="ObjectShortName">RE</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CacheFourSet_test/datamemfoursetcache/Readhit" type="logic">
+      <obj_property name="ElementShortName">Readhit</obj_property>
+      <obj_property name="ObjectShortName">Readhit</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CacheFourSet_test/datamemfoursetcache/CacheWE" type="array">
+      <obj_property name="ElementShortName">CacheWE[3:0]</obj_property>
+      <obj_property name="ObjectShortName">CacheWE[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CacheFourSet_test/datamemfoursetcache/CacheWD" type="array">
+      <obj_property name="ElementShortName">CacheWD[135:0]</obj_property>
+      <obj_property name="ObjectShortName">CacheWD[135:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CacheFourSet_test/datamemfoursetcache/CacheRD" type="array">
+      <obj_property name="ElementShortName">CacheRD[3:0][135:0]</obj_property>
+      <obj_property name="ObjectShortName">CacheRD[3:0][135:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CacheFourSet_test/datamemfoursetcache/PointerTree" type="array">
+      <obj_property name="ElementShortName">PointerTree[3:0][2:0]</obj_property>
+      <obj_property name="ObjectShortName">PointerTree[3:0][2:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CacheFourSet_test/datamemfoursetcache/CacheBlock" type="array">
+      <obj_property name="ElementShortName">CacheBlock[1:0]</obj_property>
+      <obj_property name="ObjectShortName">CacheBlock[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CacheFourSet_test/datamemfoursetcache/CacheBlockdata" type="array">
+      <obj_property name="ElementShortName">CacheBlockdata[10:0]</obj_property>
+      <obj_property name="ObjectShortName">CacheBlockdata[10:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CacheFourSet_test/datamemfoursetcache/CacheAddress" type="array">
+      <obj_property name="ElementShortName">CacheAddress[3:0]</obj_property>
+      <obj_property name="ObjectShortName">CacheAddress[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CacheFourSet_test/datamemfoursetcache/MemRead" type="array">
+      <obj_property name="ElementShortName">MemRead[3:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">MemRead[3:0][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CacheFourSet_test/datamemfoursetcache/CacheHit" type="array">
+      <obj_property name="ElementShortName">CacheHit[3:0]</obj_property>
+      <obj_property name="ObjectShortName">CacheHit[3:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CacheFourSet_test/datamemfoursetcache/CacheWriteHitWD" type="array">
+      <obj_property name="ElementShortName">CacheWriteHitWD[3:0][135:0]</obj_property>
+      <obj_property name="ObjectShortName">CacheWriteHitWD[3:0][135:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CacheFourSet_test/datamemfoursetcache/CacheReadHitRD" type="array">
+      <obj_property name="ElementShortName">CacheReadHitRD[3:0][31:0]</obj_property>
+      <obj_property name="ObjectShortName">CacheReadHitRD[3:0][31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CacheFourSet_test/datamemfoursetcache/MemStoreRead" type="array">
+      <obj_property name="ElementShortName">MemStoreRead[135:0]</obj_property>
+      <obj_property name="ObjectShortName">MemStoreRead[135:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/CacheFourSet_test/datamemfoursetcache/MemStoreRD" type="array">
+      <obj_property name="ElementShortName">MemStoreRD[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MemStoreRD[31:0]</obj_property>
+   </wvobject>
+</wave_config>

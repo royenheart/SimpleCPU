@@ -10,7 +10,7 @@
 // Target Devices: 
 // Tool Versions: 
 // Description: 
-// 将InstrMem指令存储器作为IP核引用，并使用COE文件导入指令
+// 多周期CPU+高速缓存（4路组相联32槽）
 // Dependencies: 
 // 
 // Revision:
@@ -87,6 +87,9 @@ wire [31:0] ALUResultExp;
 wire [31:0] DataMemReadExp;
 wire [31:0] WD3TempExp;
 wire [31:0] WD3Exp;
+
+// 命中
+wire dataHit;
 
 // 指令
 wire [31:0] instr;
@@ -355,14 +358,15 @@ ResultTempReg u_AluResult (
 // ResultTempReg_AluResult - End //
 
 
-// DataMem - Start //
+// Cache02Data_wrapper - Start //
 
-DataMem u_datamem(
+Cache02Data_wrapper u_cachedata02(
     .A   (ALUResultReg),
     .WD  (RD2Reg),
     .clk (clk),
-    .WE  (MemWrite),
-    .RD  (DataMemRead)
+    .MemWrite  (MemWrite),
+    .DataMemRead  (DataMemRead),
+    .hit (dataHit)
 );
 
 // Block Ram由于读出数据有时钟延迟，与我们的设计不能匹配，因此不采用
@@ -374,8 +378,7 @@ DataMem u_datamem(
 //     .RD  (DataMemRead)
 // );
 
-// DataMem - End //
-
+// Cache02Data_wrapper - End //
 
 // ResultTempReg_MemData - Start  //
 

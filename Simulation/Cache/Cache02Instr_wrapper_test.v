@@ -38,9 +38,9 @@ end
 initial
 begin
     forever begin
-        #(PERIOD/2) A = A + 4;
-        if (A == 400) begin 
-            A = ({$random} % 60) * 4;
+        #(PERIOD) A = A + (({$random} % 5) + 1) * 4;
+        if (A > 500) begin 
+            A = ({$random} % 100) * 4;
         end
     end
 end

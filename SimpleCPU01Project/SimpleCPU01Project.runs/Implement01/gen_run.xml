@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="Implement01" LaunchPart="xc7vx485tffg1157-1" LaunchTime="1651297332">
-  <File Type="ROUTE-PWR" Name="Chip_InstrIP_power_routed.rpt"/>
   <File Type="PA-TCL" Name="Chip_InstrIP.tcl"/>
-  <File Type="ROUTE-PWR-SUM" Name="Chip_InstrIP_power_summary_routed.pb"/>
   <File Type="REPORTS-TCL" Name="Chip_InstrIP_reports.tcl"/>
   <File Type="BITSTR-MSK" Name="Chip_InstrIP.msk"/>
-  <File Type="ROUTE-CLK" Name="Chip_InstrIP_clock_utilization_routed.rpt"/>
   <File Type="RDI-RDI" Name="Chip_InstrIP.vdi"/>
   <File Type="BG-BIT" Name="Chip_InstrIP.bit"/>
   <File Type="BG-DRC" Name="Chip_InstrIP.drc"/>
@@ -15,33 +12,16 @@
   <File Type="BITSTR-NKY" Name="Chip_InstrIP.nky"/>
   <File Type="BITSTR-BMM" Name="Chip_InstrIP_bd.bmm"/>
   <File Type="BITSTR-MMI" Name="Chip_InstrIP.mmi"/>
-  <File Type="ROUTE-METHODOLOGY-DRC" Name="Chip_InstrIP_methodology_drc_routed.rpt"/>
   <File Type="BITSTR-SYSDEF" Name="Chip_InstrIP.sysdef"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="Chip_InstrIP_methodology_drc_routed.pb"/>
   <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
   <File Type="BITSTR-LTX" Name="Chip_InstrIP.ltx"/>
   <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
-  <File Type="OPT-DRC" Name="Chip_InstrIP_drc_opted.rpt"/>
   <File Type="OPT-HWDEF" Name="Chip_InstrIP.hwdef"/>
-  <File Type="PLACE-IO" Name="Chip_InstrIP_io_placed.rpt"/>
-  <File Type="PLACE-UTIL" Name="Chip_InstrIP_utilization_placed.rpt"/>
-  <File Type="PLACE-UTIL-PB" Name="Chip_InstrIP_utilization_placed.pb"/>
-  <File Type="PLACE-CTRL" Name="Chip_InstrIP_control_sets_placed.rpt"/>
   <File Type="PLACE-PRE-SIMILARITY" Name="Chip_InstrIP_incremental_reuse_pre_placed.rpt"/>
-  <File Type="ROUTE-DRC" Name="Chip_InstrIP_drc_routed.rpt"/>
-  <File Type="ROUTE-DRC-PB" Name="Chip_InstrIP_drc_routed.pb"/>
-  <File Type="ROUTE-PWR-RPX" Name="Chip_InstrIP_power_routed.rpx"/>
-  <File Type="ROUTE-STATUS" Name="Chip_InstrIP_route_status.rpt"/>
-  <File Type="ROUTE-STATUS-PB" Name="Chip_InstrIP_route_status.pb"/>
   <File Type="ROUTE-DCP" Name="Chip_InstrIP_routed.dcp"/>
   <File Type="ROUTE-ERROR-DCP" Name="Chip_InstrIP_routed_error.dcp"/>
   <File Type="ROUTE-BLACKBOX-DCP" Name="Chip_InstrIP_routed_bb.dcp"/>
-  <File Type="ROUTE-TIMINGSUMMARY" Name="Chip_InstrIP_timing_summary_routed.rpt"/>
   <File Type="ROUTE-TIMING-PB" Name="Chip_InstrIP_timing_summary_routed.pb"/>
-  <File Type="ROUTE-TIMING-RPX" Name="Chip_InstrIP_timing_summary_routed.rpx"/>
-  <File Type="ROUTE-BUS-SKEW" Name="Chip_InstrIP_bus_skew_routed.rpt"/>
-  <File Type="ROUTE-BUS-SKEW-PB" Name="Chip_InstrIP_bus_skew_routed.pb"/>
-  <File Type="ROUTE-BUS-SKEW-RPX" Name="Chip_InstrIP_bus_skew_routed.rpx"/>
   <File Type="OPT-DCP" Name="Chip_InstrIP_opt.dcp"/>
   <File Type="PLACE-DCP" Name="Chip_InstrIP_placed.dcp"/>
   <File Type="PWROPT-DCP" Name="Chip_InstrIP_pwropt.dcp"/>
@@ -49,8 +29,6 @@
   <File Type="PHYSOPT-DCP" Name="Chip_InstrIP_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-DCP" Name="Chip_InstrIP_postroute_physopt.dcp"/>
   <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="Chip_InstrIP_postroute_physopt_bb.dcp"/>
-  <File Type="ROUTE-DRC-RPX" Name="Chip_InstrIP_drc_routed.rpx"/>
-  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="Chip_InstrIP_methodology_drc_routed.rpx"/>
   <File Type="PDI-FILE" Name="Chip_InstrIP.pdi"/>
   <File Type="RCFI_FILE" Name="Chip_InstrIP.rcfi"/>
   <File Type="CFI_FILE" Name="Chip_InstrIP.cfi"/>

@@ -1,0 +1,326 @@
+
+*** Running vivado
+    with args -log Cache02Data_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source Cache02Data_wrapper.tcl
+
+
+
+****** Vivado v2021.2 (64-bit)
+  **** SW Build 3367213 on Tue Oct 19 02:48:09 MDT 2021
+  **** IP Build 3369179 on Thu Oct 21 08:25:16 MDT 2021
+    ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+source Cache02Data_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2021.2/data/ip'.
+Command: synth_design -top Cache02Data_wrapper -part xc7vx485tffg1157-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7vx485t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7vx485t'
+INFO: [Common 17-86] Your Synthesis license expires in 2 day(s)
+INFO: [Common 17-1540] The version limit for your license is '2022.04' and has expired for new software. A version limit expiration means that, although you may be able to continue to use the current version of tools or IP with this license, you will not be eligible for new releases.
+INFO: [Device 21-403] Loading part xc7vx485tffg1157-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 31088
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1408.551 ; gain = 23.699
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'Cache02Data_wrapper' [D:/Git/SimpleCPU/Module/Cache/Cache02Data_wrapper.v:22]
+INFO: [Synth 8-6157] synthesizing module 'MemCacheData' [D:/Git/SimpleCPU/Module/Storage/BlockDesign/MemCacheData/synth/MemCacheData.v:13]
+INFO: [Synth 8-6157] synthesizing module 'MemCacheData_dist_mem_gen_0_1' [D:/Git/SimpleCPU/SimpleCPU01Project/SimpleCPU01Project.runs/Cache02Synth/.Xil/Vivado-3160-LAPTOP-TDKNUURL/realtime/MemCacheData_dist_mem_gen_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'MemCacheData_dist_mem_gen_0_1' (1#1) [D:/Git/SimpleCPU/SimpleCPU01Project/SimpleCPU01Project.runs/Cache02Synth/.Xil/Vivado-3160-LAPTOP-TDKNUURL/realtime/MemCacheData_dist_mem_gen_0_1_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'MemCacheData' (2#1) [D:/Git/SimpleCPU/Module/Storage/BlockDesign/MemCacheData/synth/MemCacheData.v:13]
+WARNING: [Synth 8-689] width (11) of port connection 'a_0' does not match port width (9) of module 'MemCacheData' [D:/Git/SimpleCPU/Module/Cache/Cache02Data_wrapper.v:209]
+WARNING: [Synth 8-689] width (32) of port connection 'a_0' does not match port width (9) of module 'MemCacheData' [D:/Git/SimpleCPU/Module/Cache/Cache02Data_wrapper.v:218]
+INFO: [Synth 8-6157] synthesizing module 'Cache02Data' [D:/Git/SimpleCPU/Module/Cache/BlockDesign/Cache02Data/synth/Cache02Data.v:13]
+INFO: [Synth 8-6157] synthesizing module 'Cache02Data_blk_mem_gen_0_0' [D:/Git/SimpleCPU/SimpleCPU01Project/SimpleCPU01Project.runs/Cache02Synth/.Xil/Vivado-3160-LAPTOP-TDKNUURL/realtime/Cache02Data_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Cache02Data_blk_mem_gen_0_0' (3#1) [D:/Git/SimpleCPU/SimpleCPU01Project/SimpleCPU01Project.runs/Cache02Synth/.Xil/Vivado-3160-LAPTOP-TDKNUURL/realtime/Cache02Data_blk_mem_gen_0_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'Cache02Data' (4#1) [D:/Git/SimpleCPU/Module/Cache/BlockDesign/Cache02Data/synth/Cache02Data.v:13]
+WARNING: [Synth 8-689] width (32) of port connection 'addra_0' does not match port width (5) of module 'Cache02Data' [D:/Git/SimpleCPU/Module/Cache/Cache02Data_wrapper.v:247]
+WARNING: [Synth 8-689] width (32) of port connection 'addra_0' does not match port width (5) of module 'Cache02Data' [D:/Git/SimpleCPU/Module/Cache/Cache02Data_wrapper.v:265]
+WARNING: [Synth 8-689] width (32) of port connection 'addra_0' does not match port width (5) of module 'Cache02Data' [D:/Git/SimpleCPU/Module/Cache/Cache02Data_wrapper.v:283]
+WARNING: [Synth 8-6014] Unused sequential element i_reg was removed.  [D:/Git/SimpleCPU/Module/Cache/Cache02Data_wrapper.v:144]
+INFO: [Synth 8-6155] done synthesizing module 'Cache02Data_wrapper' (5#1) [D:/Git/SimpleCPU/Module/Cache/Cache02Data_wrapper.v:22]
+WARNING: [Synth 8-7129] Port A[31] in module Cache02Data_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[30] in module Cache02Data_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[29] in module Cache02Data_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[28] in module Cache02Data_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[27] in module Cache02Data_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[26] in module Cache02Data_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[25] in module Cache02Data_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[24] in module Cache02Data_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[23] in module Cache02Data_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[22] in module Cache02Data_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[21] in module Cache02Data_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[20] in module Cache02Data_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[19] in module Cache02Data_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[18] in module Cache02Data_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[17] in module Cache02Data_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[16] in module Cache02Data_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[15] in module Cache02Data_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[14] in module Cache02Data_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[13] in module Cache02Data_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[12] in module Cache02Data_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[11] in module Cache02Data_wrapper is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1480.539 ; gain = 95.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1480.539 ; gain = 95.688
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1480.539 ; gain = 95.688
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.028 . Memory (MB): peak = 1480.539 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/Git/SimpleCPU/Module/Cache/BlockDesign/Cache02Data/ip/Cache02Data_blk_mem_gen_0_0/Cache02Data_blk_mem_gen_0_0/Cache02Data_blk_mem_gen_0_0_in_context.xdc] for cell 'cache02Data_01/Cache02Data'
+Finished Parsing XDC File [d:/Git/SimpleCPU/Module/Cache/BlockDesign/Cache02Data/ip/Cache02Data_blk_mem_gen_0_0/Cache02Data_blk_mem_gen_0_0/Cache02Data_blk_mem_gen_0_0_in_context.xdc] for cell 'cache02Data_01/Cache02Data'
+Parsing XDC File [d:/Git/SimpleCPU/Module/Cache/BlockDesign/Cache02Data/ip/Cache02Data_blk_mem_gen_0_0/Cache02Data_blk_mem_gen_0_0/Cache02Data_blk_mem_gen_0_0_in_context.xdc] for cell 'cache02Data_02/Cache02Data'
+Finished Parsing XDC File [d:/Git/SimpleCPU/Module/Cache/BlockDesign/Cache02Data/ip/Cache02Data_blk_mem_gen_0_0/Cache02Data_blk_mem_gen_0_0/Cache02Data_blk_mem_gen_0_0_in_context.xdc] for cell 'cache02Data_02/Cache02Data'
+Parsing XDC File [d:/Git/SimpleCPU/Module/Cache/BlockDesign/Cache02Data/ip/Cache02Data_blk_mem_gen_0_0/Cache02Data_blk_mem_gen_0_0/Cache02Data_blk_mem_gen_0_0_in_context.xdc] for cell 'cache02Data_03/Cache02Data'
+Finished Parsing XDC File [d:/Git/SimpleCPU/Module/Cache/BlockDesign/Cache02Data/ip/Cache02Data_blk_mem_gen_0_0/Cache02Data_blk_mem_gen_0_0/Cache02Data_blk_mem_gen_0_0_in_context.xdc] for cell 'cache02Data_03/Cache02Data'
+Parsing XDC File [d:/Git/SimpleCPU/Module/Cache/BlockDesign/Cache02Data/ip/Cache02Data_blk_mem_gen_0_0/Cache02Data_blk_mem_gen_0_0/Cache02Data_blk_mem_gen_0_0_in_context.xdc] for cell 'cache02Data_04/Cache02Data'
+Finished Parsing XDC File [d:/Git/SimpleCPU/Module/Cache/BlockDesign/Cache02Data/ip/Cache02Data_blk_mem_gen_0_0/Cache02Data_blk_mem_gen_0_0/Cache02Data_blk_mem_gen_0_0_in_context.xdc] for cell 'cache02Data_04/Cache02Data'
+Parsing XDC File [d:/Git/SimpleCPU/Module/Storage/BlockDesign/MemCacheData/ip/MemCacheData_dist_mem_gen_0_1/MemCacheData_dist_mem_gen_0_1/MemCacheData_dist_mem_gen_0_1_in_context.xdc] for cell 'memcacheData_01/dist_mem_gen_0'
+Finished Parsing XDC File [d:/Git/SimpleCPU/Module/Storage/BlockDesign/MemCacheData/ip/MemCacheData_dist_mem_gen_0_1/MemCacheData_dist_mem_gen_0_1/MemCacheData_dist_mem_gen_0_1_in_context.xdc] for cell 'memcacheData_01/dist_mem_gen_0'
+Parsing XDC File [d:/Git/SimpleCPU/Module/Storage/BlockDesign/MemCacheData/ip/MemCacheData_dist_mem_gen_0_1/MemCacheData_dist_mem_gen_0_1/MemCacheData_dist_mem_gen_0_1_in_context.xdc] for cell 'memcacheData_02/dist_mem_gen_0'
+Finished Parsing XDC File [d:/Git/SimpleCPU/Module/Storage/BlockDesign/MemCacheData/ip/MemCacheData_dist_mem_gen_0_1/MemCacheData_dist_mem_gen_0_1/MemCacheData_dist_mem_gen_0_1_in_context.xdc] for cell 'memcacheData_02/dist_mem_gen_0'
+Parsing XDC File [D:/Git/SimpleCPU/Constraints/Cache02.xdc]
+Finished Parsing XDC File [D:/Git/SimpleCPU/Constraints/Cache02.xdc]
+Parsing XDC File [D:/Git/SimpleCPU/SimpleCPU01Project/SimpleCPU01Project.runs/Cache02Synth/dont_touch.xdc]
+Finished Parsing XDC File [D:/Git/SimpleCPU/SimpleCPU01Project/SimpleCPU01Project.runs/Cache02Synth/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1598.027 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1598.027 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1598.027 ; gain = 213.176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7vx485tffg1157-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1598.027 ; gain = 213.176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property KEEP_HIERARCHY = SOFT for cache02Data_01. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for cache02Data_02. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for cache02Data_03. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for cache02Data_04. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for cache02Data_01/Cache02Data. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for cache02Data_02/Cache02Data. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for cache02Data_03/Cache02Data. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for cache02Data_04/Cache02Data. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for memcacheData_01. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for memcacheData_02. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for memcacheData_01/dist_mem_gen_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for memcacheData_02/dist_mem_gen_0. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 1598.027 ; gain = 213.176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1598.027 ; gain = 213.176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   10 Bit       Adders := 1     
+	   2 Input    5 Bit       Adders := 1     
+	   2 Input    4 Bit       Adders := 3     
++---Registers : 
+	               70 Bit    Registers := 1     
+	               32 Bit    Registers := 2     
+	                8 Bit    Registers := 8     
+	                5 Bit    Registers := 1     
+	                3 Bit    Registers := 8     
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 29    
+	   2 Input    8 Bit        Muxes := 48    
+	   2 Input    5 Bit        Muxes := 1     
+	   4 Input    4 Bit        Muxes := 1     
+	   2 Input    3 Bit        Muxes := 8     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 11    
+	   2 Input    1 Bit        Muxes := 37    
+	   4 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 2800 (col length:140)
+BRAMs: 2060 (col length: RAMB18 140 RAMB36 70)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7080] Parallel synthesis criteria is not met
+WARNING: [Synth 8-7129] Port A[31] in module Cache02Data_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[30] in module Cache02Data_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[29] in module Cache02Data_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[28] in module Cache02Data_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[27] in module Cache02Data_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[26] in module Cache02Data_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[25] in module Cache02Data_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[24] in module Cache02Data_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[23] in module Cache02Data_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[22] in module Cache02Data_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[21] in module Cache02Data_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[20] in module Cache02Data_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[19] in module Cache02Data_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[18] in module Cache02Data_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[17] in module Cache02Data_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[16] in module Cache02Data_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[15] in module Cache02Data_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[14] in module Cache02Data_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[13] in module Cache02Data_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[12] in module Cache02Data_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[11] in module Cache02Data_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[1] in module Cache02Data_wrapper is either unconnected or has no load
+WARNING: [Synth 8-7129] Port A[0] in module Cache02Data_wrapper is either unconnected or has no load
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1598.027 ; gain = 213.176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:28 ; elapsed = 00:00:29 . Memory (MB): peak = 1598.027 ; gain = 213.176
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:14 ; elapsed = 00:01:16 . Memory (MB): peak = 2068.207 ; gain = 683.355
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:15 ; elapsed = 00:01:16 . Memory (MB): peak = 2068.207 ; gain = 683.355
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:20 ; elapsed = 00:01:22 . Memory (MB): peak = 2068.207 ; gain = 683.355
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:20 ; elapsed = 00:01:22 . Memory (MB): peak = 2068.207 ; gain = 683.355
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:20 ; elapsed = 00:01:22 . Memory (MB): peak = 2068.207 ; gain = 683.355
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:20 ; elapsed = 00:01:22 . Memory (MB): peak = 2068.207 ; gain = 683.355
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:20 ; elapsed = 00:01:22 . Memory (MB): peak = 2068.207 ; gain = 683.355
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:20 ; elapsed = 00:01:22 . Memory (MB): peak = 2068.207 ; gain = 683.355
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+------------------------------+----------+
+|      |BlackBox name                 |Instances |
++------+------------------------------+----------+
+|1     |MemCacheData_dist_mem_gen_0_1 |         2|
+|2     |Cache02Data_blk_mem_gen_0_0   |         4|
++------+------------------------------+----------+
+
+Report Cell Usage: 
++------+------------------------------+------+
+|      |Cell                          |Count |
++------+------------------------------+------+
+|1     |Cache02Data_blk_mem_gen_0     |     1|
+|2     |Cache02Data_blk_mem_gen_0_0   |     3|
+|5     |MemCacheData_dist_mem_gen_0   |     1|
+|6     |MemCacheData_dist_mem_gen_0_1 |     1|
+|7     |BUFG                          |     1|
+|8     |LUT1                          |     8|
+|9     |LUT2                          |    10|
+|10    |LUT3                          |    12|
+|11    |LUT4                          |    74|
+|12    |LUT5                          |   122|
+|13    |LUT6                          |   146|
+|14    |MUXF7                         |     6|
+|15    |MUXF8                         |     2|
+|16    |FDRE                          |   169|
+|17    |IBUF                          |    43|
+|18    |OBUF                          |    33|
++------+------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:20 ; elapsed = 00:01:22 . Memory (MB): peak = 2068.207 ; gain = 683.355
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 24 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:10 ; elapsed = 00:01:18 . Memory (MB): peak = 2068.207 ; gain = 565.867
+Synthesis Optimization Complete : Time (s): cpu = 00:01:20 ; elapsed = 00:01:22 . Memory (MB): peak = 2068.207 ; gain = 683.355
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 2068.207 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 8 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2068.207 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Synth Design complete, checksum: f423d38c
+INFO: [Common 17-83] Releasing license: Synthesis
+29 Infos, 51 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:30 ; elapsed = 00:01:32 . Memory (MB): peak = 2068.207 ; gain = 683.355
+INFO: [Common 17-1381] The checkpoint 'D:/Git/SimpleCPU/SimpleCPU01Project/SimpleCPU01Project.runs/Cache02Synth/Cache02Data_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file Cache02Data_wrapper_utilization_synth.rpt -pb Cache02Data_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Thu May 26 23:03:01 2022...

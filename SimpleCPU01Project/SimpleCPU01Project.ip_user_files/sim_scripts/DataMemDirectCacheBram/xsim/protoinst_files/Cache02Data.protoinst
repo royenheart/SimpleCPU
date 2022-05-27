@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"Cache02Data": {
+			"proto_instances": {
+			}
+		}
+	}
+}

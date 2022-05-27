@@ -10,7 +10,7 @@
 // Target Devices: 
 // Tool Versions: 
 // Description: 
-// 将InstrMem指令存储器作为IP核引用，并使用COE文件导入指令
+// 多周期CPU+高速缓存（4路组相联16槽）
 // Dependencies: 
 // 
 // Revision:

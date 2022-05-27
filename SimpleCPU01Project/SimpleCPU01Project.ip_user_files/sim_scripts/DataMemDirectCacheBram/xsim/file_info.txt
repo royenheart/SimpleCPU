@@ -1,0 +1,3 @@
+DataMemDirectCacheBram_blk_mem_gen_0_0.v,verilog,xil_defaultlib,../../../bd/DataMemDirectCacheBram/ip/DataMemDirectCacheBram_blk_mem_gen_0_0/sim/DataMemDirectCacheBram_blk_mem_gen_0_0.v,
+DataMemDirectCacheBram.v,verilog,xil_defaultlib,../../../bd/DataMemDirectCacheBram/sim/DataMemDirectCacheBram.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v
