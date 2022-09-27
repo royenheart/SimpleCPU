@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: 王若譞
+// Engineer: Ruoxuan Wang
 // 
 // Create Date: 2022/04/13 19:47:34
 // Design Name: 

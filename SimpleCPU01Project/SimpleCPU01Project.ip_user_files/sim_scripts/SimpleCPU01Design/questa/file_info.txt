@@ -1,4 +1,0 @@
-dist_mem_gen_v8_0.v,verilog,dist_mem_gen_v8_0_13,../../../../SimpleCPU01Project.gen/sources_1/bd/SimpleCPU01Design/ipshared/0bf5/simulation/dist_mem_gen_v8_0.v,
-SimpleCPU01Design_dist_mem_gen_0_0.v,verilog,xil_defaultlib,../../../bd/SimpleCPU01Design/ip/SimpleCPU01Design_dist_mem_gen_0_0/sim/SimpleCPU01Design_dist_mem_gen_0_0.v,
-SimpleCPU01Design.v,verilog,xil_defaultlib,../../../bd/SimpleCPU01Design/sim/SimpleCPU01Design.v,
-glbl.v,Verilog,xil_defaultlib,glbl.v

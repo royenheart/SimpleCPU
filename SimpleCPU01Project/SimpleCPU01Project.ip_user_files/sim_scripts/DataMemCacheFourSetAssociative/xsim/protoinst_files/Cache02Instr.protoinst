@@ -1,9 +1,0 @@
-{
-	"version": "1.0",
-	"modules": {
-		"Cache02Instr": {
-			"proto_instances": {
-			}
-		}
-	}
-}

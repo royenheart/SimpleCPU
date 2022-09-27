@@ -1,7 +1,7 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
-// Engineer: 王若譞、谢皓泽
+// Engineer: Ruoxuan Wang、RoyenHeart
 // 
 // Create Date: 2022/03/06 18:58:34
 // Design Name: 

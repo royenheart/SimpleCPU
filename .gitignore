@@ -1,7 +1,21 @@
 # Project Files No Use in Git
 
-SimpleCPU01Project/SimpleCPU01Project.cache/*
-SimpleCPU01Project/SimpleCPU01Project.sim/*
-SimpleCPU01Project/SimpleCPU01Project.hw/*
+SimpleCPU01Project/.Xil
+SimpleCPU01Project/SimpleCPU01Project.cache
+SimpleCPU01Project/SimpleCPU01Project.gen
+SimpleCPU01Project/SimpleCPU01Project.hw
+SimpleCPU01Project/SimpleCPU01Project.ip_user_files
+SimpleCPU01Project/SimpleCPU01Project.runs
+SimpleCPU01Project/SimpleCPU01Project.sim
+SimpleCPU01Project/SimpleCPU01Project.tmp
+SimpleCPU01Project/*.xpr
+SimpleCPU01Project/*.str
+SimpleCPU01Project/*.jou
+SimpleCPU01Project/*.log
+
+*.exe
+*.s
+
+*.pdf
 
 .vscode
